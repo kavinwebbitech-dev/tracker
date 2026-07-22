@@ -1,0 +1,722 @@
+@extends('layouts.dashboard')
+
+@section('content')
+    <style type="text/css">
+        .count-icons {
+            text-align: center;
+        }
+
+        .count-icons p {
+            font-size: 16px;
+            margin-bottom: 5px;
+            font-weight: 400;
+        }
+
+        .count-icons .count-right-icon {
+            margin-right: 10px;
+        }
+    </style>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <div class="container-full">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="d-flex align-items-center">
+                    <div class="me-auto">
+                        <h3 class="page-title">Domain Hosting</h3>
+                        <div class="d-inline-block align-items-center">
+                            <nav>
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="{{ route('admin.index') }}"><i
+                                                class="mdi mdi-home-outline"></i></a></li>
+                                    <li class="breadcrumb-item" aria-current="page">Admin</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Domain Hosting</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <style type="text/css">
+                /*switch*/
+                .aiz-switch input:empty {
+                    height: 0;
+                    width: 0;
+                    overflow: hidden;
+                    position: absolute;
+                    opacity: 0;
+                }
+
+                .aiz-switch input:empty~span {
+                    display: inline-block;
+                    position: relative;
+                    text-indent: 0;
+                    cursor: pointer;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    line-height: 24px;
+                    height: 21px;
+                    width: 40px;
+                    border-radius: 12px;
+                }
+
+                .aiz-switch input:empty~span:after,
+                .aiz-switch input:empty~span:before {
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    content: " ";
+                    -webkit-transition: all 0.1s ease-in;
+                    transition: all 0.1s ease-in;
+                    width: 40px;
+                    border-radius: 12px;
+                }
+
+                .aiz-switch input:empty~span:before {
+                    background-color: #b0dcda;
+                }
+
+                .aiz-switch input:empty~span:after {
+                    height: 17px;
+                    width: 17px;
+                    line-height: 20px;
+                    top: 2px;
+                    bottom: 2px;
+                    margin-left: 2px;
+                    font-size: 0.8em;
+                    text-align: center;
+                    vertical-align: middle;
+                    color: #f8f9fb;
+                    background-color: #fff;
+                }
+
+                .aiz-switch input:checked~span:after {
+                    background-color: var(--primary);
+                    margin-left: 20px;
+                }
+
+                .aiz-switch-secondary input:checked~span:after {
+                    background-color: var(--secondary);
+                }
+
+                .aiz-switch-success input:checked~span:after {
+                    background-color: #fff;
+                }
+
+                .aiz-switch-success input:checked~span:after {
+                    background-color: #ff5900;
+                }
+
+                .aiz-switch-info input:checked~span:after {
+                    background-color: var(--info);
+                }
+
+                .aiz-switch-warning input:checked~span:after {
+                    background-color: var(--warning);
+                }
+
+                .aiz-switch-secondary-base input:checked~span:after {
+                    background-color: var(--secondary-base);
+                }
+
+                .aiz-switch-danger input:checked~span:after {
+                    background-color: var(--danger);
+                }
+
+                .aiz-switch-light input:checked~span:after {
+                    background-color: var(--light);
+                }
+
+                .aiz-switch-dark input:checked~span:after {
+                    background-color: var(--dark);
+                }
+
+                .aiz-switch-blue input:checked~span:after {
+                    background-color: var(--blue);
+                }
+
+                .box_color {
+                    text-align: center;
+                    background: #00afef;
+                    height: 90px;
+                    border-radius: 10px;
+                    padding: 22px !important;
+                }
+            </style>
+            <?php
+                $year_month_wise_total = [];
+            if ($domainhosting) {
+                foreach ($domainhosting as $value) {
+                    $year_key = date('Y', strtotime($value->fld_domain_end_date));
+                    $month_key = date('m', strtotime($value->fld_domain_end_date));
+                    $month_label = date('F', strtotime($value->fld_domain_end_date));
+            
+                    if (!isset($year_month_wise_total[$year_key])) {
+                        $year_month_wise_total[$year_key] = [
+                            'months' => [],
+                            'year_total' => 0,
+                        ];
+                    }
+            
+                    if (!isset($year_month_wise_total[$year_key]['months'][$month_key])) {
+                        $year_month_wise_total[$year_key]['months'][$month_key] = [
+                            'label' => $month_label,
+                            'total' => 0,
+                        ];
+                    }
+            
+                    $year_month_wise_total[$year_key]['months'][$month_key]['total'] += $value->fld_total_amount;
+                    $year_month_wise_total[$year_key]['year_total'] += $value->fld_total_amount;
+                }
+                ksort($year_month_wise_total); // years in order; use krsort() for latest first
+                foreach ($year_month_wise_total as &$year_data) {
+                    ksort($year_data['months']); // months in order Jan..Dec within each year
+                }
+                unset($year_data);
+            }
+            ?>
+            <div class="modal fade" id="modal-month-summary">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Year &amp; Month Wise Total Amount</h4>
+                            <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                        </div>
+                        <div class="modal-body">
+                            @forelse($year_month_wise_total as $year => $year_data)
+                                <table class="table table-bordered mb-3">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2" style="background:#f0f0f0;">{{ $year }}</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Month</th>
+                                            <th>Total Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($year_data['months'] as $month)
+                                            <tr>
+                                                <td>{{ $month['label'] }}</td>
+                                                <td>{{ number_format($month['total'], 2) }}</td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Year Total ({{ $year }})</th>
+                                            <th>{{ number_format($year_data['year_total'], 2) }}</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            @empty
+                                <p class="text-center">No data found</p>
+                            @endforelse
+
+                            @if (count($year_month_wise_total))
+                                <table class="table table-bordered">
+                                    <tfoot>
+                                        <tr>
+                                            <th>Grand Total</th>
+                                            <th>{{ number_format(collect($year_month_wise_total)->sum('year_total'), 2) }}
+                                            </th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+
+                    <div class="col-12">
+                        <div class="box">
+
+                            @include('layouts.flash-message')
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <style>
+
+                                </style>
+                                <div class="row" style="margin-bottom: 20px;">
+                                    <div class="col-sm-8">
+                                        <div class="five columns">
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <span style="margin-top: 3px; position: absolute;">
+                                                        Filter By (&lt;30 Days)
+                                                    </span>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <select class="form-control select2" name="days_search" id="start_date"
+                                                        onchange="daysSearch()">
+                                                        <option value="">Select Days</option>
+                                                        <option value="30"
+                                                            @if ($start_date == '30') selected @endif>30 Days
+                                                        </option>
+                                                        <option value="60"
+                                                            @if ($start_date == '60') selected @endif>60 Days
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <select class="form-control select2" name="month_search"
+                                                        id="month_search" onchange="daysSearch1()">
+                                                        <option value="">Select Month</option>
+                                                        <option value="1"
+                                                            @if ($month == '1') selected @endif>January
+                                                        </option>
+                                                        <option value="2"
+                                                            @if ($month == '2') selected @endif>February
+                                                        </option>
+                                                        <option value="3"
+                                                            @if ($month == '3') selected @endif>March</option>
+                                                        <option value="4"
+                                                            @if ($month == '4') selected @endif>April</option>
+                                                        <option value="5"
+                                                            @if ($month == '5') selected @endif>May</option>
+                                                        <option value="6"
+                                                            @if ($month == '6') selected @endif>June</option>
+                                                        <option value="7"
+                                                            @if ($month == '7') selected @endif>July</option>
+                                                        <option value="8"
+                                                            @if ($month == '8') selected @endif>August
+                                                        </option>
+                                                        <option value="9"
+                                                            @if ($month == '9') selected @endif>September
+                                                        </option>
+                                                        <option value="10"
+                                                            @if ($month == '10') selected @endif>October
+                                                        </option>
+                                                        <option value="11"
+                                                            @if ($month == '11') selected @endif>November
+                                                        </option>
+                                                        <option value="12"
+                                                            @if ($month == '12') selected @endif>December
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                                                        data-bs-target="#modal-month-summary">
+                                                        Year Wise Total
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 d-flex align-items-center gap-4 justify-content-end">
+                                        <div class="corp-search-box">
+                                            <i class="bi bi-search"></i>
+                                            <input type="text" name="text_value_search" onkeyup="text_value_search()"
+                                                id="text_value_search" placeholder="Search customers...">
+                                        </div>
+                                        <a class="btn btn-primary" href="{{ route('admin.domain.hosting.create') }}"
+                                            style="float: right;">Add New</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-10"></div>
+
+                                </div>
+                                <style type="text/css">
+                                    .add_button {
+                                        margin-bottom: 10px;
+                                    }
+                                </style>
+                                <div class="table-responsive">
+                                    <table id="example"
+                                        class="table table-bordered table-hover display nowrap margin-top-10 w-p100">
+                                        <thead>
+                                            <tr>
+                                                <th>S No</th>
+                                                <th>Domain Name</th>
+                                                <th>Expiry Date</th>
+                                                <th>Days</th>
+                                                <th>Hosting Name</th>
+                                                <th>Expiry Date</th>
+                                                <th>Days</th>
+                                                <th>Amount</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $total_amount = 0; ?>
+                                            @if ($domainhosting)
+                                                @foreach ($domainhosting as $key => $value)
+                                                    <?php
+                                                    $gsuite_end_date = $value->fld_domain_end_date;
+                                                    $today = date('Y-m-d');
+                                                    $date1 = date_create($today);
+                                                    $date2 = date_create($gsuite_end_date);
+                                                    $diff = date_diff($date1, $date2);
+                                                    $gsuite_plus_days = $diff->format('%R%a');
+                                                    $gsuite = $diff->format('%R%a days');
+                                                    
+                                                    if ($gsuite_plus_days >= 1) {
+                                                        $gsuite_days = $gsuite;
+                                                    } else {
+                                                        $gsuite_days = '0';
+                                                    }
+                                                    
+                                                    if ($gsuite_plus_days >= 1) {
+                                                        $gsuite_days_show = $gsuite_days;
+                                                    } else {
+                                                        $gsuite_days_show = '0 Days';
+                                                    }
+                                                    
+                                                    $gsuite_end_date1 = $value->fld_hosting_end_date;
+                                                    $today1 = date('Y-m-d');
+                                                    $date3 = date_create($today1);
+                                                    $date4 = date_create($gsuite_end_date1);
+                                                    $diff1 = date_diff($date3, $date4);
+                                                    $gsuite_plus_days1 = $diff1->format('%R%a');
+                                                    $gsuite1 = $diff1->format('%R%a days');
+                                                    
+                                                    if ($gsuite_plus_days1 >= 1) {
+                                                        $gsuite_days1 = $gsuite1;
+                                                    } else {
+                                                        $gsuite_days1 = '0';
+                                                    }
+                                                    
+                                                    if ($gsuite_plus_days1 >= 1) {
+                                                        $gsuite_days_show1 = $gsuite_days1;
+                                                    } else {
+                                                        $gsuite_days_show1 = '0 Days';
+                                                    }
+                                                    $total_amount += $value->fld_total_amount;
+                                                    
+                                                    ?>
+                                                    <tr
+                                                        @if ($gsuite_days == 0) style="background: #f6e2f7;" @endif>
+                                                        <td class="text-muted fw-bold sorting_1">{{ $key + 1 }}</td>
+                                                        <td>
+                                                            <div class="icon-text-wrapper">
+                                                                <div class="cell-icon icon-name"><i class="bi bi-globe"></i>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="fw-bold text-dark d-block"
+                                                                        style="font-size: 0.95rem;">{{ $value->fld_domain_name }}</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="icon-text-wrapper mb-1">
+                                                                <i class="bi bi-calendar-fill text-success"></i>
+                                                                <span
+                                                                    class="fw-semibold">{{ date('d-m-Y', strtotime($value->fld_domain_end_date)) }}</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="icon-text-wrapper mb-1">
+                                                                <i class="bi bi-calendar-range text-success"></i>
+                                                                <span class="fw-semibold">{{ $gsuite_days_show }}</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="icon-text-wrapper mb-1">
+                                                                <i class="bi bi-server text-success"></i>
+                                                                <span
+                                                                    class="fw-semibold">{{ $value->fld_hosting_name }}</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="icon-text-wrapper mb-1">
+                                                                <i class="bi bi-calendar-fill text-success"></i>
+                                                                <span
+                                                                    class="fw-semibold">{{ date('d-m-Y', strtotime($value->fld_hosting_end_date)) }}</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="icon-text-wrapper mb-1">
+                                                                <i class="bi bi-calendar-range text-success"></i>
+                                                                <span class="fw-semibold">{{ $gsuite_days_show1 }}</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="icon-text-wrapper mb-1">
+                                                                <i class="bi bi-currency-rupee text-success"></i>
+                                                                <span class="fw-semibold">
+                                                                    {{ $value->fld_total_amount }}</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <p style="display: flex;margin-bottom: 5px;margin-top: 5px;">
+                                                                <a href="{{ route('admin.domain.hosting.edit1', $value->id) }}"
+                                                                    type="Edit" class="creative-btn-action action-edit"
+                                                                    style="padding: 4px 12px;margin: 0px 4px;"><i
+                                                                        class="ion ion-edit text-white"></i></a>
+                                                                <a href="{{ route('admin.domain.hosting.not.interest', $value->id) }}"
+                                                                    data-confirm="Are you Sure Move Not Interest?"
+                                                                    title="Not interest"
+                                                                    class="creative-btn-action action-user"
+                                                                    style="padding: 4px 12px;margin: 0px 4px;"><i
+                                                                        class="ti-unlink text-white"></i></a>
+                                                                <a href="{{ route('admin.domain.hosting.invoice', $value->id) }}"
+                                                                    title="Invoice" class="creative-btn-action btn-dark"
+                                                                    style="padding: 4px 12px;margin: 0px 4px;"
+                                                                    target="_blank"><i
+                                                                        class="ti-files text-white"></i></a>
+                                                                <a onclick="CustomerDetails('{{ $value->fld_cust_id }}')"
+                                                                    title="Customer Details"
+                                                                    class="creative-btn-action btn-primary"
+                                                                    style="padding: 4px 12px;margin: 0px 4px;"><i
+                                                                        class="ti-user text-white"></i></a>
+                                                                <a href="javascript:void(0);"
+                                                                    onclick="deleteProject('{{ route('admin.domain.hosting.delete', $value->id) }}')"
+                                                                    title="Delete"
+                                                                    class="creative-btn-action action-delete"
+                                                                    style="padding: 4px 12px;margin: 0px 4px;"><i
+                                                                        class="ti-trash text-white"></i></a>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                            @endif
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>{{ $total_amount }}</td>
+                                                <td></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    <style type="text/css">
+                                        .pagination li a {
+                                            padding: 6px;
+                                        }
+                                    </style>
+                                    <div class="row gy-4 align-items-center" id="seach_hide" style="margin-top: 30px;">
+                                        <div class="col-12">
+                                            {!! $domainhosting->withQueryString()->links('pagination::bootstrap-5') !!}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </section>
+            <!-- /.content -->
+
+        </div>
+    </div>
+    <style type="text/css">
+        #example_filter label {
+            display: none;
+        }
+
+        #text_search_value {
+            display: none;
+        }
+    </style>
+    <!-- /.content-wrapper -->
+    <script src="<?php echo url(''); ?>/public/admin_assets/js/vendors.min.js"></script>
+    <?php
+    $current_route = Route::currentRouteName();
+    ?>
+    <script type="text/javascript">
+        function text_value_search() {
+            var text_value_search = $("#text_value_search").val().trim();
+            var start_date = $("#start_date").val();
+
+            $.ajax({
+                url: "{{ route('admin.domain.hosting.search') }}",
+                type: "POST",
+                data: {
+                    text_value_search: text_value_search,
+                    start_date: start_date,
+                    _token: '{{ csrf_token() }}'
+                },
+                success: function(response) {
+                    if (response.status) {
+                        $("#example").html(response.project);
+                        $("#seach_hide").hide();
+                    }
+                }
+            });
+        }
+
+        function sort_book() {
+
+            var expert_search_url = "{{ route($current_route) }}";
+            var start_date = $("#start_date").val();
+            var end_date = $("#end_date").val();
+            var status = $("#status").val();
+
+            if (start_date) {
+                start_date = start_date;
+            } else {
+                start_date = "";
+            }
+            if (end_date) {
+                end_date = end_date;
+
+            } else {
+                end_date = "";
+            }
+            if (status == 0) {
+                status = 0;
+
+            } else if (status) {
+                status = status;
+
+            } else {
+                status = "";
+            }
+            var str_search_request = "&start_date=" + start_date + "&end_date=" + end_date + "&status=" + status;
+
+
+            if (str_search_request) {
+                window.location.href = expert_search_url + '?' + str_search_request;
+            }
+
+        }
+
+        function ViewTaskModel1(id) {
+            var project_id = id;
+
+            if (project_id) {
+                $('#modal-default1').modal('show');
+                $("#project_id").val(project_id);
+            }
+        }
+
+        function CustomerDetails(id) {
+            var project_id = id;
+
+            if (project_id) {
+                $.ajax({
+                    url: "{{ route('admin.domain.hosting.user.details') }}",
+                    type: "POST",
+                    data: {
+                        id: project_id,
+                        _token: '{{ csrf_token() }}'
+                    },
+                    success: function(response) {
+                        $('#modal-default').modal('show');
+                        $("#load_html").html(response.html);
+                    }
+                });
+            }
+
+        }
+
+        function daysSearch() {
+            var expert_search_url = "{{ route($current_route) }}";
+            var start_date = $("#start_date").val();
+
+            if (start_date) {
+                start_date = start_date;
+
+            } else {
+                start_date = "";
+            }
+            var str_search_request = "&start_date=" + start_date;
+
+
+            if (str_search_request) {
+                window.location.href = expert_search_url + '?' + str_search_request;
+            }
+        }
+
+        function daysSearch1() {
+            var expert_search_url = "{{ route($current_route) }}";
+            var month = $("#month_search").val();
+
+            if (month) {
+                month = month;
+
+            } else {
+                month = "";
+            }
+            var str_search_request = "&month=" + month;
+
+
+            if (str_search_request) {
+                window.location.href = expert_search_url + '?' + str_search_request;
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('.toggle-input').change(function() {
+
+                table = $('#example').DataTable();
+                if ($(this).is(':checked')) {
+
+                    $.fn.dataTable.ext.search.push(
+                        function(settings, data, dataIndex) {
+                            return (parseFloat(data[3]) < 30 || parseFloat(data[6]) < 30) ?
+                                true :
+                                false
+                        }
+                    );
+                } else {
+                    $.fn.dataTable.ext.search.push(
+                        function(settings, data, dataIndex) {
+                            return true;
+                        }
+                    );
+                }
+                table.draw();
+                $.fn.dataTable.ext.search.pop();
+            });
+
+        });
+
+        var deleteLinks = document.querySelectorAll('.delete');
+
+        for (var i = 0; i < deleteLinks.length; i++) {
+            deleteLinks[i].addEventListener('click', function(event) {
+                event.preventDefault();
+
+                var choice = confirm(this.getAttribute('data-confirm'));
+
+                if (choice) {
+                    window.location.href = this.getAttribute('href');
+                }
+            });
+        }
+    </script>
+
+    <div class="modal fade" id="modal-default">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Customer Details</h4>
+                    <span class="btn-close" data-bs-dismiss="modal" aria-label="Close"></span>
+                </div>
+                <div class="modal-body" id="load_html">
+
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+@endsection

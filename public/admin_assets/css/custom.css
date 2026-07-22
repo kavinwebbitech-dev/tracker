@@ -1,0 +1,1137 @@
+.content-wrapper .img-updown  {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    left: auto;
+    animation: bounce-animation 5s infinite ease-in;
+}
+
+.rtl .content-wrapper .img-updown  {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    right: auto;
+    animation: bounce-animation 5s infinite ease-in;
+}
+
+.calendar_box #calendar {
+    height: 417px;
+    overflow-y: scroll;
+}
+
+@media screen and (max-width: 1440px) {
+    .calendar_box #calendar {
+        height: 482px;
+        overflow-y: scroll;
+        margin-right: 10px;
+        align-content: space-around;
+    }
+}
+
+
+
+
+@keyframes bounce-animation  {
+  0% {
+    transform: translateY(0);
+    transition: 0.5s;
+  }
+  50% {
+    transform: translateY(-5px);
+    transition: 0.5s;
+  }
+  100% {
+    transform: translateY(0);
+    transition: 0.5s;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+    .content-wrapper .img-updown  {
+        right: -10px;    
+    }
+}
+
+.fc-day-number {
+    font-size: 1rem;
+    font-weight: 300;
+}
+@media (min-width: 1200px) {
+    .fc-basic-view .fc-day-number {
+        padding: 0px 0px;
+    }
+}
+
+
+/*-----------Dashboard-2-----------*/
+
+.first-section .first-plan {
+    border-radius: 5px;
+    padding: 18px 25px;
+    position: relative;
+    overflow: hidden;
+}
+.first-section .first-plan .bg-img {
+    position: absolute;
+    top: 8px;
+    opacity: 0.9;
+    transform: rotate(-25deg);
+    right: 0px;
+}
+.rtl .first-section .first-plan {
+    border-radius: 5px;
+    padding: 18px 25px;
+    position: relative;
+    overflow: hidden;
+}
+.rtl .first-section .first-plan .bg-img {
+    position: absolute;
+    top: 8px;
+    opacity: 0.9;
+    transform: rotate(-25deg);
+    left: 0px;
+    right: auto;
+}
+
+/*-----------Dashboard-2-----------*/
+
+
+
+
+
+
+
+
+
+
+
+/* UI Update */
+  /* Corporate Table Card Container */
+.corp-table-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f1f5f9;
+    padding: 24px;
+    margin-bottom: 30px;
+}
+
+/* Action Bar Styling (Top Section) */
+.corp-action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.corp-action-left, .corp-action-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Custom File Upload Styling */
+.corp-upload-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+.corp-upload-wrapper input[type="file"] {
+    font-size: 0.85rem;
+    color: #64748b;
+    max-width: 220px;
+}
+
+.corp-upload-wrapper input[type="file"]::file-selector-button {
+    background: #e2e8f0;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 4px;
+    color: #475569;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-right: 10px;
+}
+
+.corp-upload-wrapper input[type="file"]::file-selector-button:hover {
+    background: #cbd5e1;
+}
+
+.corp-sample-link {
+    font-size: 0.8rem;
+    color: #00afef;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.corp-sample-link:hover {
+    text-decoration: underline;
+}
+
+/* Premium Corporate Buttons */
+.corp-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.corp-btn-primary {
+    background: linear-gradient(90deg, #00afef, #0284c7);
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(0, 175, 239, 0.2);
+}
+
+.corp-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 175, 239, 0.35);
+}
+
+.corp-btn-outline {
+    background: #ffffff;
+    border: 1px solid #00afef;
+    color: #00afef !important;
+}
+
+.corp-btn-outline:hover {
+    background: #f0f9ff;
+}
+
+/* Search Input Styling */
+.corp-search-box {
+    position: relative;
+    width: 250px;
+}
+
+.corp-search-box i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+
+.corp-search-box input {
+    width: 100%;
+    padding: 8px 12px 8px 35px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.corp-search-box input:focus {
+    border-color: #00afef;
+    box-shadow: 0 0 0 3px rgba(0, 175, 239, 0.1);
+}
+
+/* Modern Table Styling */
+ /* Creative Premium Table Wrapper */
+.creative-table-wrapper {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+    overflow: hidden; /* Keeps rounded corners clean */
+    margin-top: 15px;
+}
+
+/* Creative Table Base */
+.creative-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Creative Table Header */
+.creative-table thead {
+    background: linear-gradient(90deg, #1A73E8, #4ECDC4);
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.creative-table th {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.8px;
+    padding: 16px 20px !important;
+    white-space: nowrap;
+}
+
+/* Creative Table Body & Rows */
+.creative-table td {
+    padding: 16px 20px !important;
+    vertical-align: middle;
+    /* font-size: 0.9rem; */
+    color: #334155;
+    border-bottom: 1px solid #eaeaea !important;
+    transition: all 0.2s ease;
+}
+
+/* Even Colors (Zebra Striping) */
+.creative-table tbody tr:nth-child(even) {
+    background-color: #f8fafc; /* Very soft blue-gray for even rows */
+}
+
+.creative-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Hover Effect */
+.creative-table tbody tr:hover {
+    background-color: #f0f9ff; /* Soft brand blue highlight on hover */
+    transform: scale(1.001);
+    box-shadow: 0 2px 10px rgba(0, 175, 239, 0.05);
+}
+
+/* Icon & Text Wrapper for Cells */
+.icon-text-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Cell Icons - Soft Backgrounds */
+.cell-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* Specific Icon Colors */
+.icon-name { background: rgba(0, 175, 239, 0.1); color: #00afef; }
+.icon-email { background: rgba(168, 85, 247, 0.1); color: #a855f7; }
+.icon-phone { background: rgba(34, 197, 94, 0.1); color: #22c55e; }
+.icon-company { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+.icon-address { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+
+/* Status Pill Badges */
+.creative-badge {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.creative-badge-active {
+    background: rgba(34, 197, 94, 0.1);
+    color: #16a34a;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.creative-badge-inactive {
+    background: rgba(251, 5, 5, 0.1);
+    color: #64748b;
+    border: 1px solid rgba(100, 116, 139, 0.2);
+}
+
+/* Square Action Buttons */
+.creative-action-box {
+    display: flex;
+    gap: 8px;
+}
+
+.creative-btn-action {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff !important;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.creative-btn-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.action-user { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.action-edit { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.action-delete { background: linear-gradient(135deg, #ef4444, #dc2626); }
+
+/* Status Pill Badges */
+.corp-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+   text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.corp-badge-active {
+    background: #dcfce7;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
+}
+
+.corp-badge-inactive {
+    background: #f1f5f9;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+}
+
+/* Small Square Action Icons */
+.corp-action-icons {
+    display: flex;
+    gap: 6px;
+}
+
+.corp-icon-btn {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #fff !important;
+    transition: all 0.2s;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.corp-icon-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.corp-btn-edit { background: #3b82f6; }
+.corp-btn-user { background: #f59e0b; }
+.corp-btn-del { background: #ef4444; }
+
+/* Custom Pagination wrapper */
+.corp-pagination-wrapper {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#example_wrapper{
+    padding: 0px !important;
+}
+.dt-buttons{
+    margin: 10px;
+}
+
+/* Container spacing for the DataTables export buttons */
+.creative-table-wrapper .dt-buttons.btn-group {
+    display: flex;
+    gap: 12px;
+    /* margin-bottom: 20px;
+    padding: 10px 20px 0 20px; */
+}
+
+/* Modern styling for individual DataTables buttons */
+.creative-table-wrapper .dt-buttons .btn.btn-secondary {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    color: #475569 !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    padding: 8px 18px !important;
+    
+    /* Override Bootstrap's connected btn-group look */
+    border-radius: 8px !important; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Highly visible hover state (Matches your brand blue) */
+.creative-table-wrapper .dt-buttons .btn.btn-secondary:hover {
+    background: linear-gradient(90deg, #00afef, #0284c7) !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+    box-shadow: 0 6px 15px rgba(0, 175, 239, 0.25) !important;
+    transform: translateY(-2px);
+}
+
+/* 
+  Injecting Bootstrap Icons into the DataTables buttons via CSS 
+  so you don't have to edit any Javascript!
+*/
+.creative-table-wrapper .dt-buttons .buttons-copy::before {
+    content: '\F28E'; /* bi-files */
+    font-family: 'bootstrap-icons';
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.creative-table-wrapper .dt-buttons .buttons-excel::before {
+    content: '\F3E0'; /* bi-file-earmark-excel */
+    font-family: 'bootstrap-icons';
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.creative-table-wrapper .dt-buttons .buttons-csv::before {
+    content: '\F364'; /* bi-filetype-csv */
+    font-family: 'bootstrap-icons';
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.creative-table-wrapper .dt-buttons .buttons-print::before {
+    content: '\F4F1'; /* bi-printer */
+    font-family: 'bootstrap-icons';
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+/* Ensure icons turn white on hover */
+.creative-table-wrapper .dt-buttons .btn.btn-secondary:hover::before {
+    color: #ffffff !important;
+}
+
+/* Clean up the DataTables Search box placement to align nicely with the new buttons */
+.creative-table-wrapper .dataTables_filter {
+    padding: 10px 20px 0 20px;
+}
+
+.creative-table-wrapper .dataTables_filter input {
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    padding: 6px 12px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.creative-table-wrapper .dataTables_filter input:focus {
+    border-color: #00afef;
+    box-shadow: 0 0 0 3px rgba(0, 175, 239, 0.1);
+}
+
+/* =========================================
+   Modern Corporate Pagination
+========================================= */
+
+/* Add a small gap between pagination items to detach them */
+.creative-table-wrapper .pagination {
+    gap: 6px;
+    margin-bottom: 0;
+}
+
+/* Base styling for all pagination buttons */
+.creative-table-wrapper .page-item .page-link {
+    border: none !important;
+    background: transparent;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 8px !important; /* Modern squircle shape */
+    min-width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover Effect for inactive links */
+.creative-table-wrapper .page-item:not(.active):not(.disabled) .page-link:hover {
+    background-color: rgba(0, 175, 239, 0.1);
+    color: #00afef;
+    transform: translateY(-2px);
+}
+
+/* Active Page Badge (Glowing Blue Gradient) */
+.creative-table-wrapper .page-item.active .page-link {
+    background: linear-gradient(135deg, #00afef, #0284c7) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(0, 175, 239, 0.3) !important;
+    transform: translateY(-2px);
+}
+
+/* Clean up disabled states (Prev/Next arrows when at ends) */
+.creative-table-wrapper .page-item.disabled .page-link {
+    color: #cbd5e1 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Focus state removal to keep it clean after clicking */
+.creative-table-wrapper .page-link:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Styling the "Showing 1 to 10 of XYZ results" text */
+.creative-table-wrapper p.small.text-muted {
+    font-size: 0.85rem;
+    color: #64748b !important;
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-weight: 600 !important;
+}
+
+/* Emphasize the numbers in the results text */
+.creative-table-wrapper p.small.text-muted .fw-semibold {
+    color: #1e293b;
+    font-weight: 800 !important;
+    margin: 0 2px;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>*{
+    --bs-table-accent-bg: #ffffff !important;
+}
+
+.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th{
+        border: 0 !important;
+}
+
+.table-bordered > thead > tr > td, .table-bordered > thead > tr > th{
+        border: 0 !important;
+}
+
+
+.dataTables_length{
+    margin: 10px 0px 5px 20px;
+}
+
+
+
+/* INputs */
+
+/* Modern Label Styling */
+.creative-label {
+    font-weight: 700;
+    color: #475569; 
+    margin-bottom: 8px; 
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+/* Seamless Input Group Wrapper */
+.creative-input-group {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+/* Hover State */
+.creative-input-group:hover {
+    background: #ffffff;
+    border-color: #cbd5e1;
+}
+
+/* Focus State (When user clicks inside) */
+.creative-input-group:focus-within {
+    background: #ffffff;
+    border-color: #00afef; /* Brand Blue */
+    box-shadow: 0 0 0 4px rgba(0, 175, 239, 0.15); /* Soft glowing ring */
+}
+
+/* The actual input field (invisible background) */
+.creative-input-group .form-control {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    color: #1e293b;
+    font-weight: 500;
+    width: 100%;
+}
+
+.creative-input-group .form-control::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+/* The Icon inside the input */
+.creative-input-group .input-group-text {
+    border: none !important;
+    background: transparent !important;
+    color: #94a3b8;
+    padding: 14px 18px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+/* Make the icon glow blue when input is focused */
+.creative-input-group:focus-within .input-group-text {
+    color: #00afef;
+}
+
+/* Error State Handling */
+.creative-input-group:has(.is-invalid) {
+    border-color: #ef4444;
+    background: #fef2f2;
+}
+.creative-input-group:has(.is-invalid):focus-within {
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15);
+}
+.creative-input-group:has(.is-invalid) .input-group-text {
+    color: #ef4444;
+}
+
+
+
+
+
+ .dataTables_wrapper .dataTables_info{
+    padding: 18px !important;
+}
+
+
+
+
+/* =========================================================
+   PREMIUM SELECT2 MULTIPLE DESIGN
+========================================================= */
+
+/* Make the Select2 box completely transparent so the .creative-input-group handles the border & glow */
+.creative-input-group .select2-container {
+    width: 100% !important;
+}
+
+.creative-input-group .select2-selection--multiple {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    min-height: 48px; /* Matches your other inputs */
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+/* The Selected Tags (Modern Pills) */
+.creative-input-group .select2-selection__choice {
+    background: linear-gradient(135deg, rgba(0, 175, 239, 0.1), rgba(2, 132, 199, 0.1));
+    border: 1px solid rgba(0, 175, 239, 0.2) !important;
+    border-radius: 8px !important;
+    color: #0284c7 !important; /* Deep brand blue text */
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 6px 12px 6px 28px !important; /* Space for the 'X' on the left */
+    margin-top: 6px !important;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 175, 239, 0.05);
+    transition: all 0.2s ease;
+	color: #fff !important;
+}
+
+.creative-input-group .select2-selection__choice:hover {
+    background: rgba(239, 68, 68, 0.05); /* Slight red tint on hover for deletion */
+    border-color: rgba(239, 68, 68, 0.3) !important;
+}
+
+/* The 'X' Remove Button */
+.creative-input-group .select2-selection__choice__remove {
+    color: #00afef !important;
+    position: absolute !important;
+    left: 8px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    border: none !important;
+    background: transparent !important;
+    font-weight: 900 !important;
+    font-size: 1.1rem !important;
+    padding: 0 !important;
+    transition: color 0.2s ease;
+}
+
+.creative-input-group .select2-selection__choice__remove:hover {
+    color: #ef4444 !important; /* Turns red when hovered */
+    background: transparent !important;
+}
+
+/* Typing Input Field */
+.creative-input-group .select2-search__field {
+    color: #1e293b !important;
+    font-size: 0.95rem !important;
+    margin-top: 8px !important;
+    padding-left: 8px !important;
+    font-family: inherit !important;
+}
+
+.creative-input-group .select2-search__field::placeholder {
+    color: #94a3b8;
+}
+
+/* =========================================================
+   DROPDOWN MENU (The list of staff)
+========================================================= */
+.select2-dropdown {
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08) !important;
+    overflow: hidden;
+    z-index: 9999;
+    margin-top: 5px;
+}
+
+.select2-results__option {
+    padding: 12px 18px !important;
+    font-size: 0.9rem;
+    color: #475569;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+/* Hovered / Focused Option */
+.select2-results__option--highlighted[aria-selected] {
+    background-color: rgba(0, 175, 239, 0.08) !important;
+    color: #00afef !important;
+    font-weight: 700 !important;
+    padding-left: 24px !important; /* Premium slide-in effect */
+}
+
+/* Already Selected Option */
+.select2-results__option[aria-selected="true"] {
+    background-color: #f8fafc !important;
+    color: #94a3b8 !important;
+    text-decoration: line-through; /* Cool UI trick: strikes through picked names */
+}
+
+
+
+
+.theme-primary .btn-primary{
+    background: linear-gradient(90deg, #00afef, #0284c7);
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(0, 175, 239, 0.2);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.form-label{
+    color: #475569 !important;
+    margin-bottom: 8px !important;
+    letter-spacing: 0.5px !important;
+    display: block !important;
+    font-weight: 500 !important;
+}
+
+
+.input-group{
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    overflow: hidden !important;
+}
+
+
+.form-control{
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 14px 18px !important;
+    font-size: 0.95rem !important;
+    color: #1e293b !important;
+    font-weight: 500 !important; 
+}
+
+.input-group-text{
+    border: none !important;
+    background: transparent !important;
+    color: #94a3b8 !important;
+    padding: 14px 18px !important;
+    font-size: 1.2rem !important;
+    transition: color 0.3s ease !important;
+}
+
+
+
+/* Seamless Input Group Wrapper */
+ 
+/* Hover State */
+.input-group:hover {
+    background: #ffffff !important;
+    border-color: #cbd5e1 !important;
+}
+
+/* Focus State (When user clicks inside) */
+.input-group:focus-within {
+    background: #ffffff !important;
+    border-color: #00afef !important; /* Brand Blue */
+    box-shadow: 0 0 0 4px rgba(0, 175, 239, 0.15) !important; /* Soft glowing ring */
+}
+ 
+
+.input-group .form-control::placeholder {
+    color: #94a3b8 !important;
+    font-weight: 400 !important;
+} 
+
+/* Make the icon glow blue when input is focused */
+.input-group:focus-within .input-group-text {
+    color: #00afef !important;
+}
+
+/* Error State Handling */
+.input-group:has(.is-invalid) {
+    border-color: #ef4444 !important;
+    background: #fef2f2 !important;
+}
+.input-group:has(.is-invalid):focus-within {
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15) !important;
+}
+.input-group:has(.is-invalid) .input-group-text {
+    color: #ef4444 !important;
+}
+
+
+.table-responsive{
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.03) !important;
+    border: 1px solid #e2e8f0 !important;
+    overflow: auto !important; /* Keeps rounded corners clean */
+    margin-top: 15px !important;
+}
+
+.dataTable{
+        margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.dataTable thead{
+    background: linear-gradient(90deg, #1A73E8, #4ECDC4) !important;
+    border-bottom: 2px solid #e2e8f0 !important;
+}
+
+.dataTable th{
+        color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.8px !important;
+    padding: 16px 20px !important;
+    white-space: nowrap !important;
+}
+
+.dataTable td{
+    padding: 16px 20px !important;
+    transition: all 0.2s ease;
+}
+
+.dataTable tbody tr:nth-child(odd) {
+    background-color: #ffffff !important;
+}
+
+.dataTable tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.dataTable tbody tr:hover {
+    background-color: #f0f9ff;
+    transform: scale(1.001);
+    box-shadow: 0 2px 10px rgba(0, 175, 239, 0.05);
+}
+
+.dataTable a{
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff !important;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.text_search{
+    border: 1px solid #dadada !important;
+    padding: 8px !important;
+    height: auto !important;
+    margin: 10px 14px !important; 
+    border-radius: 10px !important;
+}
+
+.table-responsive .pagination {
+    gap: 6px;
+    margin-bottom: 0;
+}
+
+.table-responsive .page-item.disabled .page-link {
+    color: #cbd5e1 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.table-responsive .page-item .page-link {
+    border: none !important;
+    background: transparent;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 8px !important;
+    min-width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.table-responsive .page-item.active .page-link{
+    background: linear-gradient(135deg, #00afef, #0284c7) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(0, 175, 239, 0.3) !important;
+    transform: translateY(-2px);
+}
+
+.table-responsive .dt-buttons.btn-group {
+    display: flex;
+    gap: 12px;
+}
+
+.table-responsive .dt-buttons .btn.btn-secondary {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    color: #475569 !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    padding: 8px 18px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-responsive .dt-buttons .buttons-copy::before {
+    content: '\F28E';
+    font-family: 'bootstrap-icons';
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.table-responsive .dt-buttons .buttons-excel::before {
+    content: '\F3E0';
+    font-family: 'bootstrap-icons';
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.table-responsive .dt-buttons .buttons-csv::before {
+    content: '\F364';
+    font-family: 'bootstrap-icons';
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.table-responsive .dt-buttons .buttons-print::before {
+    content: '\F4F1';
+    font-family: 'bootstrap-icons';
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.table-responsive .dt-buttons .btn.btn-secondary:hover {
+    background: linear-gradient(90deg, #00afef, #0284c7) !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+    box-shadow: 0 6px 15px rgba(0, 175, 239, 0.25) !important;
+    transform: translateY(-2px);
+}
+
+
+
+.nowrap-table > tbody > tr > td, .nowrap-table > tbody > tr > th{
+    white-space: nowrap;
+}
+
+textarea.form-control{
+    border: 1px solid #d2d2d2 !important;
+    border-radius: 10px !important;
+}
+
+
+.select2-container--default .select2-selection--single{
+    padding: 10px 16px !important;
+    height: auto !important;
+    border: 0 !important;
+    background: #f8fafc !important;
+}
+
+
+
+/* custom */
+.custom-max-width {
+    width: max-content;
+}
+
+
+.table-text {
+    display: inline-block;
+    max-width: 180px;
+    /* Adjust width as needed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    cursor: pointer;
+}
