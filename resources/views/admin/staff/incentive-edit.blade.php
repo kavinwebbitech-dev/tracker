@@ -49,7 +49,7 @@
 									<div class="col-md-12">
 										<div class="form-group">
 											<label class="form-label">Select Staff</label>
-											<div class="creative-input-group mb-3">
+											<div class="creative-input-group in-bord mb-3">
 												<select class="select2 form-control @error('staff_id') is-invalid @enderror" name="staff_id" style="width: 100%;">
 													<option value="">Select Staff</option>
 													@if(count($sub_admin) > 0)
@@ -72,18 +72,18 @@
 					                  <div class="row mb-3 @if($key != 0) dynamicrow @endif">
 					                  		<input type="hidden" name="addmore[{{ $key }}][id]" value="{{ $value->id }}">
 					                      <div class="col-md-4">
-											<div class="creative-input-group">
+											<div class="creative-input-group in-bord">
 												<input type="text" name="addmore[{{ $key }}][start_amount]" value="{{ $value->start_amount }}" placeholder="Start Amount" class="form-control">
 											</div> 
 					                      </div>
 					                      <div class="col-md-4">
-											<div class="creative-input-group">
+											<div class="creative-input-group in-bord">
 												<input type="text" name="addmore[{{ $key }}][end_amount]" value="{{ $value->end_amount }}" placeholder="End Amount" class="form-control" />
 											</div>
 					                          
 					                      </div>
 					                      <div class="col-md-3">
-											<div class="creative-input-group">
+											<div class="creative-input-group in-bord">
 												 <input type="text" name="addmore[{{ $key }}][incentive]" value="{{ $value->amount }}" placeholder="Incentive Amount" class="form-control" />
 											</div>
 					                         
@@ -116,7 +116,7 @@
 									{{-- <div class="col-md-12">
 										<div class="form-group">
 						                    <label class="form-label">Status</label>
-						                    <div class="input-group mb-3">
+						                    <div class="input-group in-bord mb-3">
 						                        <select name="status" class="form-control" id="status">
 						                            <option value="Active">Active</option>
 						                            <option value="In Active">In Active</option>
@@ -164,19 +164,19 @@
             '<div class="row dynamicrow mb-3">' +
 
 				'<div class="col-md-4">' +
-					'<div class="creative-input-group">' +
+					'<div class="creative-input-group in-bord">' +
 						'<input type="text" name="addmore[' + i + '][start_amount]" placeholder="Start Amount" class="form-control" />' +
 					'</div>' +
 				'</div>' +
 
 				'<div class="col-md-4">' +
-					'<div class="creative-input-group">' +
+					'<div class="creative-input-group in-bord">' +
 						'<input type="text" name="addmore[' + i + '][end_amount]" placeholder="End Amount" class="form-control" />' +
 					'</div>' +
 				'</div>' +
 
 				'<div class="col-md-3">' +
-					'<div class="creative-input-group">' +
+					'<div class="creative-input-group in-bord">' +
 						'<input type="text" name="addmore[' + i + '][incentive]" placeholder="Incentive Amount" class="form-control" />' +
 					'</div>' +
 				'</div>' +

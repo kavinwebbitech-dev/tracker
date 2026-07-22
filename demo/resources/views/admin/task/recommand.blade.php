@@ -50,14 +50,14 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Task Type</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control @error('task_type') is-invalid @enderror" name="task_type" id="date_type" onchange="cusom_date()">
 													<option value="">Select Task Type</option>
 													<option value="custom">One time Task</option>
 													<option value="recurring">Recurring</option>
 													<option value="recommend">Recommend</option>
 												</select>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('date_type')
 			                                    <span class="invalid-feedback" role="alert">
@@ -70,9 +70,9 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Task Name</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('task_name') is-invalid @enderror" name="task_name" placeholder="Task Name" value="{{ old('task_name') }}" required>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('task_name')
 			                                    <span class="invalid-feedback" role="alert">

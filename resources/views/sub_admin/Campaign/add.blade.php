@@ -50,7 +50,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Template Name</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('template_name') is-invalid @enderror" name="template_name" placeholder="Template Name" value="{{ old('template_name') }}" required>
 											</div>
 											@error('template_name')
@@ -71,7 +71,7 @@
 													<a href="<?php echo url('');?>/public/admin_assets/images/new_campaign.xlsx" download style="float: right;">Sample File</a>
 												</div>
 											</div>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="file" class="form-control @error('upload_csv') is-invalid @enderror" name="upload_csv" placeholder="Email" value="{{ old('upload_csv') }}" required>
 											</div>
 											@error('upload_csv')
@@ -85,7 +85,7 @@
 									{{-- <div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Select User</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control select2 @error('project_id') is-invalid @enderror" name="project_id[]" id="project_id" multiple="multiple" data-placeholder="Select User">
 													@if($leads_details)
 													@foreach($leads_details as $key => $admin)
@@ -105,7 +105,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Campaign Name</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('campaign_name') is-invalid @enderror" name="campaign_name" placeholder="Campaign Name" value="{{ old('campaign_name') }}" required>
 											</div>
 											@error('campaign_name')
@@ -119,7 +119,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Campaign Image</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="file" class="form-control @error('campaign_image') is-invalid @enderror" name="campaign_image" placeholder="Email" value="{{ old('campaign_image') }}" required>
 											</div>
 											@error('campaign_image')
@@ -133,7 +133,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Description</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<textarea name="description" rows="5" cols="80" style="width: 100%;border: 1px solid #dcd9d9;border-radius: 10px;padding: 10px;"></textarea>
 											</div>
 										</div>

@@ -730,7 +730,7 @@
 }
 
 /* Seamless Input Group Wrapper */
-.creative-input-group {
+.creative-input-group in-bord {
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 10px;
@@ -741,13 +741,13 @@
 }
 
 /* Hover State */
-.creative-input-group:hover {
+.creative-input-group in-bord:hover {
     background: #ffffff;
     border-color: #cbd5e1;
 }
 
 /* Focus State (When user clicks inside) */
-.creative-input-group:focus-within {
+.creative-input-group in-bord:focus-within {
     background: #ffffff;
     border-color: #00afef;
     /* Brand Blue */
@@ -756,7 +756,7 @@
 }
 
 /* The actual input field (invisible background) */
-.creative-input-group .form-control {
+.creative-input-group in-bord .form-control {
     border: none !important;
     background: transparent !important;
     box-shadow: none !important;
@@ -767,13 +767,13 @@
     width: 100%;
 }
 
-.creative-input-group .form-control::placeholder {
+.creative-input-group in-bord .form-control::placeholder {
     color: #94a3b8;
     font-weight: 400;
 }
 
 /* The Icon inside the input */
-.creative-input-group .input-group-text {
+.creative-input-group in-bord .input-group in-bord-text {
     border: none !important;
     background: transparent !important;
     color: #94a3b8;
@@ -783,21 +783,21 @@
 }
 
 /* Make the icon glow blue when input is focused */
-.creative-input-group:focus-within .input-group-text {
+.creative-input-group in-bord:focus-within .input-group in-bord-text {
     color: #00afef;
 }
 
 /* Error State Handling */
-.creative-input-group:has(.is-invalid) {
+.creative-input-group in-bord:has(.is-invalid) {
     border-color: #ef4444;
     background: #fef2f2;
 }
 
-.creative-input-group:has(.is-invalid):focus-within {
+.creative-input-group in-bord:has(.is-invalid):focus-within {
     box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15);
 }
 
-.creative-input-group:has(.is-invalid) .input-group-text {
+.creative-input-group in-bord:has(.is-invalid) .input-group in-bord-text {
     color: #ef4444;
 }
 
@@ -816,12 +816,12 @@
    PREMIUM SELECT2 MULTIPLE DESIGN
 ========================================================= */
 
-/* Make the Select2 box completely transparent so the .creative-input-group handles the border & glow */
-.creative-input-group .select2-container {
+/* Make the Select2 box completely transparent so the .creative-input-group in-bord handles the border & glow */
+.creative-input-group in-bord .select2-container {
     width: 100% !important;
 }
 
-.creative-input-group .select2-selection--multiple {
+.creative-input-group in-bord .select2-selection--multiple {
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
@@ -832,7 +832,7 @@
 }
 
 /* The Selected Tags (Modern Pills) */
-.creative-input-group .select2-selection__choice {
+.creative-input-group in-bord .select2-selection__choice {
     background: linear-gradient(135deg, rgba(0, 175, 239, 0.1), rgba(2, 132, 199, 0.1));
     border: 1px solid rgba(0, 175, 239, 0.2) !important;
     border-radius: 8px !important;
@@ -849,14 +849,14 @@
     color: #fff !important;
 }
 
-.creative-input-group .select2-selection__choice:hover {
+.creative-input-group in-bord .select2-selection__choice:hover {
     background: rgba(239, 68, 68, 0.05);
     /* Slight red tint on hover for deletion */
     border-color: rgba(239, 68, 68, 0.3) !important;
 }
 
 /* The 'X' Remove Button */
-.creative-input-group .select2-selection__choice__remove {
+.creative-input-group in-bord .select2-selection__choice__remove {
     color: #00afef !important;
     position: absolute !important;
     left: 8px !important;
@@ -870,14 +870,14 @@
     transition: color 0.2s ease;
 }
 
-.creative-input-group .select2-selection__choice__remove:hover {
+.creative-input-group in-bord .select2-selection__choice__remove:hover {
     color: #ef4444 !important;
     /* Turns red when hovered */
     background: transparent !important;
 }
 
 /* Typing Input Field */
-.creative-input-group .select2-search__field {
+.creative-input-group in-bord .select2-search__field {
     color: #1e293b !important;
     font-size: 0.95rem !important;
     margin-top: 8px !important;
@@ -885,7 +885,7 @@
     font-family: inherit !important;
 }
 
-.creative-input-group .select2-search__field::placeholder {
+.creative-input-group in-bord .select2-search__field::placeholder {
     color: #94a3b8;
 }
 
@@ -956,7 +956,7 @@
 }
 
 
-.input-group {
+.input-group in-bord {
     background: #f8fafc !important;
     border: 1px solid #e2e8f0 !important;
     border-radius: 10px !important;
@@ -977,7 +977,7 @@
     font-weight: 500 !important;
 }
 
-.input-group-text {
+.input-group in-bord-text {
     border: none !important;
     background: transparent !important;
     color: #94a3b8 !important;
@@ -991,13 +991,13 @@
 /* Seamless Input Group Wrapper */
 
 /* Hover State */
-.input-group:hover {
+.input-group in-bord:hover {
     background: #ffffff !important;
     border-color: #cbd5e1 !important;
 }
 
 /* Focus State (When user clicks inside) */
-.input-group:focus-within {
+.input-group in-bord:focus-within {
     background: #ffffff !important;
     border-color: #00afef !important;
     /* Brand Blue */
@@ -1006,27 +1006,27 @@
 }
 
 
-.input-group .form-control::placeholder {
+.input-group in-bord .form-control::placeholder {
     color: #94a3b8 !important;
     font-weight: 400 !important;
 }
 
 /* Make the icon glow blue when input is focused */
-.input-group:focus-within .input-group-text {
+.input-group in-bord:focus-within .input-group in-bord-text {
     color: #00afef !important;
 }
 
 /* Error State Handling */
-.input-group:has(.is-invalid) {
+.input-group in-bord:has(.is-invalid) {
     border-color: #ef4444 !important;
     background: #fef2f2 !important;
 }
 
-.input-group:has(.is-invalid):focus-within {
+.input-group in-bord:has(.is-invalid):focus-within {
     box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15) !important;
 }
 
-.input-group:has(.is-invalid) .input-group-text {
+.input-group in-bord:has(.is-invalid) .input-group in-bord-text {
     color: #ef4444 !important;
 }
 
@@ -1237,4 +1237,11 @@ textarea.form-control {
     text-overflow: ellipsis;
     vertical-align: middle;
     cursor: pointer;
+}
+
+/* input box */
+.in-bord {
+    border: 1px solid #e2e8f0 !important;
+    background-color: #fff !important;
+    border-radius: 8px !important;
 }

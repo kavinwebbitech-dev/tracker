@@ -56,7 +56,7 @@
                         <div class="col-md-7"></div>
                         <div class="col-md-3">
                             {{-- <div class="form-group">
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <select class="form-control select2 @error('project_id') is-invalid @enderror" name="project_id[]" id="project_id" data-placeholder="Select Status">
                                         <option value="">Select Status</option>
                                         @if($lead_status)
@@ -93,7 +93,7 @@
                                 <th style="width: 20%;">Campaign Name</th>
                                 <th style="width: 20%;">Campaign Image</th>
                                 <th style="width: 30%;">Campaign Content</th>
-                                <th style="width: 5%;">Number of Campaign user</th>
+                                <th style="width: 15%;">Number of Campaign user</th>
                                 <th style="width: 5%;">Action</th>
                             </tr>
                         </thead>

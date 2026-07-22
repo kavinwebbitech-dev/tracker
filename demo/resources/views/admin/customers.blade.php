@@ -179,9 +179,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Customers Name</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="text" class="form-control @error('fld_name') is-invalid @enderror" id="fld_name" name="fld_name" placeholder="Customers Name" value="{{ old('fld_name') }}" required>
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('fld_name')
                         <span class="invalid-feedback" role="alert">
@@ -194,9 +194,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Email Address</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="email" class="form-control @error('fld_email') is-invalid @enderror" id="fld_email" name="fld_email" placeholder="Email Address" value="{{ old('fld_email') }}">
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('fld_email')
                         <span class="invalid-feedback" role="alert">
@@ -209,9 +209,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Phone Number</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="number" class="form-control @error('fld_phone') is-invalid @enderror" id="fld_phone" name="fld_phone" placeholder="Phone Number" value="{{ old('fld_phone') }}">
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('fld_phone')
                         <span class="invalid-feedback" role="alert">
@@ -225,9 +225,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Address</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="text" class="form-control @error('fld_address') is-invalid @enderror" id="fld_address" name="fld_address" placeholder="Address" value="{{ old('fld_address') }}">
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('fld_address')
                         <span class="invalid-feedback" role="alert">
@@ -240,9 +240,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Company Name</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="text" class="form-control @error('fld_company_name') is-invalid @enderror" id="fld_company_name" name="fld_company_name" placeholder="Company Name" value="{{ old('fld_company_name') }}">
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('fld_company_name')
                         <span class="invalid-feedback" role="alert">
@@ -255,9 +255,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">GST Number</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="text" class="form-control @error('fld_customer_gstno') is-invalid @enderror" id="fld_customer_gstno" name="fld_customer_gstno" placeholder="GST Number" value="{{ old('fld_customer_gstno') }}">
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('fld_customer_gstno')
                         <span class="invalid-feedback" role="alert">
@@ -270,9 +270,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Date of Birth</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="date" class="form-control @error('fld_customer_dob') is-invalid @enderror" id="fld_customer_dob" name="fld_customer_dob" placeholder="Business Name" value="{{ old('fld_customer_dob') }}">
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('service')
                         <span class="invalid-feedback" role="alert">
@@ -285,12 +285,12 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Status</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <select name="fld_status" class="form-control" id="fld_status">
                             <option value="1">Active</option>
                             <option value="0">In Active</option>
                         </select>
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('fld_status')
                         <span class="invalid-feedback" role="alert">
@@ -331,9 +331,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Customers Name</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="text" class="form-control @error('fld_name1') is-invalid @enderror" id="fld_name1" name="fld_name1" placeholder="Customers Name" value="{{ old('fld_name1') }}" required>
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('fld_name1')
                         <span class="invalid-feedback" role="alert">
@@ -346,9 +346,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Email Address</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="email" class="form-control @error('fld_email1') is-invalid @enderror" id="fld_email1" name="fld_email1" placeholder="Email Address" value="{{ old('fld_email1') }}">
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('fld_email1')
                         <span class="invalid-feedback" role="alert">
@@ -361,9 +361,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Phone Number</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="text" class="form-control @error('fld_phone1') is-invalid @enderror" id="fld_phone1" name="fld_phone1" placeholder="Phone Number" value="{{ old('fld_phone1') }}">
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('fld_phone')
                         <span class="invalid-feedback" role="alert">
@@ -376,9 +376,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Password</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" placeholder="Password" value="{{ old('password') }}">
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('password')
                         <span class="invalid-feedback" role="alert">

@@ -2585,7 +2585,7 @@ textarea.form-control.is-invalid {
     display: inline-block;
   }
 
-  .form-inline .input-group,
+  .form-inline .input-group in-bord,
   .form-inline .custom-select {
     width: auto;
   }
@@ -3657,7 +3657,7 @@ input[type=button].btn-block {
   justify-content: flex-start;
 }
 
-.btn-toolbar .input-group {
+.btn-toolbar .input-group in-bord {
   width: auto;
 }
 
@@ -3747,7 +3747,7 @@ input[type=button].btn-block {
   pointer-events: none;
 }
 
-.input-group {
+.input-group in-bord {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -3755,10 +3755,10 @@ input[type=button].btn-block {
   width: 100%;
 }
 
-.input-group > .form-control,
-.input-group > .form-control-plaintext,
-.input-group > .custom-select,
-.input-group > .custom-file {
+.input-group in-bord > .form-control,
+.input-group in-bord > .form-control-plaintext,
+.input-group in-bord > .custom-select,
+.input-group in-bord > .custom-file {
   position: relative;
   flex: 1 1 auto;
   width: 1%;
@@ -3766,95 +3766,95 @@ input[type=button].btn-block {
   margin-bottom: 0;
 }
 
-.input-group > .form-control + .form-control,
-.input-group > .form-control + .custom-select,
-.input-group > .form-control + .custom-file,
-.input-group > .form-control-plaintext + .form-control,
-.input-group > .form-control-plaintext + .custom-select,
-.input-group > .form-control-plaintext + .custom-file,
-.input-group > .custom-select + .form-control,
-.input-group > .custom-select + .custom-select,
-.input-group > .custom-select + .custom-file,
-.input-group > .custom-file + .form-control,
-.input-group > .custom-file + .custom-select,
-.input-group > .custom-file + .custom-file {
+.input-group in-bord > .form-control + .form-control,
+.input-group in-bord > .form-control + .custom-select,
+.input-group in-bord > .form-control + .custom-file,
+.input-group in-bord > .form-control-plaintext + .form-control,
+.input-group in-bord > .form-control-plaintext + .custom-select,
+.input-group in-bord > .form-control-plaintext + .custom-file,
+.input-group in-bord > .custom-select + .form-control,
+.input-group in-bord > .custom-select + .custom-select,
+.input-group in-bord > .custom-select + .custom-file,
+.input-group in-bord > .custom-file + .form-control,
+.input-group in-bord > .custom-file + .custom-select,
+.input-group in-bord > .custom-file + .custom-file {
   margin-left: -1px;
 }
 
-.input-group > .form-control:focus,
-.input-group > .custom-select:focus,
-.input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {
+.input-group in-bord > .form-control:focus,
+.input-group in-bord > .custom-select:focus,
+.input-group in-bord > .custom-file .custom-file-input:focus ~ .custom-file-label {
   z-index: 3;
 }
 
-.input-group > .custom-file .custom-file-input:focus {
+.input-group in-bord > .custom-file .custom-file-input:focus {
   z-index: 4;
 }
 
-.input-group > .form-control:not(:last-child),
-.input-group > .custom-select:not(:last-child) {
+.input-group in-bord > .form-control:not(:last-child),
+.input-group in-bord > .custom-select:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.input-group > .form-control:not(:first-child),
-.input-group > .custom-select:not(:first-child) {
+.input-group in-bord > .form-control:not(:first-child),
+.input-group in-bord > .custom-select:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.input-group > .custom-file {
+.input-group in-bord > .custom-file {
   display: flex;
   align-items: center;
 }
 
-.input-group > .custom-file:not(:last-child) .custom-file-label,
-.input-group > .custom-file:not(:last-child) .custom-file-label::after {
+.input-group in-bord > .custom-file:not(:last-child) .custom-file-label,
+.input-group in-bord > .custom-file:not(:last-child) .custom-file-label::after {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.input-group > .custom-file:not(:first-child) .custom-file-label {
+.input-group in-bord > .custom-file:not(:first-child) .custom-file-label {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.input-group-prepend,
-.input-group-append {
+.input-group in-bord-prepend,
+.input-group in-bord-append {
   display: flex;
 }
 
-.input-group-prepend .btn,
-.input-group-append .btn {
+.input-group in-bord-prepend .btn,
+.input-group in-bord-append .btn {
   position: relative;
   z-index: 2;
 }
 
-.input-group-prepend .btn:focus,
-.input-group-append .btn:focus {
+.input-group in-bord-prepend .btn:focus,
+.input-group in-bord-append .btn:focus {
   z-index: 3;
 }
 
-.input-group-prepend .btn + .btn,
-.input-group-prepend .btn + .input-group-text,
-.input-group-prepend .input-group-text + .input-group-text,
-.input-group-prepend .input-group-text + .btn,
-.input-group-append .btn + .btn,
-.input-group-append .btn + .input-group-text,
-.input-group-append .input-group-text + .input-group-text,
-.input-group-append .input-group-text + .btn {
+.input-group in-bord-prepend .btn + .btn,
+.input-group in-bord-prepend .btn + .input-group in-bord-text,
+.input-group in-bord-prepend .input-group in-bord-text + .input-group in-bord-text,
+.input-group in-bord-prepend .input-group in-bord-text + .btn,
+.input-group in-bord-append .btn + .btn,
+.input-group in-bord-append .btn + .input-group in-bord-text,
+.input-group in-bord-append .input-group in-bord-text + .input-group in-bord-text,
+.input-group in-bord-append .input-group in-bord-text + .btn {
   margin-left: -1px;
 }
 
-.input-group-prepend {
+.input-group in-bord-prepend {
   margin-right: -1px;
 }
 
-.input-group-append {
+.input-group in-bord-append {
   margin-left: -1px;
 }
 
-.input-group-text {
+.input-group in-bord-text {
   display: flex;
   align-items: center;
   padding: 0.375rem 0.75rem;
@@ -3870,66 +3870,66 @@ input[type=button].btn-block {
   border-radius: 0.25rem;
 }
 
-.input-group-text input[type=radio],
-.input-group-text input[type=checkbox] {
+.input-group in-bord-text input[type=radio],
+.input-group in-bord-text input[type=checkbox] {
   margin-top: 0;
 }
 
-.input-group-lg > .form-control:not(textarea),
-.input-group-lg > .custom-select {
+.input-group in-bord-lg > .form-control:not(textarea),
+.input-group in-bord-lg > .custom-select {
   height: calc(1.5em + 1rem + 2px);
 }
 
-.input-group-lg > .form-control,
-.input-group-lg > .custom-select,
-.input-group-lg > .input-group-prepend > .input-group-text,
-.input-group-lg > .input-group-append > .input-group-text,
-.input-group-lg > .input-group-prepend > .btn,
-.input-group-lg > .input-group-append > .btn {
+.input-group in-bord-lg > .form-control,
+.input-group in-bord-lg > .custom-select,
+.input-group in-bord-lg > .input-group in-bord-prepend > .input-group in-bord-text,
+.input-group in-bord-lg > .input-group in-bord-append > .input-group in-bord-text,
+.input-group in-bord-lg > .input-group in-bord-prepend > .btn,
+.input-group in-bord-lg > .input-group in-bord-append > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.125rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
 
-.input-group-sm > .form-control:not(textarea),
-.input-group-sm > .custom-select {
+.input-group in-bord-sm > .form-control:not(textarea),
+.input-group in-bord-sm > .custom-select {
   height: calc(1.5em + 0.5rem + 2px);
 }
 
-.input-group-sm > .form-control,
-.input-group-sm > .custom-select,
-.input-group-sm > .input-group-prepend > .input-group-text,
-.input-group-sm > .input-group-append > .input-group-text,
-.input-group-sm > .input-group-prepend > .btn,
-.input-group-sm > .input-group-append > .btn {
+.input-group in-bord-sm > .form-control,
+.input-group in-bord-sm > .custom-select,
+.input-group in-bord-sm > .input-group in-bord-prepend > .input-group in-bord-text,
+.input-group in-bord-sm > .input-group in-bord-append > .input-group in-bord-text,
+.input-group in-bord-sm > .input-group in-bord-prepend > .btn,
+.input-group in-bord-sm > .input-group in-bord-append > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.7875rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
 
-.input-group-lg > .custom-select,
-.input-group-sm > .custom-select {
+.input-group in-bord-lg > .custom-select,
+.input-group in-bord-sm > .custom-select {
   padding-right: 1.75rem;
 }
 
-.input-group > .input-group-prepend > .btn,
-.input-group > .input-group-prepend > .input-group-text,
-.input-group > .input-group-append:not(:last-child) > .btn,
-.input-group > .input-group-append:not(:last-child) > .input-group-text,
-.input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
+.input-group in-bord > .input-group in-bord-prepend > .btn,
+.input-group in-bord > .input-group in-bord-prepend > .input-group in-bord-text,
+.input-group in-bord > .input-group in-bord-append:not(:last-child) > .btn,
+.input-group in-bord > .input-group in-bord-append:not(:last-child) > .input-group in-bord-text,
+.input-group in-bord > .input-group in-bord-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group in-bord > .input-group in-bord-append:last-child > .input-group in-bord-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.input-group > .input-group-append > .btn,
-.input-group > .input-group-append > .input-group-text,
-.input-group > .input-group-prepend:not(:first-child) > .btn,
-.input-group > .input-group-prepend:not(:first-child) > .input-group-text,
-.input-group > .input-group-prepend:first-child > .btn:not(:first-child),
-.input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
+.input-group in-bord > .input-group in-bord-append > .btn,
+.input-group in-bord > .input-group in-bord-append > .input-group in-bord-text,
+.input-group in-bord > .input-group in-bord-prepend:not(:first-child) > .btn,
+.input-group in-bord > .input-group in-bord-prepend:not(:first-child) > .input-group in-bord-text,
+.input-group in-bord > .input-group in-bord-prepend:first-child > .btn:not(:first-child),
+.input-group in-bord > .input-group in-bord-prepend:first-child > .input-group in-bord-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }

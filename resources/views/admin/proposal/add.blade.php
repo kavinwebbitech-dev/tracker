@@ -50,7 +50,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Name</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Name" value="{{ old('name') }}" required>
 											</div>
 											@error('name')
@@ -63,7 +63,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Date</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="date" class="form-control @error('proposal_date') is-invalid @enderror" name="proposal_date" placeholder="Date" value="{{ old('proposal_date') }}" required>
 											</div>
 											@error('proposal_date')
@@ -92,14 +92,14 @@
 										</div>
 									</div>
 		                            <div class="row mb-3">
-		                            	<div class="col-md-3"><input type="file" name="title_list[0][proposal_documents]" placeholder="Quantity" class="form-control inputnum" /></div>
+		                            	<div class="col-md-3"><input type="file" name="title_list[0][proposal_documents]" placeholder="Quantity" class="form-control inputnum in-bord" /></div>
 								        <div class="col-md-4">
-								            <select class="form-control form-control-sm" name="title_list[0][proposal_type]">
+								            <select class="form-control form-control-sm in-bord" name="title_list[0][proposal_type]">
 								                <option value="New Proposal">New Proposal</option>
 								                <option value="Re-Proposal">Re-Proposal</option>
 								            </select>
 								        </div>
-								        <div class="col-md-3"><input type="text" name="title_list[0][amount]" placeholder="Amount" class="form-control inputnum" /></div>
+								        <div class="col-md-3"><input type="text" name="title_list[0][amount]" placeholder="Amount" class="form-control inputnum in-bord" /></div>
 		                                <div class="col-md-2"><a href="javascript::void(0)" name="add" id="add" title="Add More"><i class="btn btn-success mdi mdi-plus" style="padding: 3px 12px;"></i></a></div>
 		                            </div>
 		                        </div>

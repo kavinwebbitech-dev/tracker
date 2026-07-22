@@ -10,7 +10,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label class="form-label">Category</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <input type="text" class="form-control @error('category') is-invalid @enderror" name="category" id="category" value="{{ $amount_details->category ?? '' }}">
                         </div>
                         @error('category')
@@ -44,7 +44,7 @@
                                 <label class="form-label">₹ Rupees</label>
                             </div>
                         </div>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <input type="text" class="form-control @error('amount') is-invalid @enderror" name="amount" id="amount" value="{{ $amount_details->amount ?? '' }}" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" onkeyup="DollerAmount()">
                         </div>
                         @error('amount')
@@ -57,7 +57,7 @@
                         <label class="form-label">Estimate Time</label>
                         <div class="row">
                             <div class="col-md-4">
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="text" class="form-control @error('estimate_time') is-invalid @enderror" name="estimate_time" id="estimate_time" value="{{ $amount_details->estimate_time ?? '' }}">
                                 </div>
                                 @error('estimate_time')
@@ -68,12 +68,12 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <div class="input-group mb-3">
+                                    <div class="input-group in-bord mb-3">
                                         <select class="form-control @error('estimate_type') is-invalid @enderror" name="estimate_type" id="estimate_type">
                                             <option value="Hours">Hours</option>
                                             <option value="Minutes">Minutes</option>
                                         </select>
-                                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                                     </div>
                                     @error('estimate_type')
                                         <span class="invalid-feedback" role="alert">
@@ -87,7 +87,7 @@
 
                     <div class="form-group">
                         <label class="form-label">Admin Comment</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <textarea name="editor1" id="editor1">
                                 
                             </textarea>

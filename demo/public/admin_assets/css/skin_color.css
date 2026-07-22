@@ -89,7 +89,7 @@ File: scss
     border-bottom-left-radius: 2px; }
     .light-skin .sidebar-form input[type="text"]:focus {
       color: #ffffff; }
-      .light-skin .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+      .light-skin .sidebar-form input[type="text"]:focus + .input-group in-bord-btn .btn {
         color: #ffffff; }
   .light-skin .sidebar-form .btn {
     box-shadow: none;
@@ -513,11 +513,11 @@ body.dark-skin {
     background-image: -webkit-linear-gradient(#F6B749, #F6B749), -webkit-linear-gradient(rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.12));
     background-image: -o-linear-gradient(#F6B749, #F6B749), -o-linear-gradient(rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.12));
     background-image: linear-gradient(#F6B749, #F6B749), linear-gradient(rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.12)); }
-.dark-skin .input-group .input-group-addon {
+.dark-skin .input-group in-bord .input-group in-bord-addon {
   border-color: rgba(255, 255, 255, 0.12);
   color: #b5b5c3;
   background-color: #1b3a70; }
-.dark-skin .input-group-text {
+.dark-skin .input-group in-bord-text {
   border-color: rgba(255, 255, 255, 0.12);
   color: #b5b5c3;
   background-color: #1b3a70; }
@@ -843,7 +843,7 @@ body.dark-skin {
     color: #ffffff; }
     .dark-skin .sidebar-form input[type="text"]:focus {
       color: #ffffff; }
-      .dark-skin .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+      .dark-skin .sidebar-form input[type="text"]:focus + .input-group in-bord-btn .btn {
         color: #ffffff; }
   .dark-skin .sidebar-form .btn {
     box-shadow: none;

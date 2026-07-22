@@ -56,7 +56,7 @@
                         @endif
                         {{-- <div class="col-md-3" id="input_file_col" style="display: none;">
                             <div class="form-group">
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="file" class="form-control @error('bulk_upoad_file') is-invalid @enderror" id="bulk_upoad_file" name="bulk_upoad_file" placeholder="Email Address" value="{{ old('email') }}" required>
                                 </div>
                                 <a href="<?php echo url('');?>/public/admin_assets/images/client_bulk_uploads.xlsx" download>Download Sample File</a>
@@ -145,9 +145,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Name</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="Name" value="{{ old('name') }}" required>
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('name')
                         <span class="invalid-feedback" role="alert">
@@ -160,12 +160,12 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Status</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <select name="status" class="form-control" id="status">
                             <option value="Active">Active</option>
                             <option value="In Active">In Active</option>
                         </select>
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('link')
                         <span class="invalid-feedback" role="alert">

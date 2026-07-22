@@ -62,7 +62,7 @@
                                     <div class="row" style="margin-bottom: 10px;">
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="date"
                                                         class="form-control @error('upload_file') is-invalid @enderror"
                                                         id="start_date" onfocus="'showPicker' in this && this.showPicker()"
@@ -77,7 +77,7 @@
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="date"
                                                         class="form-control @error('upload_file') is-invalid @enderror"
                                                         id="end_date" onfocus="'showPicker' in this && this.showPicker()"
@@ -92,7 +92,7 @@
                                         </div>
 
                                         <div class="col-md-3">
-                                            <div class="input-group mb-3">
+                                            <div class="input-group in-bord mb-3">
                                                 <select class="form-control" id="category_filter" name="category_filter">
                                                     <option value="">All Categories</option>
                                                     @foreach ($categories as $category)
@@ -203,7 +203,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Category Name</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="text" class="form-control @error('name') is-invalid @enderror"
                                         id="category_name" name="name" placeholder="Category Name"
                                         value="{{ old('name') }}" required>
@@ -217,7 +217,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Status</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <select class="form-control" id="category_status" name="status" required>
                                         <option value="Active" {{ old('status') == 'Active' ? 'selected' : '' }}>Active
                                         </option>
@@ -307,7 +307,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Name</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="text" class="form-control @error('name') is-invalid @enderror"
                                         id="name" name="name" placeholder="Name" value="{{ old('name') }}"
                                         required>
@@ -321,7 +321,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Category</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <select class="form-control @error('category_id') is-invalid @enderror"
                                         id="category_id" name="category_id" required>
                                         <option value="">-- Select Category --</option>
@@ -345,7 +345,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Amount</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="number" class="form-control @error('amount') is-invalid @enderror"
                                         id="amount" name="amount" placeholder="Amount" value="{{ old('amount') }}">
                                 </div>
@@ -358,7 +358,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Date</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="date" class="form-control @error('income_date') is-invalid @enderror"
                                         id="income_date" name="income_date"
                                         onfocus="'showPicker' in this && this.showPicker()" placeholder="Business Name"
@@ -373,7 +373,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Description</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="text" class="form-control @error('description') is-invalid @enderror"
                                         id="description" name="description" placeholder="Description"
                                         value="{{ old('description') }}">

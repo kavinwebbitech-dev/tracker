@@ -260,7 +260,7 @@
                     <div class="row mb-10">
                         <div class="col-md-5">
                             <div class="form-group">
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="date" class="form-control @error('start_date') is-invalid @enderror" name="start_date" id="start_date" value="{{ $start_date ?? '' }}" onfocus="'showPicker' in this && this.showPicker()" value="">
                                 </div>
                                 @error('start_date')
@@ -272,7 +272,7 @@
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="date" class="form-control @error('end_date') is-invalid @enderror" name="end_date" id="end_date" value="{{ $end_date ?? '' }}" onfocus="'showPicker' in this && this.showPicker()" value="">
                                 </div>
                                 @error('start_date')

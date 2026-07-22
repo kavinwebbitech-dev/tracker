@@ -50,7 +50,7 @@
                         <div class="col-md-5"></div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="date" class="form-control @error('upload_file') is-invalid @enderror" id="start_date" onfocus="'showPicker' in this && this.showPicker()" name="start_date" placeholder="Business Name" value="{{ $start_date }}">
                                 </div>
                                 @error('start_date')
@@ -62,7 +62,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="date" class="form-control @error('upload_file') is-invalid @enderror" id="end_date" onfocus="'showPicker' in this && this.showPicker()" name="end_date" placeholder="Business Name" value="{{ $end_date }}">
                                 </div>
                                 @error('end_date')
@@ -169,9 +169,9 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label class="form-label">Name</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="Name" value="{{ old('name') }}" required>
-                            <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                            <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                         </div>
                         @error('name')
                             <span class="invalid-feedback" role="alert">
@@ -184,9 +184,9 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label class="form-label">Amount</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <input type="number" class="form-control @error('amount') is-invalid @enderror" id="amount" name="amount" placeholder="Amount" value="{{ old('amount') }}">
-                            <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                            <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                         </div>
                         @error('amount')
                             <span class="invalid-feedback" role="alert">
@@ -199,9 +199,9 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label class="form-label">Date</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <input type="date" class="form-control @error('income_date') is-invalid @enderror" id="income_date" name="income_date" onfocus="'showPicker' in this && this.showPicker()" placeholder="Business Name" value="{{ old('income_date') }}">
-                            <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                            <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                         </div>
                         @error('income_date')
                             <span class="invalid-feedback" role="alert">
@@ -214,9 +214,9 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label class="form-label">Description</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <input type="text" class="form-control @error('description') is-invalid @enderror" id="description" name="description" placeholder="Description" value="{{ old('description') }}">
-                            <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                            <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                         </div>
                         @error('description')
                             <span class="invalid-feedback" role="alert">

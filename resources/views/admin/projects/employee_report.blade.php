@@ -56,7 +56,7 @@
                     <div class="row">
                         <div class="col-md-2">
                             <div class="form-group">
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="date" class="form-control @error('start_date') is-invalid @enderror" name="start_date" id="start_date" value="{{ $start_date ?? '' }}" onfocus="'showPicker' in this && this.showPicker()" required>
                                 </div>
                                 @error('start_date')
@@ -68,7 +68,7 @@
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="date" class="form-control @error('end_date') is-invalid @enderror" name="end_date" id="end_date" value="{{ $end_date ?? '' }}" onfocus="'showPicker' in this && this.showPicker()" required>
                                 </div>
                                 @error('end_date')
@@ -80,7 +80,7 @@
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <select class="form-control select2 @error('select_staff') is-invalid @enderror" name="select_staff" id="select_staff">
                                         <option value="">Select Staff</option>
                                         @if($staff_details)
@@ -104,7 +104,7 @@
                         <div class="col-md-2"></div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <select class="form-control select2 @error('select_ex_staff') is-invalid @enderror" name="select_ex_staff" id="select_ex_staff" onchange="sort_book1()">
                                         <option value="">Select Ex Staff</option>
                                         @if($staff_details1)

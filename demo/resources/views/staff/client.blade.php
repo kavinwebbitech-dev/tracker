@@ -45,9 +45,9 @@
                         
                         <div class="col-md-3" id="input_file_col" style="display: none;">
                             <div class="form-group">
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="file" class="form-control @error('bulk_upoad_file') is-invalid @enderror" id="bulk_upoad_file" name="bulk_upoad_file" placeholder="Email Address" value="{{ old('email') }}" required>
-                                    <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                                    <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                                 </div>
                                 <a href="<?php echo url('');?>/public/admin_assets/images/client_bulk_uploads.xlsx" download>Download Sample File</a>
                                 @error('bulk_upoad_file')
@@ -139,7 +139,7 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Service</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <select name="cat_id" class="form-control" id="cat_id">
                             @if(count($service_details) > 0)
                             @foreach($service_details as $key => $value)
@@ -159,9 +159,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Client Name</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="Client Name" value="{{ old('name') }}" required>
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('name')
                         <span class="invalid-feedback" role="alert">
@@ -174,9 +174,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Email Address</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="Email Address" value="{{ old('email') }}" required>
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('email')
                         <span class="invalid-feedback" role="alert">
@@ -189,9 +189,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Phone Number</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="text" class="form-control @error('phone') is-invalid @enderror" id="phone" name="phone" placeholder="Phone Number" value="{{ old('phone') }}" required>
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('title')
                         <span class="invalid-feedback" role="alert">
@@ -205,9 +205,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Address</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="text" class="form-control @error('address') is-invalid @enderror" id="address" name="address" placeholder="Address" value="{{ old('address') }}" required>
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('address')
                         <span class="invalid-feedback" role="alert">
@@ -221,9 +221,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">GST Number</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="text" class="form-control @error('gst_number') is-invalid @enderror" id="gst_number" name="gst_number" placeholder="GST Number" value="{{ old('gst_number') }}" required>
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('gst_number')
                         <span class="invalid-feedback" role="alert">
@@ -236,9 +236,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Company Name</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="text" class="form-control @error('company_name') is-invalid @enderror" id="company_name" name="company_name" placeholder="Company Name" value="{{ old('company_name') }}" required>
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('company_name')
                         <span class="invalid-feedback" role="alert">
@@ -251,7 +251,7 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Description</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <textarea name="description" id="description" rows="5" cols="80"></textarea>
                     </div>
                     @error('editor1')
@@ -265,12 +265,12 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Status</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <select name="status" class="form-control" id="status">
                             <option value="Active">Active</option>
                             <option value="In Active">In Active</option>
                         </select>
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('link')
                         <span class="invalid-feedback" role="alert">

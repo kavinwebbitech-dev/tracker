@@ -12,7 +12,7 @@
 
                     <div class="form-group">
                         <label class="form-label">Status</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <select class="form-control select2 @error('status') is-invalid @enderror" name="status" onchange="StatusCheck()" id="status_change">
                                 <option value="">Select Status</option>
                                 <option value="Approved">Approved</option>
@@ -32,7 +32,7 @@
                     <div class="form-group" style="display: none;" id="description_box">
 
                         <label class="form-label">User Comment</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <textarea name="editor1" id="editor1">
                                 
                             </textarea>

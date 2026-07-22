@@ -63,9 +63,9 @@
                             
                             <div class="col-md-3" id="input_file_col" style="display: none;">
                                 <div class="form-group">
-                                    <div class="input-group mb-3">
+                                    <div class="input-group in-bord mb-3">
                                         <input type="file" class="form-control @error('bulk_upoad_file') is-invalid @enderror" id="bulk_upoad_file" name="bulk_upoad_file" placeholder="Email Address" value="{{ old('email') }}" required>
-                                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                                     </div>
                                     <a href="<?php echo url('');?>/public/admin_assets/images/credentials_bulk_uploads.xlsx" download>Download Sample File</a>
                                     @error('bulk_upoad_file')
@@ -182,9 +182,9 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label class="form-label">Name</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <input type="text" class="form-control @error('name') is-invalid @enderror" id="firstname" name="name" placeholder="Name" value="{{ old('name') }}" required>
-                            <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                            <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                         </div>
                         @error('name')
                             <span class="invalid-feedback" role="alert">
@@ -196,9 +196,9 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label class="form-label">User Name</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" name="username" placeholder="User Name" value="{{ old('username') }}">
-                            <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                            <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                         </div>
                         @error('username')
                             <span class="invalid-feedback" role="alert">
@@ -211,9 +211,9 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label class="form-label">Password</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <input type="text" class="form-control @error('password') is-invalid @enderror" id="password" name="password" placeholder="Password" value="{{ old('password') }}">
-                            <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                            <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                         </div>
                         @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -226,7 +226,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label class="form-label">Description</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <textarea name="description" id="description" rows="5" cols="80"></textarea>
                         </div>
                         @error('editor1')

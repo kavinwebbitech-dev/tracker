@@ -49,7 +49,7 @@
 									<div class="col-md-12">
 										<div class="form-group">
 											<label class="form-label">Select Staff</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="select2 form-control @error('staff_id') is-invalid @enderror" name="staff_id" style="width: 100%;">
 													<option value="">Select Staff</option>
 													@if(count($sub_admin) > 0)
@@ -108,7 +108,7 @@
 									{{-- <div class="col-md-12">
 										<div class="form-group">
 						                    <label class="form-label">Status</label>
-						                    <div class="input-group mb-3">
+						                    <div class="input-group in-bord mb-3">
 						                        <select name="status" class="form-control" id="status">
 						                            <option value="Active">Active</option>
 						                            <option value="In Active">In Active</option>

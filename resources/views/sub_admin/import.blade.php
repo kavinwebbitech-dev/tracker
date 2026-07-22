@@ -51,7 +51,7 @@
 										<div class="col-md-12">
 											<div class="form-group">
 												<label class="form-label d-block">Excel File <span class="float-end"><a href="<?php echo url('');?>/public/admin_assets/images/sample_file.xlsx" download><i class="fa fa-download"></i> Sample File</a> </span></label>
-												<div class="input-group mb-3">
+												<div class="input-group in-bord mb-3">
 													<input type="file" class="form-control @error('excel_file') is-invalid @enderror" name="excel_file" placeholder="Excel File" value="{{ old('excel_file') }}" required>
 												</div>
 												@error('excel_file')
@@ -79,9 +79,9 @@
 								</div>
 								{{-- <div class="form-group">
 									<label class="form-label">Confirm Password</label>
-									<div class="input-group mb-3">
+									<div class="input-group in-bord mb-3">
 										<input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" placeholder="Confirm Password">
-										<span class="input-group-text"><i class="ti-lock"></i></span>
+										<span class="input-group in-bord-text"><i class="ti-lock"></i></span>
 									</div>
 									@error('password_confirmation')
 	                                    <span class="invalid-feedback" role="alert">

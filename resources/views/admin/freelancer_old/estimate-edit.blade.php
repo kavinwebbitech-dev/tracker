@@ -72,14 +72,14 @@
 
 										<div class="form-group">
 											<label class="form-label">Select Freelancer</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control select2 @error('client_id') is-invalid @enderror" name="client_id" id="client_id">
 													<option value=""> Select Freelancer</option>
 													@foreach($client_details as $key => $value)
 														<option value="{{ $value->id }}" @if($task_details->user_id == $value->id) selected @endif> {{ $value->name }} </option>
 													@endforeach
 												</select>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('client_id')
 			                                    <span class="invalid-feedback" role="alert">
@@ -92,7 +92,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Task Name</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Name" value="{{ $task_details->name }}" required>
 											</div>
 											@error('name')
@@ -106,7 +106,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Date</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="date" class="form-control @error('confirm_date') is-invalid @enderror" name="confirm_date" onfocus="'showPicker' in this && this.showPicker()" value="{{ $task_details->date }}" required>
 											</div>
 											@error('confirm_date')
@@ -119,7 +119,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Amount</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('amount') is-invalid @enderror" name="amount" placeholder="Amount" value="{{ number_format($task_details->amount,2) }}" required>
 											</div>
 											@error('amount')

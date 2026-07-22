@@ -14,7 +14,8 @@ class SimpleTaskController extends Controller
      */
     public function index(Request $request)
     {
-        try {
+
+       
             $query = SimpleTask::query()->latest();
 
             if ($request->filled('text_value_search')) {
@@ -32,10 +33,8 @@ class SimpleTaskController extends Controller
             $simple_tasks = $query->get();
 
             return view('admin.simpletask.index', compact('simple_tasks'));
-        } catch (\Throwable $e) {
-            Log::error('SimpleTask index error: ' . $e->getMessage());
-            return back()->with('error', 'Unable to load tasks.');
-        }
+       
+        
     }
 
     public function create()
@@ -137,7 +136,7 @@ class SimpleTaskController extends Controller
 
     public function subindex(Request $request)
     {
-        try {
+       
             $query = SimpleTask::query()->latest();
 
             if ($request->filled('text_value_search')) {
@@ -155,10 +154,7 @@ class SimpleTaskController extends Controller
             $simple_tasks = $query->get();
 
             return view('sub_admin.simpletask.index', compact('simple_tasks'));
-        } catch (\Throwable $e) {
-            Log::error('SubAdmin SimpleTask index error: ' . $e->getMessage());
-            return back()->with('error', 'Unable to load tasks.');
-        }
+        
     }
 
     public function subcreate()

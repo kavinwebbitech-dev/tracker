@@ -105,9 +105,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Title</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" placeholder="Title" value="{{ old('title') }}" required>
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('title')
                         <span class="invalid-feedback" role="alert">
@@ -120,12 +120,12 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Status</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <select name="status" class="form-control">
                             <option value="Active">Active</option>
                             <option value="In Active">In Active</option>
                         </select>
-                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                     </div>
                     @error('link')
                         <span class="invalid-feedback" role="alert">

@@ -47,7 +47,7 @@
 							<div class="box-body">
 								<div class="form-group">
 									<label class="form-label">First Name</label>
-									<div class="input-group mb-3">
+									<div class="input-group in-bord mb-3">
 										<input type="text" class="form-control @error('firstname') is-invalid @enderror" name="firstname" placeholder="First Name" value="{{ $sub_admin->firstname }}" required>
 									</div>
 									@error('firstname')
@@ -58,7 +58,7 @@
 								</div>
 								<div class="form-group">
 									<label class="form-label">Last Name</label>
-									<div class="input-group mb-3">
+									<div class="input-group in-bord mb-3">
 										<input type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" placeholder="Last Name" value="{{ $sub_admin->lastname }}" required>
 									</div>
 									@error('lastname')
@@ -69,7 +69,7 @@
 								</div>
 								<div class="form-group">
 									<label class="form-label">Email address</label>
-									<div class="input-group mb-3">
+									<div class="input-group in-bord mb-3">
 										<input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ $sub_admin->email }}" required>
 									</div>
 									@error('email')
@@ -80,7 +80,7 @@
 								</div>
 								<div class="form-group">
 									<label class="form-label">Phone Number</label>
-									<div class="input-group mb-3">
+									<div class="input-group in-bord mb-3">
 										<input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" placeholder="Phone Number" value="{{ $sub_admin->phone }}" required>
 									</div>
 									@error('phone')
@@ -91,7 +91,7 @@
 								</div>
 								<div class="form-group">
 									<label class="form-label">Color Code</label>
-									<div class="input-group mb-3">
+									<div class="input-group in-bord mb-3">
 										<input type="color" class="form-control @error('color_code') is-invalid @enderror" name="color_code" placeholder="Color Code" value="{{ $sub_admin->color_code }}">
 									</div>
 									@error('color_code')
@@ -102,7 +102,7 @@
 								</div>
 								<div class="form-group">
 									<label class="form-label">Profile</label>
-									<div class="input-group mb-3">
+									<div class="input-group in-bord mb-3">
 										<input type="file" class="form-control @error('profile') is-invalid @enderror" name="profile" placeholder="Password">
 									</div>
 									@error('profile')
@@ -113,7 +113,7 @@
 								</div>
 								<div class="form-group">
 									<label class="form-label">User Role</label>
-									<div class="input-group mb-3">
+									<div class="input-group in-bord mb-3">
 										<select class="form-control @error('user_role') is-invalid @enderror" name="user_role">
 											<option value="1" @if($sub_admin->type == 1) selected @endif>Admin</option>
 											<option value="3" @if($sub_admin->type == 3) selected @endif>Employee</option>

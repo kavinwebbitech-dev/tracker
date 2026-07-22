@@ -49,7 +49,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="form-label">Frequency of Task Type</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <select class="form-control @error('task_type') is-invalid @enderror"
                                                         name="task_type" onchange="cusom_date()" id="date_type">
                                                         <option value="">Select Task Type</option>
@@ -68,7 +68,7 @@
                                         <div class="col-md-6" style="display:none;" id="single_staff">
                                             <div class="form-group">
                                                 <label class="form-label">Select Staff</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <select
                                                         class="form-control multiple_staff select2 @error('staff_id') is-invalid @enderror"
                                                         id="multiple_staff" name="multiple_staff[]" style="width: 100%;"
@@ -89,7 +89,7 @@
                                         <div class="col-md-6" style="display:none;" id="recurring_staff">
                                             <div class="form-group">
                                                 <label class="form-label">Select Staff</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <select class="form-control @error('staff_id') is-invalid @enderror"
                                                         name="staff_id" id="staff_dropdown">
                                                         <option value="">Select Staff</option>
@@ -111,7 +111,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="form-label">Select Project</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <select
                                                         class="form-control select2 @error('project_id') is-invalid @enderror"
                                                         name="project_id" id="project_id">
@@ -130,7 +130,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="form-label">Task Name</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="text"
                                                         class="form-control @error('task_name') is-invalid @enderror"
                                                         name="task_name" placeholder="Task Name"
@@ -151,7 +151,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="form-label">Period of Task</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <select class="form-control @error('date_type') is-invalid @enderror"
                                                         name="date_type">
                                                         <option value="7">Weekly</option>
@@ -167,7 +167,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="form-label">Start Date</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="date"
                                                         class="form-control @error('recurring_start_date') is-invalid @enderror"
                                                         name="recurring_start_date" placeholder="Task Start Date"
@@ -181,7 +181,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="form-label">Start Date</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="datetime-local" name="start_date"
                                                         class="form-control @error('start_date') is-invalid @enderror">
                                                 </div>
@@ -190,7 +190,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="form-label">End Date</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="date" name="end_date"
                                                         class="form-control @error('end_date') is-invalid @enderror">
                                                 </div>
@@ -202,7 +202,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="form-label">Payment Follow Up</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <select
                                                         class="form-control select2 @error('payment_follow_up') is-invalid @enderror"
                                                         id="payment_follow_up" name="payment_follow_up"
@@ -220,7 +220,7 @@
                                         {{-- <div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Project Work Follow Up</label>
-						    				<div class="input-group mb-3">
+						    				<div class="input-group in-bord mb-3">
 						    					<select class="form-control select2 @error('project_follow_up') is-invalid @enderror" id="project_follow_up" name="project_follow_up" style="width: 100%;">
 													<option value="">Select Person</option>
 													@foreach ($sub_admin1 as $key => $value)

@@ -55,7 +55,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Assign Staff</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control @error('staff_id') is-invalid @enderror" name="staff_id" id="staff_dropdown">
 													<option value="">Select Staff</option>
 													@if($staff)
@@ -64,7 +64,7 @@
 													@endforeach
 													@endif
 												</select>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('staff_id')
 			                                    <span class="invalid-feedback" role="alert">
@@ -79,9 +79,9 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Task Name</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('task_name') is-invalid @enderror" name="task_name" placeholder="Task Name" value="{{ $task->name }}" required>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('task_name')
 			                                    <span class="invalid-feedback" role="alert">
@@ -93,8 +93,8 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Date Range</label>
-											<div class="input-group">
-											  <div class="input-group-addon">
+											<div class="input-group in-bord">
+											  <div class="input-group in-bord-addon">
 												<i class="fa fa-calendar"></i>
 											  </div>
 											  <input type="text" class="form-control pull-right" name="date_range_task" id="reservation" value="{{ $date_range }}">
@@ -114,14 +114,14 @@
 										<div class="form-group">
 											<label class="form-label">Status</label>
 
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control @error('status') is-invalid @enderror" name="status">
 													<option value="pending" @if($task->status == "pending") selected @endif>Pending</option>
 													<option value="progress" @if($task->status == "progress") selected @endif>Progress</option>
 													<option value="completed" @if($task->status == "completed") selected @endif>Completed</option>
 													<option value="rejected" @if($task->status == "rejected") selected @endif>Rejected</option>
 												</select>
-												<!-- <span class="input-group-text"><i class="ti-lock"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-lock"></i></span> -->
 											</div>
 											@error('status')
 			                                    <span class="invalid-feedback" role="alert">

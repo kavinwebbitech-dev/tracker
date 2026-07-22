@@ -10,7 +10,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label class="form-label">Please Enter the Comment</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <textarea name="editor1" id="editor1">
                                 
                             </textarea>

@@ -81,7 +81,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Customer</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <select
                                                         class="form-control select2 @error('customer') is-invalid @enderror"
                                                         name="customer">
@@ -108,7 +108,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Project Name</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="text"
                                                         class="form-control @error('name') is-invalid @enderror"
                                                         name="name" placeholder="Name" value="{{ old('name') }}"
@@ -124,7 +124,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Status</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <select class="form-control @error('status') is-invalid @enderror"
                                                         name="status">
                                                         <option value="0">Pending</option>
@@ -144,7 +144,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Sales Person</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <select class="form-control @error('sales_person') is-invalid @enderror"
                                                         name="sales_person">
                                                         <option value="">Select Person</option>
@@ -172,7 +172,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Order Confirm Date</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="date"
                                                         class="form-control @error('confirm_date') is-invalid @enderror"
                                                         name="confirm_date"
@@ -189,7 +189,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Start Date</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="date"
                                                         class="form-control @error('start_date') is-invalid @enderror"
                                                         name="start_date"
@@ -206,7 +206,7 @@
                                         <div class="col-md-4" style="display: none;" id="end_day_display">
                                             <div class="form-group">
                                                 <label class="form-label">End Date</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="date"
                                                         class="form-control @error('end_date') is-invalid @enderror"
                                                         name="end_date"
@@ -223,7 +223,7 @@
                                         <div class="col-md-4" style="display: none;" id="renewal_days">
                                             <div class="form-group">
                                                 <label class="form-label">Renewal Days</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="text"
                                                         class="form-control @error('renewal_days') is-invalid @enderror"
                                                         name="renewal_days" value="{{ old('renewal_days') }}">
@@ -238,7 +238,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Amount</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="text"
                                                         class="form-control @error('amount') is-invalid @enderror"
                                                         name="amount" placeholder="Amount" value="{{ old('amount') }}"
@@ -254,7 +254,7 @@
                                         <div class="col-md-4" style="display: none;" id="alert_days">
                                             <div class="form-group">
                                                 <label class="form-label">Alert Days</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="text"
                                                         class="form-control @error('alert_days') is-invalid @enderror"
                                                         name="alert_days" placeholder="Days"
@@ -270,7 +270,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Service</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <select
                                                         class="form-control select2 @error('services') is-invalid @enderror"
                                                         name="services">
@@ -294,7 +294,7 @@
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label class="form-label">Designer Time (Hours)</label>
-                                                    <div class="input-group mb-3">
+                                                    <div class="input-group in-bord mb-3">
                                                         <input type="number" step="0.1" min="0"
                                                             class="form-control @error('designer_hours') is-invalid @enderror"
                                                             name="designer_hours" value="{{ old('designer_hours') }}"
@@ -310,7 +310,7 @@
                                             <div class="col-md-2">
                                                 <div class="form-group">
                                                     <label class="form-label">Frontend Time (Hours)</label>
-                                                    <div class="input-group mb-3">
+                                                    <div class="input-group in-bord mb-3">
                                                         <input type="number" step="0.1" min="0"
                                                             class="form-control @error('frontend_hours') is-invalid @enderror"
                                                             name="frontend_hours" value="{{ old('frontend_hours') }}"
@@ -327,7 +327,7 @@
                                             <div class="col-md-2">
                                                 <div class="form-group">
                                                     <label class="form-label">Backend Time (Hours)</label>
-                                                    <div class="input-group mb-3">
+                                                    <div class="input-group in-bord mb-3">
                                                         <input type="number" step="0.1" min="0"
                                                             class="form-control @error('backend_hours') is-invalid @enderror"
                                                             name="backend_hours" value="{{ old('backend_hours') }}"
@@ -344,7 +344,7 @@
                                             <div class="col-md-2">
                                                 <div class="form-group">
                                                     <label class="form-label">SEO Time (Hours)</label>
-                                                    <div class="input-group mb-3">
+                                                    <div class="input-group in-bord mb-3">
                                                         <input type="number" step="0.1" min="0"
                                                             class="form-control @error('seo_hours') is-invalid @enderror"
                                                             name="seo_hours" value="{{ old('seo_hours') }}"
@@ -361,7 +361,7 @@
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label class="form-label">Testing Time (Hours)</label>
-                                                    <div class="input-group mb-3">
+                                                    <div class="input-group in-bord mb-3">
                                                         <input type="number" step="0.1" min="0"
                                                             class="form-control @error('testing_hours') is-invalid @enderror"
                                                             name="testing_hours" value="{{ old('testing_hours') }}"

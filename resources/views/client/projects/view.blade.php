@@ -427,7 +427,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-label">Payment Date</label>
-                            <div class="input-group mb-3">
+                            <div class="input-group in-bord mb-3">
                                 <input type="date" class="form-control @error('payment_date') is-invalid @enderror" name="payment_date" value="{{ old('payment_date') }}" required>
                             </div>
                             @error('payment_date')
@@ -440,7 +440,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-label">Payment Amount</label>
-                            <div class="input-group mb-3">
+                            <div class="input-group in-bord mb-3">
                                 <input type="text" class="form-control @error('payment_amount') is-invalid @enderror" name="payment_amount" value="{{ old('payment_amount') }}" required>
                             </div>
                             @error('payment_amount')
