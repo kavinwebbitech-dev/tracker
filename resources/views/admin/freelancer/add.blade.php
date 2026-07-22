@@ -1,6 +1,17 @@
 @extends('layouts.dashboard')
 
+<style>
+	.althic {
+		display: flex;
+		align-items: center;
+	}
+	i {
+		margin-right: 10px;
+	}
+</style>
+
 @section('content')
+
 	
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -49,7 +60,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Name</label>
-											<div class="input-group in-bord mb-3">
+											<div class="input-group in-bord althic mb-3">
 												<input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Name" value="{{ old('name') }}" required>
 												<span class="input-group in-bord-text"><i class="ti-user"></i></span>
 											</div>
@@ -63,7 +74,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Email address</label>
-											<div class="input-group in-bord mb-3">
+											<div class="input-group in-bord althic mb-3">
 												<input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ old('email') }}" required>
 												<span class="input-group in-bord-text"><i class="ti-email"></i></span>
 											</div>
@@ -77,7 +88,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Phone Number</label>
-											<div class="input-group in-bord mb-3">
+											<div class="input-group in-bord althic mb-3">
 												<input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" placeholder="Phone Number" value="{{ old('phone') }}" required>
 												<span class="input-group in-bord-text"><i class="ti-mobile"></i></span>
 											</div>
@@ -121,7 +132,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Password</label>
-											<div class="input-group in-bord mb-3">
+											<div class="input-group in-bord althic mb-3">
 												<input type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password">
 												<span class="input-group in-bord-text"><i class="ti-lock"></i></span>
 											</div>
@@ -135,7 +146,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Confirm Password</label>
-											<div class="input-group in-bord mb-3">
+											<div class="input-group in-bord althic mb-3">
 												<input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" placeholder="Confirm Password">
 												<span class="input-group in-bord-text"><i class="ti-lock"></i></span>
 											</div>
