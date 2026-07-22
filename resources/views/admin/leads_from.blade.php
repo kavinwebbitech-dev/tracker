@@ -288,7 +288,7 @@
                                                                 class="creative-btn-action action-edit"
                                                                 style="padding: 4px 12px;margin: 10px 4px;"><i
                                                                     class="ion ion-edit text-white"></i></a>
-                                                            <a href="javascript:void(0);" onclick="deleteProject('{{ route('admin.leads.from.delete', $value->id) }}'}"
+                                                            <a href="javascript:void(0);" onclick="deleteProject('{{ route('admin.leads.from.delete', $value->id) }}')"
                                                                 class="creative-btn-action action-delete"
                                                                 style="padding: 4px 12px;margin: 10px 4px;"><i
                                                                     class="ti-trash text-white"></i></a>

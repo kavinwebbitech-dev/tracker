@@ -197,13 +197,13 @@ class AdminProjectController extends Controller
             $users = $users;
         }
         // Replace all three paginate calls:
-if ($status == "all") {
-    $users = $users->with('tasks')->paginate(1000);
-} elseif ($status) {
-    $users = $users->where('status', $status)->with('tasks')->paginate(100);
-} else {
-    $users = $users->with('tasks')->paginate(100);
-}
+        if ($status == "all") {
+            $users = $users->with('tasks')->paginate(1000);
+        } elseif ($status !== '' && $status !== null) {
+            $users = $users->where('status', $status)->with('tasks')->paginate(100);
+        } else {
+            $users = $users->with('tasks')->paginate(100);
+        }
         // $users = $users->paginate(50);
         // dd($users);
 

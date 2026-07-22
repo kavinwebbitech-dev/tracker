@@ -7,6 +7,7 @@ use App\Models\Branches;
 use App\Models\Customers;
 use App\Models\DomainHosting;
 use App\Models\HostingServer;
+ use App\Models\DomainServer;
 use Illuminate\Http\Request;
 use PDF;
 use Dompdf\Dompdf;
@@ -41,7 +42,8 @@ class AdminRenewalController extends Controller
         $branches = Branches::where('fld_status', 1)->get();
         $customers = Customers::where('fld_status', 1)->get();
         $hostingServers = HostingServer::where('fld_status', 1)->get();
-        return view('sub_admin.domainhosting.add', compact('branches', 'customers', 'hostingServers'));
+        $domains = DomainServer::select('fld_domain_server_name')->get();
+        return view('sub_admin.domainhosting.add', compact('branches', 'customers', 'hostingServers','domains'));
     }
 
     public function edit($id)
@@ -49,10 +51,10 @@ class AdminRenewalController extends Controller
         $branches = Branches::where('fld_status', 1)->get();
         $customers = Customers::where('fld_status', 1)->get();
         $hostingServers = HostingServer::where('fld_status', 1)->get();
-
+        $domains = DomainServer::select('fld_domain_server_name')->get();
         $domainhosting = DomainHosting::where('id', $id)->first();
         $customer_details = Customers::where('id', $domainhosting->fld_cust_id)->first();
-        return view('sub_admin.domainhosting.edit', compact('branches', 'customers', 'domainhosting', 'customer_details', 'hostingServers'));
+        return view('sub_admin.domainhosting.edit', compact('branches', 'customers', 'domainhosting', 'customer_details', 'hostingServers','domains'));
     }
 
     public function NotInterest($id)
