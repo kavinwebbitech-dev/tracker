@@ -448,10 +448,10 @@
                                             href="#"><i class="bi bi-indent"></i>Freelancer</a>
                                         <ul class="dropdown-menu">
                                             <ul class="treeview-menu" style="display: block;">
-                                                <li><a href="{{ route('admin.freelancer.create') }}"
+                                                <li><a href="{{ route('sub_admin.freelancer.create') }}"
                                                         class="dropdown-item"><i class="bi bi-indent"></i>Add
                                                         Freelancer</a></li>
-                                                <li><a href="{{ route('admin.freelancer.view') }}"
+                                                <li><a href="{{ route('sub_admin.freelancer.view') }}"
                                                         class="dropdown-item"><i class="bi bi-indent"></i>View
                                                         Freelancer</a></li>
                                             </ul>
@@ -552,7 +552,7 @@
                                                     class="dropdown-item"><i class="bi bi-indent"></i>Follow Up</a>
                                             </li>
                                         @endif
-                                        @if (in_array('49', $role_section))
+                                        {{-- @if (in_array('49', $role_section))
                                             <li><a href="{{ route('sub_admin.projects.going') }}"
                                                     class="dropdown-item"><i class="bi bi-indent"></i>On Progress
                                                     Projects</a></li>
@@ -571,7 +571,7 @@
                                             <li><a href="{{ route('sub_admin.projects.completed') }}"
                                                     class="dropdown-item"><i class="bi bi-indent"></i>Completed
                                                     Projects</a></li>
-                                        @endif
+                                        @endif --}}
                                         @if (in_array('53', $role_section))
                                             <li><a href="{{ route('sub_admin.projects.renewal') }}"
                                                     class="dropdown-item"><i class="bi bi-indent"></i>Renewal

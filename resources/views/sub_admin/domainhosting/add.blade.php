@@ -144,89 +144,96 @@
                                                 @enderror
                                             </div>
                                         </div>
-                                       
-                                         <div class="row">
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label class="form-label">Domain Name</label>
-                                                <div class="input-group in-bord mb-3">
-                                                    <input type="text"
-                                                        class="form-control @error('fld_domain_name') is-invalid @enderror"
-                                                        name="fld_domain_name" placeholder="Domain Name"
-                                                        value="{{ old('fld_domain_name') }}" required>
+
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="form-label">Domain Name</label>
+
+                                                    <div class="input-group mb-3">
+                                                        <input type="text"
+                                                            class="form-control @error('fld_domain_name') is-invalid @enderror"
+                                                            name="fld_domain_name" placeholder="Domain Name"
+                                                            value="{{ old('fld_domain_name') }}" required>
+
+                                                        <button type="button" class="btn btn-outline-primary"
+                                                            data-bs-toggle="modal" data-bs-target="#domainModal">
+                                                            <i class="fa fa-eye"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    @error('fld_domain_name')
+                                                        <span class="invalid-feedback">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
                                                 </div>
-                                                @error('fld_domain_name')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
                                             </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label class="form-label">Domain Register Date</label>
-                                                <div class="input-group in-bord mb-3">
-                                                    <input type="date"
-                                                        class="form-control @error('fld_domain_start_date') is-invalid @enderror"
-                                                        name="fld_domain_start_date"
-                                                        value="{{ old('fld_domain_start_date') }}"
-                                                        id="fld_domain_start_date" required>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="form-label">Domain Register Date</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="date"
+                                                            class="form-control @error('fld_domain_start_date') is-invalid @enderror"
+                                                            name="fld_domain_start_date"
+                                                            value="{{ old('fld_domain_start_date') }}"
+                                                            id="fld_domain_start_date" required>
+                                                    </div>
+                                                    @error('fld_domain_start_date')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
                                                 </div>
-                                                @error('fld_domain_start_date')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
                                             </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label class="form-label">Years</label>
-                                                <div class="input-group in-bord mb-3">
-                                                    <select
-                                                        class="form-control select2 @error('fld_domain_tenure') is-invalid @enderror"
-                                                        name="fld_domain_tenure" onchange="checkDate()"
-                                                        id="fld_domain_tenure">
-                                                        <option value="">Years</option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                        <option value="6">6</option>
-                                                        <option value="7">7</option>
-                                                        <option value="8">8</option>
-                                                        <option value="9">9</option>
-                                                        <option value="10">10</option>
-                                                        <option value="11">11</option>
-                                                        <option value="12">12</option>
-                                                    </select>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="form-label">Years</label>
+                                                    <div class="input-group mb-3">
+                                                        <select
+                                                            class="form-control select2 @error('fld_domain_tenure') is-invalid @enderror"
+                                                            name="fld_domain_tenure" onchange="checkDate()"
+                                                            id="fld_domain_tenure">
+                                                            <option value="">Years</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                            <option value="10">10</option>
+                                                            <option value="11">11</option>
+                                                            <option value="12">12</option>
+                                                        </select>
+                                                    </div>
+                                                    @error('fld_domain_tenure')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
                                                 </div>
-                                                @error('fld_domain_tenure')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
                                             </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label class="form-label">Domain Expiry Date</label>
-                                                <div class="input-group in-bord mb-3">
-                                                    <input type="date"
-                                                        class="form-control @error('fld_domain_end_date') is-invalid @enderror"
-                                                        name="fld_domain_end_date"
-                                                        value="{{ old('fld_domain_end_date') }}" id="fld_domain_end_date"
-                                                        required>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="form-label">Domain Expiry Date</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="date"
+                                                            class="form-control @error('fld_domain_end_date') is-invalid @enderror"
+                                                            name="fld_domain_end_date"
+                                                            value="{{ old('fld_domain_end_date') }}"
+                                                            id="fld_domain_end_date" required>
+                                                    </div>
+                                                    @error('fld_domain_end_date')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
                                                 </div>
-                                                @error('fld_domain_end_date')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
                                             </div>
-                                        </div>
-                                        <div class="col-md-3">
+                                            <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label class="form-label">Hosting Name</label>
                                                     <div class="input-group in-bord mb-3">
@@ -250,71 +257,71 @@
                                                     @enderror
                                                 </div>
                                             </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label class="form-label">Hosting Register Date</label>
-                                                <div class="input-group in-bord mb-3">
-                                                    <input type="date"
-                                                        class="form-control @error('fld_hosting_start_date') is-invalid @enderror"
-                                                        name="fld_hosting_start_date"
-                                                        value="{{ old('fld_hosting_start_date') }}"
-                                                        id="fld_hosting_start_date" required>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="form-label">Hosting Register Date</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="date"
+                                                            class="form-control @error('fld_hosting_start_date') is-invalid @enderror"
+                                                            name="fld_hosting_start_date"
+                                                            value="{{ old('fld_hosting_start_date') }}"
+                                                            id="fld_hosting_start_date" required>
+                                                    </div>
+                                                    @error('fld_hosting_start_date')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
                                                 </div>
-                                                @error('fld_hosting_start_date')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="form-label">Years</label>
+                                                    <div class="input-group mb-3">
+                                                        <select
+                                                            class="form-control select2 @error('fld_hosting_tenure') is-invalid @enderror"
+                                                            name="fld_hosting_tenure" onchange="checkDate1()"
+                                                            id="fld_hosting_tenure">
+                                                            <option value="">Years</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                            <option value="10">10</option>
+                                                            <option value="11">11</option>
+                                                            <option value="12">12</option>
+                                                        </select>
+                                                    </div>
+                                                    @error('fld_hosting_tenure')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label class="form-label">Hosting Expiry Date</label>
+                                                    <div class="input-group mb-3">
+                                                        <input type="date"
+                                                            class="form-control @error('fld_hosting_end_date') is-invalid @enderror"
+                                                            name="fld_hosting_end_date"
+                                                            value="{{ old('fld_hosting_end_date') }}"
+                                                            id="fld_hosting_end_date" required>
+                                                    </div>
+                                                    @error('fld_hosting_end_date')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label class="form-label">Years</label>
-                                                <div class="input-group in-bord mb-3">
-                                                    <select
-                                                        class="form-control select2 @error('fld_hosting_tenure') is-invalid @enderror"
-                                                        name="fld_hosting_tenure" onchange="checkDate1()"
-                                                        id="fld_hosting_tenure">
-                                                        <option value="">Years</option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                        <option value="6">6</option>
-                                                        <option value="7">7</option>
-                                                        <option value="8">8</option>
-                                                        <option value="9">9</option>
-                                                        <option value="10">10</option>
-                                                        <option value="11">11</option>
-                                                        <option value="12">12</option>
-                                                    </select>
-                                                </div>
-                                                @error('fld_hosting_tenure')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label class="form-label">Hosting Expiry Date</label>
-                                                <div class="input-group in-bord mb-3">
-                                                    <input type="date"
-                                                        class="form-control @error('fld_hosting_end_date') is-invalid @enderror"
-                                                        name="fld_hosting_end_date"
-                                                        value="{{ old('fld_hosting_end_date') }}"
-                                                        id="fld_hosting_end_date" required>
-                                                </div>
-                                                @error('fld_hosting_end_date')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
-                                        </div>
-                                    </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Tax Rate(%)</label>
@@ -389,8 +396,8 @@
                                 <div class="box-footer text-end">
                                     <input type="submit" name="submit" class="btn btn-primary" value="Submit">
                                     <!-- <button type="submit" class="btn btn-primary">
-            <i class="ti-save-alt"></i> Save
-            </button> -->
+                                <i class="ti-save-alt"></i> Save
+                                </button> -->
                                 </div>
                             </form>
                         </div>
@@ -398,14 +405,38 @@
                     </div>
 
                 </div>
-
+            </section>
         </div>
-        <!-- /.row -->
+        <div class="modal fade" id="domainModal" tabindex="-1">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
 
-        </section>
-        <!-- /.content -->
+                    <div class="modal-header">
+                        <h5 class="modal-title">Domain List</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <ul class="list-group">
+                            @forelse($domains as $domain)
+                                <li class="list-group-item">
+                                    {{ $domain->fld_domain_server_name }}
+                                </li>
+                            @empty
+                                <li class="list-group-item text-danger">
+                                    No Domain Found
+                                </li>
+                            @endforelse
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
+
     <!-- /.content-wrapper -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="<?php echo url(''); ?>/public/admin_assets/js/vendors.min.js"></script>

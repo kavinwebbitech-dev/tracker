@@ -31,7 +31,7 @@ $page_user_tile = 'Project List - ' . $user_title_name;
             <div class="content-header">
                 <div class="d-flex align-items-center">
                     <div class="me-auto">
-                        <h3 class="page-title">{{ $page_title }} Project List11</h3>
+                        <h3 class="page-title">{{ $page_title }} Project List</h3>
                         <div class="d-inline-block align-items-center">
                             <nav>
                                 <ol class="breadcrumb">
@@ -142,15 +142,23 @@ $page_user_tile = 'Project List - ' . $user_title_name;
                                                     name="salesperson" id="salesperson">
                                                     <option value="">Select Sales Person</option>
                                                     @if ($salesperson)
-                                                        @foreach ($salesperson as $key => $person)
+                                                        @foreach ($salesperson as $person)
                                                             @if ($person->added_by)
-                                                                <?php
-                                                                $user_details = \App\Models\User::where('id', $person->added_by)->first();
-                                                                // dd($user_details);
-                                                                ?>
-                                                                <option value="{{ $user_details->id }}"
-                                                                    @if ($salesperson1 == $user_details->id) selected @endif>
-                                                                    {{ $user_details->name ?? '' }}</option>
+                                                                @php
+                                                                    $user_details = \App\Models\User::where(
+                                                                        'id',
+                                                                        $person->added_by,
+                                                                    )
+                                                                        ->where('status', 'active')
+                                                                        ->first();
+                                                                @endphp
+
+                                                                @if ($user_details)
+                                                                    <option value="{{ $user_details->id }}"
+                                                                        {{ $salesperson1 == $user_details->id ? 'selected' : '' }}>
+                                                                        {{ $user_details->name }}
+                                                                    </option>
+                                                                @endif
                                                             @endif
                                                         @endforeach
                                                     @endif
@@ -194,6 +202,7 @@ $page_user_tile = 'Project List - ' . $user_title_name;
                                                     <option value="all"
                                                         @if ($status == '' || $status == null) selected @endif>All</option>
                                                     <option value="0"
+                                                    {{-- @dd($status == 0) --}}
                                                         @if ($status != null && $status == 0) selected @endif>Pending</option>
                                                     <option value="1"
                                                         @if ($status != null && $status == 1) selected @endif>On Progress
@@ -454,7 +463,8 @@ $page_user_tile = 'Project List - ' . $user_title_name;
                                                                         <i class="ti-user text-white"></i>
                                                                     </a>
 
-                                                                   <a href="javascript:void(0);" onclick="deleteProject('{{ route('admin.projects.delete', $value->id) }}')"
+                                                                    <a href="javascript:void(0);"
+                                                                        onclick="deleteProject('{{ route('admin.projects.delete', $value->id) }}')"
                                                                         class="creative-btn-action action-delete"
                                                                         style="padding: 4px 12px;margin: 0px 4px;">
                                                                         <i class="ti-trash text-white"></i>
@@ -781,8 +791,8 @@ $page_user_tile = 'Project List - ' . $user_title_name;
                     </form>
                 </div>
                 <!-- <div class="modal-footer">
-                <span class="btn btn-danger" data-bs-dismiss="modal">Close</span>
-              </div> -->
+                    <span class="btn btn-danger" data-bs-dismiss="modal">Close</span>
+                  </div> -->
             </div>
             <!-- /.modal-content -->
         </div>

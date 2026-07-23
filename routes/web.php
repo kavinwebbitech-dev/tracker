@@ -575,6 +575,39 @@ Route::group(['prefix' => 'sub-admin'], function () {
             });
         });
 
+        Route::group(['prefix' => 'freelancer'], function () {
+            Route::controller(FreeLancerController::class)->group(function () {
+
+                Route::get('/create', 'subcreate')->name('sub_admin.freelancer.create');
+                Route::get('/view', 'subview')->name('sub_admin.freelancer.view');
+                Route::get('/edit/{id}', 'subedit')->name('sub_admin.freelancer.edit');
+                Route::get('/delete/{id}', 'subdelete')->name('sub_admin.freelancer.delete');
+
+                Route::post('/store', 'substore')->name('sub_admin.freelancer.store');
+                Route::post('/update/{id}', 'subupdate')->name('sub_admin.freelancer.update');
+
+                // Freelancer Task Request
+                Route::get('/estimate-create', 'subEstimateCreate')->name('sub_admin.freelancer.request.create');
+                Route::get('/task-request', 'subTaskRequest')->name('sub_admin.freelancer.request');
+                Route::get('/request-details/{id}', 'subTaskRequestDetails')->name('sub_admin.freelancer.task.details');
+                Route::get('/request-edit/{id}', 'subTaskRequestEdit')->name('sub_admin.freelancer.task.edit');
+                Route::get('/details/delete/{id}', 'subDeleteDetailsTask')->name('sub_admin.freelancer.details.delete');
+                Route::get('/estimate/delete/{id}', 'subDeleteEstimateTask')->name('sub_admin.freelancer.estimate.delete');
+                Route::get('/estimate-commen5/delete/{id}', 'subDeleteEstimateComment')->name('sub_admin.freelancer.task.estimate.comment.delete');
+
+                Route::post('/estimate-store', 'subEstimateStore')->name('sub_admin.freelancer.request.store');
+                Route::post('/estimate-extra.store', 'subEstimateExtraStore')->name('sub_admin.freelancer.request.extra.store');
+                Route::post('/task-request-update', 'subTaskRequestUpdate')->name('sub_admin.freelancer.request.update');
+                Route::post('/task-request-comment-update', 'subTaskRequestCommentUpdate')->name('sub_admin.freelancer.request.comment.update');
+                Route::post('/task-request-payment-update', 'subTaskRequestPaymentUpdate')->name('sub_admin.freelancer.request.payment.update');
+                Route::post('/task-estimate-close', 'subTaskEstimateClose')->name('sub_admin.freelancer.estimate.close');
+                Route::post('/estimate-edit-store/{id}', 'subEstimateEditStore')->name('sub_admin.freelancer.request.edit.store');
+
+                Route::post('/estimate-description', 'subEstimateDescription')->name('sub_admin.freelancer.request.description');
+                Route::post('/estimate-pay', 'subEstimatePay')->name('sub_admin.freelancer.request.pay');
+            });
+        });
+
         Route::group(['prefix' => 'task'], function () {
             Route::controller(SubAdminTaskController::class)->group(function () {
                 Route::get('/create', 'TaskCreate')->name('sub.task.create');

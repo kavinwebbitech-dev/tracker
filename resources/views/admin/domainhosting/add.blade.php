@@ -144,20 +144,27 @@
                                                 @enderror
                                             </div>
                                         </div>
-                                       
+
                                     </div>
                                     <div class="row">
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label class="form-label">Domain Name</label>
-                                                <div class="input-group in-bord mb-3">
+
+                                                <div class="input-group mb-3">
                                                     <input type="text"
                                                         class="form-control @error('fld_domain_name') is-invalid @enderror"
                                                         name="fld_domain_name" placeholder="Domain Name"
                                                         value="{{ old('fld_domain_name') }}" required>
+
+                                                    <button type="button" class="btn btn-outline-primary"
+                                                        data-bs-toggle="modal" data-bs-target="#domainModal">
+                                                        <i class="fa fa-eye"></i>
+                                                    </button>
                                                 </div>
+
                                                 @error('fld_domain_name')
-                                                    <span class="invalid-feedback" role="alert">
+                                                    <span class="invalid-feedback">
                                                         <strong>{{ $message }}</strong>
                                                     </span>
                                                 @enderror
@@ -393,8 +400,8 @@
                                 <div class="box-footer text-end">
                                     <input type="submit" name="submit" class="btn btn-primary" value="Submit">
                                     <!-- <button type="submit" class="btn btn-primary">
-                        <i class="ti-save-alt"></i> Save
-                        </button> -->
+                                        <i class="ti-save-alt"></i> Save
+                                        </button> -->
                                 </div>
                             </form>
                         </div>
@@ -402,13 +409,37 @@
                     </div>
 
                 </div>
+            </section>
+            <div class="modal fade" id="domainModal" tabindex="-1">
+                <div class="modal-dialog modal-md">
+                    <div class="modal-content">
 
+                        <div class="modal-header">
+                            <h5 class="modal-title">Domain List</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <ul class="list-group">
+                                @forelse($domains as $domain)
+                                    <li class="list-group-item">
+                                        {{ $domain->fld_domain_server_name }}
+                                    </li>
+                                @empty
+                                    <li class="list-group-item text-danger">
+                                        No Domain Found
+                                    </li>
+                                @endforelse
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /.content -->
         </div>
-        <!-- /.row -->
-
-        </section>
-        <!-- /.content -->
-    </div>
     </div>
     <!-- /.content-wrapper -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

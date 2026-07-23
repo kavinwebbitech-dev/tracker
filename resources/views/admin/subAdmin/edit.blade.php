@@ -757,7 +757,7 @@
                                                             </label>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
+                                                    {{-- <div class="row">
                                                         <div class="col-md-1"></div>
                                                         <div class="col-md-9">
                                                             <label class="col-from-label">On Progress Project</label>
@@ -812,7 +812,7 @@
                                                                 <span class="slider round"></span>
                                                             </label>
                                                         </div>
-                                                    </div>
+                                                    </div> --}}
                                                     <div class="row">
                                                         <div class="col-md-1"></div>
                                                         <div class="col-md-9">

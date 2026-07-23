@@ -105,7 +105,7 @@
                                                     <input type="text"
                                                         class="form-control @error('cname') is-invalid @enderror"
                                                         name="cname" id="cname" placeholder="Name"
-                                                        value="{{ $customer_details->fld_name }}" >
+                                                        value="{{ $customer_details->fld_name }}">
                                                 </div>
                                                 @error('cname')
                                                     <span class="invalid-feedback" role="alert">
@@ -121,7 +121,7 @@
                                                     <input type="email"
                                                         class="form-control @error('cemail') is-invalid @enderror"
                                                         name="cemail" id="cemail" placeholder="Email"
-                                                        value="{{ $customer_details->fld_email }}" >
+                                                        value="{{ $customer_details->fld_email }}">
                                                 </div>
                                                 @error('cemail')
                                                     <span class="invalid-feedback" role="alert">
@@ -137,7 +137,7 @@
                                                     <input type="text"
                                                         class="form-control @error('ccname') is-invalid @enderror"
                                                         name="ccname" id="ccname" placeholder="Company Name"
-                                                        value="{{ $customer_details->fld_company_name }}" >
+                                                        value="{{ $customer_details->fld_company_name }}">
                                                 </div>
                                                 @error('ccname')
                                                     <span class="invalid-feedback" role="alert">
@@ -147,410 +147,416 @@
                                             </div>
                                         </div>
 
-                                        
-                                            
-                                        </div>
-
-                                        <div class="row">
-											<div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="form-label">Domain Name</label>
-                                                    <div class="input-group in-bord mb-3">
-                                                        <input type="text"
-                                                            class="form-control @error('fld_domain_name') is-invalid @enderror"
-                                                            name="fld_domain_name" placeholder="Domain Name"
-                                                            value="{{ $domainhosting->fld_domain_name }}" required>
-                                                    </div>
-                                                    @error('fld_domain_name')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="form-label">Domain Register Date</label>
-                                                    <div class="input-group in-bord mb-3">
-                                                        <input type="date"
-                                                            class="form-control @error('fld_domain_start_date') is-invalid @enderror"
-                                                            name="fld_domain_start_date"
-                                                            value="{{ $domainhosting->fld_domain_start_date }}"
-                                                            id="fld_domain_start_date" required>
-                                                    </div>
-                                                    @error('fld_domain_start_date')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="form-group">
-                                                    <label class="form-label">Years</label>
-                                                    <div class="input-group in-bord mb-3">
-                                                        <select
-                                                            class="form-control select2 @error('fld_domain_tenure') is-invalid @enderror"
-                                                            id="fld_domain_tenure">
-                                                            <option value="">Years</option>
-                                                            <option value="1"
-                                                                @if ($domainhosting->fld_domain_tenure == 1) selected @endif>1</option>
-                                                            <option value="2"
-                                                                @if ($domainhosting->fld_domain_tenure == 2) selected @endif>2
-                                                            </option>
-                                                            <option value="3"
-                                                                @if ($domainhosting->fld_domain_tenure == 3) selected @endif>3
-                                                            </option>
-                                                            <option value="4"
-                                                                @if ($domainhosting->fld_domain_tenure == 4) selected @endif>4
-                                                            </option>
-                                                            <option value="5"
-                                                                @if ($domainhosting->fld_domain_tenure == 5) selected @endif>5
-                                                            </option>
-                                                            <option value="6"
-                                                                @if ($domainhosting->fld_domain_tenure == 6) selected @endif>6
-                                                            </option>
-                                                            <option value="7"
-                                                                @if ($domainhosting->fld_domain_tenure == 7) selected @endif>7
-                                                            </option>
-                                                            <option value="8"
-                                                                @if ($domainhosting->fld_domain_tenure == 8) selected @endif>8
-                                                            </option>
-                                                            <option value="9"
-                                                                @if ($domainhosting->fld_domain_tenure == 9) selected @endif>9
-                                                            </option>
-                                                            <option value="10"
-                                                                @if ($domainhosting->fld_domain_tenure == 10) selected @endif>10
-                                                            </option>
-                                                            <option value="11"
-                                                                @if ($domainhosting->fld_domain_tenure == 11) selected @endif>11
-                                                            </option>
-                                                            <option value="12"
-                                                                @if ($domainhosting->fld_domain_tenure == 12) selected @endif>12
-                                                            </option>
-                                                        </select>
-                                                        <input type="hidden" id="fld_domain_tenure_hidden"
-                                                            name="fld_domain_tenure"
-                                                            value="{{ $domainhosting->fld_domain_tenure }}">
-                                                    </div>
-                                                    @error('fld_domain_tenure')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="form-group">
-                                                    <label class="form-label">Expiry Years</label>
-                                                    <div class="input-group in-bord mb-3">
-                                                        <select
-                                                            class="form-control select2 @error('fld_expiry_domain_tenure') is-invalid @enderror"
-                                                            name="fld_expiry_domain_tenure" id="fld_expiry_domain_tenure">
-                                                            <option value="">Years</option>
-                                                            <option value="1"
-                                                                @if ($domainhosting->fld_expiry_domain_tenure == 1) selected @endif>1
-                                                            </option>
-                                                            <option value="2"
-                                                                @if ($domainhosting->fld_expiry_domain_tenure == 2) selected @endif>2
-                                                            </option>
-                                                            <option value="3"
-                                                                @if ($domainhosting->fld_expiry_domain_tenure == 3) selected @endif>3
-                                                            </option>
-                                                            <option value="4"
-                                                                @if ($domainhosting->fld_expiry_domain_tenure == 4) selected @endif>4
-                                                            </option>
-                                                            <option value="5"
-                                                                @if ($domainhosting->fld_expiry_domain_tenure == 5) selected @endif>5
-                                                            </option>
-                                                            <option value="6"
-                                                                @if ($domainhosting->fld_expiry_domain_tenure == 6) selected @endif>6
-                                                            </option>
-                                                            <option value="7"
-                                                                @if ($domainhosting->fld_expiry_domain_tenure == 7) selected @endif>7
-                                                            </option>
-                                                            <option value="8"
-                                                                @if ($domainhosting->fld_expiry_domain_tenure == 8) selected @endif>8
-                                                            </option>
-                                                            <option value="9"
-                                                                @if ($domainhosting->fld_expiry_domain_tenure == 9) selected @endif>9
-                                                            </option>
-                                                            <option value="10"
-                                                                @if ($domainhosting->fld_expiry_domain_tenure == 10) selected @endif>10
-                                                            </option>
-                                                            <option value="11"
-                                                                @if ($domainhosting->fld_expiry_domain_tenure == 11) selected @endif>11
-                                                            </option>
-                                                            <option value="12"
-                                                                @if ($domainhosting->fld_expiry_domain_tenure == 12) selected @endif>12
-                                                            </option>
-                                                        </select>
-                                                    </div>
-                                                    @error('fld_expiry_domain_tenure')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="form-group">
-                                                    <label class="form-label">Domain Expiry Date</label>
-                                                    <div class="input-group in-bord mb-3">
-                                                        <input type="date"
-                                                            class="form-control @error('fld_domain_end_date') is-invalid @enderror"
-                                                            name="fld_domain_end_date" id="fld_domain_end_date"
-                                                            value="{{ $domainhosting->fld_domain_end_date }}" required>
-                                                    </div>
-                                                    @error('fld_domain_end_date')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="form-label">Hosting Name</label>
-                                                    <div class="input-group in-bord mb-3">
-                                                        <select
-                                                            class="form-control @error('fld_hosting_name') is-invalid @enderror"
-                                                            name="fld_hosting_name" required>
-                                                            <option value="">Select Hosting Server</option>
-
-                                                            @foreach ($hostingServers as $server)
-                                                                <option value="{{ $server->fld_hosting_name }}"
-                                                                    {{ old('fld_hosting_name', $domainhosting->fld_hosting_name) == $server->fld_hosting_name ? 'selected' : '' }}>
-                                                                    {{ $server->fld_hosting_name }}
-                                                                </option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                    @error('fld_hosting_name')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="form-label">Hosting Register Date</label>
-                                                    <div class="input-group in-bord mb-3">
-                                                        <input type="date"
-                                                            class="form-control @error('fld_hosting_start_date') is-invalid @enderror"
-                                                            name="fld_hosting_start_date" id="fld_hosting_start_date"
-                                                            value="{{ $domainhosting->fld_hosting_start_date }}" required>
-                                                    </div>
-                                                    @error('fld_hosting_start_date')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="form-group">
-                                                    <label class="form-label">Years</label>
-                                                    <div class="input-group in-bord mb-3">
-                                                        <select
-                                                            class="form-control select2 @error('fld_hosting_tenure') is-invalid @enderror"
-                                                            id="fld_hosting_tenure">
-                                                            <option value="">Years</option>
-                                                            <option value="1"
-                                                                @if ($domainhosting->fld_hosting_tenure == 1) selected @endif>1
-                                                            </option>
-                                                            <option value="2"
-                                                                @if ($domainhosting->fld_hosting_tenure == 2) selected @endif>2
-                                                            </option>
-                                                            <option value="3"
-                                                                @if ($domainhosting->fld_hosting_tenure == 3) selected @endif>3
-                                                            </option>
-                                                            <option value="4"
-                                                                @if ($domainhosting->fld_hosting_tenure == 4) selected @endif>4
-                                                            </option>
-                                                            <option value="5"
-                                                                @if ($domainhosting->fld_hosting_tenure == 5) selected @endif>5
-                                                            </option>
-                                                            <option value="6"
-                                                                @if ($domainhosting->fld_hosting_tenure == 6) selected @endif>6
-                                                            </option>
-                                                            <option value="7"
-                                                                @if ($domainhosting->fld_hosting_tenure == 7) selected @endif>7
-                                                            </option>
-                                                            <option value="8"
-                                                                @if ($domainhosting->fld_hosting_tenure == 8) selected @endif>8
-                                                            </option>
-                                                            <option value="9"
-                                                                @if ($domainhosting->fld_hosting_tenure == 9) selected @endif>9
-                                                            </option>
-                                                            <option value="10"
-                                                                @if ($domainhosting->fld_hosting_tenure == 10) selected @endif>10
-                                                            </option>
-                                                            <option value="11"
-                                                                @if ($domainhosting->fld_hosting_tenure == 11) selected @endif>11
-                                                            </option>
-                                                            <option value="12"
-                                                                @if ($domainhosting->fld_hosting_tenure == 12) selected @endif>12
-                                                            </option>
-                                                        </select>
-                                                        <input type="hidden" id="fld_hosting_tenure_hidden"
-                                                            name="fld_hosting_tenure"
-                                                            value="{{ $domainhosting->fld_hosting_tenure }}">
-                                                    </div>
-                                                    @error('fld_hosting_tenure')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="form-group">
-                                                    <label class="form-label">Expiry Years</label>
-                                                    <div class="input-group in-bord mb-3">
-                                                        <select
-                                                            class="form-control select2 @error('fld_expiry_hosting_tenure') is-invalid @enderror"
-                                                            name="fld_expiry_hosting_tenure"
-                                                            id="fld_expiry_hosting_tenure">
-                                                            <option value="">Years</option>
-                                                            <option value="1"
-                                                                @if ($domainhosting->fld_expiry_hosting_tenure == 1) selected @endif>1
-                                                            </option>
-                                                            <option value="2"
-                                                                @if ($domainhosting->fld_expiry_hosting_tenure == 2) selected @endif>2
-                                                            </option>
-                                                            <option value="3"
-                                                                @if ($domainhosting->fld_expiry_hosting_tenure == 3) selected @endif>3
-                                                            </option>
-                                                            <option value="4"
-                                                                @if ($domainhosting->fld_expiry_hosting_tenure == 4) selected @endif>4
-                                                            </option>
-                                                            <option value="5"
-                                                                @if ($domainhosting->fld_expiry_hosting_tenure == 5) selected @endif>5
-                                                            </option>
-                                                            <option value="6"
-                                                                @if ($domainhosting->fld_expiry_hosting_tenure == 6) selected @endif>6
-                                                            </option>
-                                                            <option value="7"
-                                                                @if ($domainhosting->fld_expiry_hosting_tenure == 7) selected @endif>7
-                                                            </option>
-                                                            <option value="8"
-                                                                @if ($domainhosting->fld_expiry_hosting_tenure == 8) selected @endif>8
-                                                            </option>
-                                                            <option value="9"
-                                                                @if ($domainhosting->fld_expiry_hosting_tenure == 9) selected @endif>9
-                                                            </option>
-                                                            <option value="10"
-                                                                @if ($domainhosting->fld_expiry_hosting_tenure == 10) selected @endif>10
-                                                            </option>
-                                                            <option value="11"
-                                                                @if ($domainhosting->fld_expiry_hosting_tenure == 11) selected @endif>11
-                                                            </option>
-                                                            <option value="12"
-                                                                @if ($domainhosting->fld_expiry_hosting_tenure == 12) selected @endif>12
-                                                            </option>
-                                                        </select>
-                                                    </div>
-                                                    @error('fld_expiry_hosting_tenure')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="form-group">
-                                                    <label class="form-label">Hosting Expiry Date</label>
-                                                    <div class="input-group in-bord mb-3">
-                                                        <input type="date"
-                                                            class="form-control @error('fld_hosting_end_date') is-invalid @enderror"
-                                                            name="fld_hosting_end_date"
-                                                            value="{{ $domainhosting->fld_hosting_end_date }}"
-                                                            id="fld_hosting_end_date" required>
-                                                    </div>
-                                                    @error('fld_hosting_end_date')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label class="form-label">Tax Rate(%)</label>
-                                                    <div class="input-group in-bord mb-3">
-                                                        <input type="text"
-                                                            class="form-control @error('fld_tax_percentage') is-invalid @enderror"
-                                                            name="fld_tax_percentage" id="fld_tax_percentage"
-                                                            placeholder="Tax Rate"
-                                                            value="{{ $domainhosting->fld_tax_percentage }}" required
-                                                            onkeyup="TaxCalculate()">
-                                                    </div>
-                                                    @error('fld_tax_percentage')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label class="form-label">Amount</label>
-                                                    <div class="input-group in-bord mb-3">
-
-                                                        <input type="text"
-                                                            class="form-control @error('fld_amount') is-invalid @enderror"
-                                                            name="fld_amount" id="fld_amount" placeholder="Amount"
-                                                            value="{{ $domainhosting->fld_amount }}" required
-                                                            onkeyup="TaxCalculate()">
-                                                    </div>
-                                                    @error('fld_amount')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label class="form-label">Total Amount</label>
-                                                    <div class="input-group in-bord mb-3">
-                                                        <input type="text"
-                                                            class="form-control @error('fld_total_amount') is-invalid @enderror"
-                                                            name="fld_total_amount" id="fld_total_amount"
-                                                            placeholder="Total Amount"
-                                                            value="{{ $domainhosting->fld_total_amount }}" readonly>
-                                                    </div>
-                                                    @error('fld_total_amount')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <div class="form-group">
-                                                    <label class="form-label">Description</label>
-                                                    <div class="input-group in-bord mb-3">
-                                                        <textarea type="text" class="form-control @error('fld_description') is-invalid @enderror" name="fld_description"
-                                                            placeholder="Description" rows="4">{{ $domainhosting->fld_description }}</textarea>
-                                                    </div>
-                                                    @error('fld_description')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                        </div>
 
 
                                     </div>
-                                    <!-- /.box-body -->
-                                    <div class="box-footer text-end">
-                                        <input type="submit" name="submit" class="btn btn-primary" value="Submit">
+
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="form-label">Domain Name</label>
+
+                                                <div class="input-group mb-3">
+                                                    <input type="text"
+                                                        class="form-control @error('fld_domain_name') is-invalid @enderror"
+                                                        name="fld_domain_name" placeholder="Domain Name"
+                                                        value="{{ $domainhosting->fld_domain_name }}" required>
+
+                                                    <button type="button" class="btn btn-outline-primary"
+                                                        data-bs-toggle="modal" data-bs-target="#domainModal">
+                                                        <i class="fa fa-eye"></i>
+                                                    </button>
+                                                </div>
+
+                                                @error('fld_domain_name')
+                                                    <span class="invalid-feedback">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="form-label">Domain Register Date</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="date"
+                                                        class="form-control @error('fld_domain_start_date') is-invalid @enderror"
+                                                        name="fld_domain_start_date"
+                                                        value="{{ $domainhosting->fld_domain_start_date }}"
+                                                        id="fld_domain_start_date" required>
+                                                </div>
+                                                @error('fld_domain_start_date')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label class="form-label">Years</label>
+                                                <div class="input-group mb-3">
+                                                    <select
+                                                        class="form-control select2 @error('fld_domain_tenure') is-invalid @enderror"
+                                                        id="fld_domain_tenure">
+                                                        <option value="">Years</option>
+                                                        <option value="1"
+                                                            @if ($domainhosting->fld_domain_tenure == 1) selected @endif>1</option>
+                                                        <option value="2"
+                                                            @if ($domainhosting->fld_domain_tenure == 2) selected @endif>2
+                                                        </option>
+                                                        <option value="3"
+                                                            @if ($domainhosting->fld_domain_tenure == 3) selected @endif>3
+                                                        </option>
+                                                        <option value="4"
+                                                            @if ($domainhosting->fld_domain_tenure == 4) selected @endif>4
+                                                        </option>
+                                                        <option value="5"
+                                                            @if ($domainhosting->fld_domain_tenure == 5) selected @endif>5
+                                                        </option>
+                                                        <option value="6"
+                                                            @if ($domainhosting->fld_domain_tenure == 6) selected @endif>6
+                                                        </option>
+                                                        <option value="7"
+                                                            @if ($domainhosting->fld_domain_tenure == 7) selected @endif>7
+                                                        </option>
+                                                        <option value="8"
+                                                            @if ($domainhosting->fld_domain_tenure == 8) selected @endif>8
+                                                        </option>
+                                                        <option value="9"
+                                                            @if ($domainhosting->fld_domain_tenure == 9) selected @endif>9
+                                                        </option>
+                                                        <option value="10"
+                                                            @if ($domainhosting->fld_domain_tenure == 10) selected @endif>10
+                                                        </option>
+                                                        <option value="11"
+                                                            @if ($domainhosting->fld_domain_tenure == 11) selected @endif>11
+                                                        </option>
+                                                        <option value="12"
+                                                            @if ($domainhosting->fld_domain_tenure == 12) selected @endif>12
+                                                        </option>
+                                                    </select>
+                                                    <input type="hidden" id="fld_domain_tenure_hidden"
+                                                        name="fld_domain_tenure"
+                                                        value="{{ $domainhosting->fld_domain_tenure }}">
+                                                </div>
+                                                @error('fld_domain_tenure')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label class="form-label">Expiry Years</label>
+                                                <div class="input-group mb-3">
+                                                    <select
+                                                        class="form-control select2 @error('fld_expiry_domain_tenure') is-invalid @enderror"
+                                                        name="fld_expiry_domain_tenure" id="fld_expiry_domain_tenure">
+                                                        <option value="">Years</option>
+                                                        <option value="1"
+                                                            @if ($domainhosting->fld_expiry_domain_tenure == 1) selected @endif>1
+                                                        </option>
+                                                        <option value="2"
+                                                            @if ($domainhosting->fld_expiry_domain_tenure == 2) selected @endif>2
+                                                        </option>
+                                                        <option value="3"
+                                                            @if ($domainhosting->fld_expiry_domain_tenure == 3) selected @endif>3
+                                                        </option>
+                                                        <option value="4"
+                                                            @if ($domainhosting->fld_expiry_domain_tenure == 4) selected @endif>4
+                                                        </option>
+                                                        <option value="5"
+                                                            @if ($domainhosting->fld_expiry_domain_tenure == 5) selected @endif>5
+                                                        </option>
+                                                        <option value="6"
+                                                            @if ($domainhosting->fld_expiry_domain_tenure == 6) selected @endif>6
+                                                        </option>
+                                                        <option value="7"
+                                                            @if ($domainhosting->fld_expiry_domain_tenure == 7) selected @endif>7
+                                                        </option>
+                                                        <option value="8"
+                                                            @if ($domainhosting->fld_expiry_domain_tenure == 8) selected @endif>8
+                                                        </option>
+                                                        <option value="9"
+                                                            @if ($domainhosting->fld_expiry_domain_tenure == 9) selected @endif>9
+                                                        </option>
+                                                        <option value="10"
+                                                            @if ($domainhosting->fld_expiry_domain_tenure == 10) selected @endif>10
+                                                        </option>
+                                                        <option value="11"
+                                                            @if ($domainhosting->fld_expiry_domain_tenure == 11) selected @endif>11
+                                                        </option>
+                                                        <option value="12"
+                                                            @if ($domainhosting->fld_expiry_domain_tenure == 12) selected @endif>12
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                                @error('fld_expiry_domain_tenure')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label class="form-label">Domain Expiry Date</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="date"
+                                                        class="form-control @error('fld_domain_end_date') is-invalid @enderror"
+                                                        name="fld_domain_end_date" id="fld_domain_end_date"
+                                                        value="{{ $domainhosting->fld_domain_end_date }}" required>
+                                                </div>
+                                                @error('fld_domain_end_date')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="form-label">Hosting Name</label>
+                                                <div class="input-group mb-3">
+                                                    <select
+                                                        class="form-control @error('fld_hosting_name') is-invalid @enderror"
+                                                        name="fld_hosting_name" required>
+                                                        <option value="">Select Hosting Server</option>
+
+                                                        @foreach ($hostingServers as $server)
+                                                            <option value="{{ $server->fld_hosting_name }}"
+                                                                {{ old('fld_hosting_name', $domainhosting->fld_hosting_name) == $server->fld_hosting_name ? 'selected' : '' }}>
+                                                                {{ $server->fld_hosting_name }}
+                                                            </option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                @error('fld_hosting_name')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="form-label">Hosting Register Date</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="date"
+                                                        class="form-control @error('fld_hosting_start_date') is-invalid @enderror"
+                                                        name="fld_hosting_start_date" id="fld_hosting_start_date"
+                                                        value="{{ $domainhosting->fld_hosting_start_date }}" required>
+                                                </div>
+                                                @error('fld_hosting_start_date')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label class="form-label">Years</label>
+                                                <div class="input-group mb-3">
+                                                    <select
+                                                        class="form-control select2 @error('fld_hosting_tenure') is-invalid @enderror"
+                                                        id="fld_hosting_tenure">
+                                                        <option value="">Years</option>
+                                                        <option value="1"
+                                                            @if ($domainhosting->fld_hosting_tenure == 1) selected @endif>1
+                                                        </option>
+                                                        <option value="2"
+                                                            @if ($domainhosting->fld_hosting_tenure == 2) selected @endif>2
+                                                        </option>
+                                                        <option value="3"
+                                                            @if ($domainhosting->fld_hosting_tenure == 3) selected @endif>3
+                                                        </option>
+                                                        <option value="4"
+                                                            @if ($domainhosting->fld_hosting_tenure == 4) selected @endif>4
+                                                        </option>
+                                                        <option value="5"
+                                                            @if ($domainhosting->fld_hosting_tenure == 5) selected @endif>5
+                                                        </option>
+                                                        <option value="6"
+                                                            @if ($domainhosting->fld_hosting_tenure == 6) selected @endif>6
+                                                        </option>
+                                                        <option value="7"
+                                                            @if ($domainhosting->fld_hosting_tenure == 7) selected @endif>7
+                                                        </option>
+                                                        <option value="8"
+                                                            @if ($domainhosting->fld_hosting_tenure == 8) selected @endif>8
+                                                        </option>
+                                                        <option value="9"
+                                                            @if ($domainhosting->fld_hosting_tenure == 9) selected @endif>9
+                                                        </option>
+                                                        <option value="10"
+                                                            @if ($domainhosting->fld_hosting_tenure == 10) selected @endif>10
+                                                        </option>
+                                                        <option value="11"
+                                                            @if ($domainhosting->fld_hosting_tenure == 11) selected @endif>11
+                                                        </option>
+                                                        <option value="12"
+                                                            @if ($domainhosting->fld_hosting_tenure == 12) selected @endif>12
+                                                        </option>
+                                                    </select>
+                                                    <input type="hidden" id="fld_hosting_tenure_hidden"
+                                                        name="fld_hosting_tenure"
+                                                        value="{{ $domainhosting->fld_hosting_tenure }}">
+                                                </div>
+                                                @error('fld_hosting_tenure')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label class="form-label">Expiry Years</label>
+                                                <div class="input-group mb-3">
+                                                    <select
+                                                        class="form-control select2 @error('fld_expiry_hosting_tenure') is-invalid @enderror"
+                                                        name="fld_expiry_hosting_tenure" id="fld_expiry_hosting_tenure">
+                                                        <option value="">Years</option>
+                                                        <option value="1"
+                                                            @if ($domainhosting->fld_expiry_hosting_tenure == 1) selected @endif>1
+                                                        </option>
+                                                        <option value="2"
+                                                            @if ($domainhosting->fld_expiry_hosting_tenure == 2) selected @endif>2
+                                                        </option>
+                                                        <option value="3"
+                                                            @if ($domainhosting->fld_expiry_hosting_tenure == 3) selected @endif>3
+                                                        </option>
+                                                        <option value="4"
+                                                            @if ($domainhosting->fld_expiry_hosting_tenure == 4) selected @endif>4
+                                                        </option>
+                                                        <option value="5"
+                                                            @if ($domainhosting->fld_expiry_hosting_tenure == 5) selected @endif>5
+                                                        </option>
+                                                        <option value="6"
+                                                            @if ($domainhosting->fld_expiry_hosting_tenure == 6) selected @endif>6
+                                                        </option>
+                                                        <option value="7"
+                                                            @if ($domainhosting->fld_expiry_hosting_tenure == 7) selected @endif>7
+                                                        </option>
+                                                        <option value="8"
+                                                            @if ($domainhosting->fld_expiry_hosting_tenure == 8) selected @endif>8
+                                                        </option>
+                                                        <option value="9"
+                                                            @if ($domainhosting->fld_expiry_hosting_tenure == 9) selected @endif>9
+                                                        </option>
+                                                        <option value="10"
+                                                            @if ($domainhosting->fld_expiry_hosting_tenure == 10) selected @endif>10
+                                                        </option>
+                                                        <option value="11"
+                                                            @if ($domainhosting->fld_expiry_hosting_tenure == 11) selected @endif>11
+                                                        </option>
+                                                        <option value="12"
+                                                            @if ($domainhosting->fld_expiry_hosting_tenure == 12) selected @endif>12
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                                @error('fld_expiry_hosting_tenure')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label class="form-label">Hosting Expiry Date</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="date"
+                                                        class="form-control @error('fld_hosting_end_date') is-invalid @enderror"
+                                                        name="fld_hosting_end_date"
+                                                        value="{{ $domainhosting->fld_hosting_end_date }}"
+                                                        id="fld_hosting_end_date" required>
+                                                </div>
+                                                @error('fld_hosting_end_date')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="form-label">Tax Rate(%)</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="text"
+                                                        class="form-control @error('fld_tax_percentage') is-invalid @enderror"
+                                                        name="fld_tax_percentage" id="fld_tax_percentage"
+                                                        placeholder="Tax Rate"
+                                                        value="{{ $domainhosting->fld_tax_percentage }}" required
+                                                        onkeyup="TaxCalculate()">
+                                                </div>
+                                                @error('fld_tax_percentage')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="form-label">Amount</label>
+                                                <div class="input-group mb-3">
+
+                                                    <input type="text"
+                                                        class="form-control @error('fld_amount') is-invalid @enderror"
+                                                        name="fld_amount" id="fld_amount" placeholder="Amount"
+                                                        value="{{ $domainhosting->fld_amount }}" required
+                                                        onkeyup="TaxCalculate()">
+                                                </div>
+                                                @error('fld_amount')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="form-label">Total Amount</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="text"
+                                                        class="form-control @error('fld_total_amount') is-invalid @enderror"
+                                                        name="fld_total_amount" id="fld_total_amount"
+                                                        placeholder="Total Amount"
+                                                        value="{{ $domainhosting->fld_total_amount }}" readonly>
+                                                </div>
+                                                @error('fld_total_amount')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <label class="form-label">Description</label>
+                                                <div class="input-group mb-3">
+                                                    <textarea type="text" class="form-control @error('fld_description') is-invalid @enderror" name="fld_description"
+                                                        placeholder="Description" rows="4">{{ $domainhosting->fld_description }}</textarea>
+                                                </div>
+                                                @error('fld_description')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                        </div>
                                     </div>
+
+
+                                </div>
+                                <!-- /.box-body -->
+                                <div class="box-footer text-end">
+                                    <input type="submit" name="submit" class="btn btn-primary" value="Submit">
+                                </div>
                             </form>
                         </div>
                         <!-- /.box -->
@@ -564,6 +570,34 @@
         </section>
         <!-- /.content -->
     </div>
+    </div>
+    <div class="modal fade" id="domainModal" tabindex="-1">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Domain List</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <ul class="list-group">
+                        @forelse($domains as $domain)
+                            <li class="list-group-item">
+                                {{ $domain->fld_domain_server_name }}
+                            </li>
+                        @empty
+                            <li class="list-group-item text-danger">
+                                No Domain Found
+                            </li>
+                        @endforelse
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
     </div>
     <!-- /.content-wrapper -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

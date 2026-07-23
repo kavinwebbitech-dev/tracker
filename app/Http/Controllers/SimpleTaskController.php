@@ -14,8 +14,7 @@ class SimpleTaskController extends Controller
      */
     public function index(Request $request)
     {
-
-       
+      
             $query = SimpleTask::query()->latest();
 
             if ($request->filled('text_value_search')) {
@@ -33,7 +32,6 @@ class SimpleTaskController extends Controller
             $simple_tasks = $query->get();
 
             return view('admin.simpletask.index', compact('simple_tasks'));
-       
         
     }
 
@@ -154,7 +152,7 @@ class SimpleTaskController extends Controller
             $simple_tasks = $query->get();
 
             return view('sub_admin.simpletask.index', compact('simple_tasks'));
-        
+       
     }
 
     public function subcreate()
