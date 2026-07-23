@@ -31,7 +31,7 @@ $page_user_tile = 'Project List - ' . $user_title_name;
             <div class="content-header">
                 <div class="d-flex align-items-center">
                     <div class="me-auto">
-                        <h3 class="page-title">{{ $page_title }} Project List11</h3>
+                        <h3 class="page-title">{{ $page_title }} Project List</h3>
                         <div class="d-inline-block align-items-center">
                             <nav>
                                 <ol class="breadcrumb">

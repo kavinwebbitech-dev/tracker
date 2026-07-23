@@ -42,7 +42,7 @@
                                         enctype="multipart/form-data">
                                         @csrf
                                         <div class="row" style="margin-bottom: 10px;">
-                                            <div class="col-md-3">
+                                            {{-- <div class="col-md-3">
                                                 <div class="form-group">
                                                     <div class="input-group mb-3">
                                                         <select name="service_id" class="form-control" id="service_id">
@@ -61,7 +61,7 @@
                                                         </span>
                                                     @enderror
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     <div class="input-group mb-3">

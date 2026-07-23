@@ -637,7 +637,7 @@
                                     @endif
                                     <li><a href="{{ route('admin.follow.up.view') }}" class="dropdown-item">Follow
                                             Up</a></li>
-                                    <li><a href="{{ route('admin.projects.going') }}" class="dropdown-item">On
+                                    {{-- <li><a href="{{ route('admin.projects.going') }}" class="dropdown-item">On
                                             Progress Projects</a>
                                     </li>
                                     <li><a href="{{ route('admin.projects.pending') }}" class="dropdown-item">Pending
@@ -645,7 +645,7 @@
                                     <li><a href="{{ route('admin.projects.hold') }}" class="dropdown-item">On Hold
                                             Projects</a></li>
                                     <li><a href="{{ route('admin.projects.completed') }}"
-                                            class="dropdown-item">Completed Projects</a></li>
+                                            class="dropdown-item">Completed Projects</a></li> --}}
                                     <li><a href="{{ route('admin.projects.employee.report') }}"
                                             class="dropdown-item">Employee Project Report</a></li>
 
