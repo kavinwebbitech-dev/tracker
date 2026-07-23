@@ -993,7 +993,7 @@ code {
 @media (max-width: 370px) {
   .bg-none-small {
     background: none !important; } }
-.input-group-prepend, .input-group-append {
+.input-group in-bord-prepend, .input-group in-bord-append {
   display: flex; }
 
 .media {
@@ -20511,9 +20511,9 @@ Height property
       height: 45px; }
     .main-header .app-menu .search-bx ::placeholder {
       color: #717C99; }
-    .main-header .app-menu .search-bx .input-group {
+    .main-header .app-menu .search-bx .input-group in-bord {
       margin-top: 0px; }
-    .main-header .app-menu .search-bx .input-group-append {
+    .main-header .app-menu .search-bx .input-group in-bord-append {
       margin-left: 0px; }
     .main-header .app-menu .search-bx .btn {
       background-color: #ffffff;
@@ -25959,7 +25959,7 @@ time {
   .dask-bg {
     background-position: 160% bottom !important; } }
 /*form-element*/
-.form-element .input-group .input-group-addon {
+.form-element .input-group in-bord .input-group in-bord-addon {
   border: none;
   -webkit-background-clip: padding-box;
   background-color: transparent;
@@ -26056,9 +26056,9 @@ time {
     border-radius: 5px !important;
     padding: 10px 20px;
     font-size: 1.143rem; }
-  .cours-search .input-group-append {
+  .cours-search .input-group in-bord-append {
     margin-left: 10px; }
-    .cours-search .input-group-append .btn {
+    .cours-search .input-group in-bord-append .btn {
       border-radius: 5px; }
   .cours-search .select2-container--default .select2-selection--single {
     height: 50px; }
@@ -26403,7 +26403,7 @@ input[type="color"] {
 .form-group.has-success .form-control {
   border-color: #04a08b;
   box-shadow: none; }
-.form-group.has-success .input-group-addon {
+.form-group.has-success .input-group in-bord-addon {
   border-color: #04a08b;
   box-shadow: none; }
 .form-group.has-warning .help-block {
@@ -26413,7 +26413,7 @@ input[type="color"] {
 .form-group.has-warning .form-control {
   border-color: #F6B749;
   box-shadow: none; }
-.form-group.has-warning .input-group-addon {
+.form-group.has-warning .input-group in-bord-addon {
   border-color: #F6B749;
   box-shadow: none; }
 .form-group.has-error .help-block {
@@ -26423,7 +26423,7 @@ input[type="color"] {
 .form-group.has-error .form-control {
   border-color: #FF6C6C;
   box-shadow: none; }
-.form-group.has-error .input-group-addon {
+.form-group.has-error .input-group in-bord-addon {
   border-color: #FF6C6C;
   box-shadow: none; }
 
@@ -26450,11 +26450,11 @@ input[type="color"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none; }
-  .form-control + .input-group-addon:not(:first-child), .form-select + .input-group-addon:not(:first-child) {
+  .form-control + .input-group in-bord-addon:not(:first-child), .form-select + .input-group in-bord-addon:not(:first-child) {
     border-radius: 0px 5px 5px 0px;
     border-left: 0; }
 
-.input-group-addon, .input-group-btn {
+.input-group in-bord-addon, .input-group in-bord-btn {
   white-space: nowrap;
   vertical-align: middle; }
 
@@ -26472,15 +26472,15 @@ textarea.form-control {
 .icheck > label {
   padding-left: 0; }
 
-.input-group .input-group-addon {
+.input-group in-bord .input-group in-bord-addon {
   border-radius: 5px 0px 0px 5px;
   border-color: #86a4c3;
   background-color: #ffffff; }
-.input-group .input-group-text {
+.input-group in-bord .input-group in-bord-text {
   border-color: #86a4c3;
   border-radius: 5px; }
 
-.input-group-addon {
+.input-group in-bord-addon {
   font-weight: 300;
   padding: .425rem .75rem;
   border: 1px solid #86a4c3;
@@ -26499,7 +26499,7 @@ textarea.form-control {
 .form-group-sm .form-control + .form-control-feedback.fa {
   line-height: 30px; }
 
-.input-group-sm + .form-control-feedback.fa {
+.input-group in-bord-sm + .form-control-feedback.fa {
   line-height: 30px; }
 
 .input-sm + .form-control-feedback.fa {
@@ -26519,7 +26519,7 @@ textarea.form-control {
 .form-group-feedback-right .form-control-feedback {
   right: 0; }
 
-.input-group-lg + .form-control-feedback.fa {
+.input-group in-bord-lg + .form-control-feedback.fa {
   line-height: 46px; }
 
 .input-lg + .form-control-feedback.fa {
@@ -26529,7 +26529,7 @@ textarea.form-control {
 .bootstrap-select .btn-group .dropdown-menu {
   -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1); }
-.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group in-bord-btn) {
   width: 100%; }
 .bootstrap-select .dropdown-menu li a {
   display: block;
@@ -26552,7 +26552,7 @@ textarea.form-control {
   .bootstrap-select.btn-group .dropdown-menu li a span.text {
     letter-spacing: inherit; }
 
-.bootstrap-touchspin .input-group-btn-vertical > .btn {
+.bootstrap-touchspin .input-group in-bord-btn-vertical > .btn {
   padding: 9px 10px; }
 
 .btn.bootstrap-touchspin-up {
@@ -26562,7 +26562,7 @@ textarea.form-control {
   border-radius: 5px; }
 
 /*---form-group---*/
-.input-group-append .btn, .input-group-prepend .btn {
+.input-group in-bord-append .btn, .input-group in-bord-prepend .btn {
   border-radius: 5px; }
 
 .file-group input[type="file"] {

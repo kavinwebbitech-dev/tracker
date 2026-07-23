@@ -48,7 +48,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Select Project</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control select2 @error('project_id') is-invalid @enderror" name="project_id" id="staff_dropdown">
 													<option value="">Select Project</option>
 													@if($projects)
@@ -57,7 +57,7 @@
 													@endforeach
 													@endif
 												</select>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('project_id')
 			                                    <span class="invalid-feedback" role="alert">
@@ -69,9 +69,9 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Task Name</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('task_name') is-invalid @enderror" name="task_name" placeholder="Task Name" value="{{ old('task_name') }}" required>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('task_name')
 			                                    <span class="invalid-feedback" role="alert">
@@ -86,8 +86,8 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Date Range</label>
-											<div class="input-group">
-											  <div class="input-group-addon">
+											<div class="input-group in-bord">
+											  <div class="input-group in-bord-addon">
 												<i class="fa fa-calendar"></i>
 											  </div>
 											  <input type="text" class="form-control pull-right" name="date_range_task" id="reservation">
@@ -103,7 +103,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Task Priority </label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control" name="priority">
 													<option value="">Select Priority</option>
 													<option value="High">High</option>
@@ -141,9 +141,9 @@
 								</div>
 								{{-- <div class="form-group">
 									<label class="form-label">Confirm Password</label>
-									<div class="input-group mb-3">
+									<div class="input-group in-bord mb-3">
 										<input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" placeholder="Confirm Password">
-										<span class="input-group-text"><i class="ti-lock"></i></span>
+										<span class="input-group in-bord-text"><i class="ti-lock"></i></span>
 									</div>
 									@error('password_confirmation')
 	                                    <span class="invalid-feedback" role="alert">

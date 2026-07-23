@@ -82,7 +82,7 @@
                     <div class="row">
                         <div class="col-md-2">
                             <div class="form-group">
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="date" class="form-control @error('start_date') is-invalid @enderror" name="start_date" id="start_date" value="{{ $start_date ?? '' }}" required>
                                 </div>
                                 @error('start_date')
@@ -94,7 +94,7 @@
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="date" class="form-control @error('end_date') is-invalid @enderror" name="end_date" id="end_date" value="{{ $end_date ?? '' }}" required>
                                 </div>
                                 @error('end_date')
@@ -106,7 +106,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <select class="form-control @error('salesperson') is-invalid @enderror" name="salesperson" id="salesperson">
                                         <option value="">Select Sales Person</option>
                                         @if($salesperson)
@@ -125,7 +125,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <select class="form-control @error('status') is-invalid @enderror" name="status" id="status">
                                         <option value="all" @if($status == "" || $status == null) selected @endif>All</option>
                                         <option value="0" @if($status != null && $status == 0) selected @endif>Pending</option>
@@ -378,7 +378,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-label">Payment Date</label>
-                            <div class="input-group mb-3">
+                            <div class="input-group in-bord mb-3">
                                 <input type="date" class="form-control @error('payment_date') is-invalid @enderror" name="payment_date" value="{{ old('payment_date') }}" required>
                             </div>
                             @error('payment_date')
@@ -391,7 +391,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-label">Payment Amount</label>
-                            <div class="input-group mb-3">
+                            <div class="input-group in-bord mb-3">
                                 <input type="text" class="form-control @error('payment_amount') is-invalid @enderror" name="payment_amount" value="{{ old('payment_amount') }}" required>
                             </div>
                             @error('payment_amount')

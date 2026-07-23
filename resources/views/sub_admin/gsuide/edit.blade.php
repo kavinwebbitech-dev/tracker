@@ -52,7 +52,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Branches</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <select class="form-control select2" id="fld_branch_id"
                                                         name="fld_branch_id">
                                                         @if ($branches)
@@ -74,7 +74,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Customers List</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <select class="form-control select2" id="fld_cust_id" name="fld_cust_id"
                                                         onchange="CustomerDetails()">
                                                         <option value="">Select Person</option>
@@ -100,7 +100,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Name</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="text"
                                                         class="form-control @error('cname') is-invalid @enderror"
                                                         name="cname" id="cname" placeholder="Name"
@@ -116,7 +116,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Email</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="email"
                                                         class="form-control @error('cemail') is-invalid @enderror"
                                                         name="cemail" id="cemail" placeholder="Email"
@@ -132,7 +132,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Company Name</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="text"
                                                         class="form-control @error('ccname') is-invalid @enderror"
                                                         name="ccname" id="ccname" placeholder="Company Name"
@@ -148,7 +148,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Domain Name</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="text"
                                                         class="form-control @error('fld_domain_name') is-invalid @enderror"
                                                         name="fld_domain_name" placeholder="Domain Name"
@@ -164,7 +164,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Domain Register Date</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="date"
                                                         class="form-control @error('fld_gsuite_start_date') is-invalid @enderror"
                                                         name="fld_gsuite_start_date"
@@ -181,7 +181,7 @@
                                         {{-- <div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Years</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control select2 @error('fld_gsuite_tenure') is-invalid @enderror" name="fld_gsuite_tenure" onchange="checkDate()" id="fld_gsuite_tenure">
 													<option value="">Years</option>
 													<option value="1" @if ($domainhosting->fld_gsuite_tenure == 1) selected @endif>1</option>
@@ -208,7 +208,7 @@
                                         <div class="col-md-2">
                                             <div class="form-group">
                                                 <label class="form-label">Years</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <select
                                                         class="form-control select2 @error('fld_gsuite_tenure') is-invalid @enderror"
                                                         id="fld_gsuite_tenure">
@@ -234,7 +234,7 @@
                                         <div class="col-md-2">
                                             <div class="form-group">
                                                 <label class="form-label">Expiry years</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <select
                                                         class="form-control select2 @error('fld_expiry_gsuite_tenure') is-invalid @enderror"
                                                         name="fld_expiry_gsuite_tenure" id="fld_expiry_gsuite_tenure">
@@ -255,7 +255,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Domain Expiry Date</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="date"
                                                         class="form-control @error('fld_gsuite_end_date') is-invalid @enderror"
                                                         name="fld_gsuite_end_date"
@@ -272,7 +272,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Tax Rate(%)</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="text"
                                                         class="form-control @error('fld_tax_percentage') is-invalid @enderror"
                                                         name="fld_tax_percentage" id="fld_tax_percentage"
@@ -289,7 +289,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Amount</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
 
                                                     <input type="text"
                                                         class="form-control @error('fld_amount') is-invalid @enderror"
@@ -307,7 +307,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Total Amount</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="text"
                                                         class="form-control @error('fld_total_amount') is-invalid @enderror"
                                                         name="fld_total_amount" id="fld_total_amount"
@@ -364,7 +364,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Total Email_count</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="text"
                                                         class="form-control @error('fld_email_count') is-invalid @enderror"
                                                         name="fld_email_count" id="fld_email_count"
@@ -380,7 +380,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Description</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <textarea type="text" class="form-control @error('fld_description') is-invalid @enderror" name="fld_description"
                                                         placeholder="Description" rows="4">{{ $domainhosting->fld_description }}</textarea>
                                                 </div>

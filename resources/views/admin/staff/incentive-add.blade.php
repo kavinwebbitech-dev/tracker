@@ -49,7 +49,7 @@
 									<div class="col-md-12">
 										<div class="form-group">
 											<label class="creative-label">Select Staff</label>
-											<div class="creative-input-group mb-3">
+											<div class="creative-input-group in-bord mb-3">
 												<select class="select2 form-control @error('staff_id') is-invalid @enderror" name="staff_id[]" multiple style="width: 100%;">
 													<option value="">Select Staff</option>
 													@if(count($sub_admin) > 0)
@@ -69,17 +69,17 @@
 									<div class="col-12 text-center" id="dynamicTable">
 					              		<div class="row mb-3">
 					                      	<div class="col-md-4">
-												<div class="creative-input-group">
+												<div class="creative-input-group in-bord">
 					                          		<input type="text" name="addmore[0][start_amount]" value="" placeholder="Start Amount" class="form-control">
 												</div>
 					                      	</div>
 					                      	<div class="col-md-4">
-												<div class="creative-input-group">
+												<div class="creative-input-group in-bord">
 					                          		<input type="text" name="addmore[0][end_amount]" value="" placeholder="End Amount" class="form-control" />
 												</div> 
 					                      	</div>
 					                      	<div class="col-md-3">
-												<div class="creative-input-group">
+												<div class="creative-input-group in-bord">
 					                          		<input type="text" name="addmore[{{ 0 }}][incentive]" value="" placeholder="Incentive Amount" class="form-control" />
 												</div> 
 					                      	</div>
@@ -91,12 +91,12 @@
 									{{-- <div class="col-md-12">
 										<div class="form-group">
 						                    <label class="form-label">Status</label>
-						                    <div class="input-group mb-3">
+						                    <div class="input-group in-bord mb-3">
 						                        <select name="status" class="form-control" id="status">
 						                            <option value="Active">Active</option>
 						                            <option value="In Active">In Active</option>
 						                        </select>
-						                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+						                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 						                    </div>
 						                    @error('link')
 						                        <span class="invalid-feedback" role="alert">
@@ -143,19 +143,19 @@
             '<div class="row dynamicrow mb-3">' +
 
 				'<div class="col-md-4">' +
-					'<div class="creative-input-group">' +
+					'<div class="creative-input-group in-bord">' +
 						'<input type="text" name="addmore[' + i + '][start_amount]" placeholder="Start Amount" class="form-control" />' +
 					'</div>' +
 				'</div>' +
 
 				'<div class="col-md-4">' +
-					'<div class="creative-input-group">' +
+					'<div class="creative-input-group in-bord">' +
 						'<input type="text" name="addmore[' + i + '][end_amount]" placeholder="End Amount" class="form-control" />' +
 					'</div>' +
 				'</div>' +
 
 				'<div class="col-md-3">' +
-					'<div class="creative-input-group">' +
+					'<div class="creative-input-group in-bord">' +
 						'<input type="text" name="addmore[' + i + '][incentive]" placeholder="Incentive Amount" class="form-control" />' +
 					'</div>' +
 				'</div>' +

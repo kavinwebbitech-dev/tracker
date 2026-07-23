@@ -1392,7 +1392,7 @@ class TaskController extends Controller
                 <div class="col-md-3">
                     <div class="form-group">
                         <label class="form-label">Task Priority </label>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <select class="form-control" name="addmore['.$user_id.'][priority]">
                                 <option value="">Select Priority</option>
                                 <option value="High" '.$selected2.'>High</option>\
@@ -1423,7 +1423,7 @@ class TaskController extends Controller
                 <div class="col-md-3">
                     <div class="form-group">
                         <label class="form-label">Task Priority </label>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <select class="form-control" name="addmore['.$user_id.'][priority]">
                                 <option value="">Select Priority</option>
                                 <option value="High">High</option>\

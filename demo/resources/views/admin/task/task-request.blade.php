@@ -84,7 +84,7 @@
                         </div>
                         <div class="col-md-6"></div>
                         <div class="col-md-3">
-                            <div class="input-group mb-3">
+                            <div class="input-group in-bord mb-3">
                                 <select class="form-control select2 @error('client_id') is-invalid @enderror" name="client_id" id="client_id" onchange="ClientTaskSearch()">
                                     <option value=""> Select Client</option>
                                     @if($client_details)
@@ -266,9 +266,9 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="form-label">Close Date</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <input type="date" class="form-control @error('date') is-invalid @enderror" name="date" placeholder="Task Name" onfocus="'showPicker' in this && this.showPicker()" value="{{ old('date') }}" required>
-                            <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                            <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                         </div>
                         @error('task_name')
                             <span class="invalid-feedback" role="alert">
@@ -281,9 +281,9 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="form-label">Total Amount</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group in-bord mb-3">
                             <input type="text" class="form-control @error('total_amount') is-invalid @enderror" name="total_amount" placeholder="Task Amount" value="{{ old('total_amount') }}" required>
-                            <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                            <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                         </div>
                         @error('total_amount')
                             <span class="invalid-feedback" role="alert">

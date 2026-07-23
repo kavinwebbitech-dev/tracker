@@ -1852,7 +1852,7 @@ Theme Primary Color
   border-bottom: 2px solid #3762EA; }
 
 /*---form-element---*/
-.theme-primary .form-element .input-group .input-group-addon {
+.theme-primary .form-element .input-group in-bord .input-group in-bord-addon {
   background-image: linear-gradient(45deg, #3762EA, #00baff), linear-gradient(#3b6dc1, #3b6dc1); }
 .theme-primary .form-element .form-control {
   background-image: linear-gradient(45deg, #3762EA, #00baff), linear-gradient(#3b6dc1, #3b6dc1); }
@@ -3569,7 +3569,7 @@ Theme Secondary Color
   border-bottom: 2px solid #b7c1d1; }
 
 /*---form-element---*/
-.theme-secondary .form-element .input-group .input-group-addon {
+.theme-secondary .form-element .input-group in-bord .input-group in-bord-addon {
   background-image: linear-gradient(45deg, #b7c1d1, #00baff), linear-gradient(#3b6dc1, #3b6dc1); }
 .theme-secondary .form-element .form-control {
   background-image: linear-gradient(45deg, #b7c1d1, #00baff), linear-gradient(#3b6dc1, #3b6dc1); }
@@ -5286,7 +5286,7 @@ Theme Info Color
   border-bottom: 2px solid #00baff; }
 
 /*---form-element---*/
-.theme-info .form-element .input-group .input-group-addon {
+.theme-info .form-element .input-group in-bord .input-group in-bord-addon {
   background-image: linear-gradient(45deg, #00baff, #3762EA), linear-gradient(#3b6dc1, #3b6dc1); }
 .theme-info .form-element .form-control {
   background-image: linear-gradient(45deg, #00baff, #3762EA), linear-gradient(#3b6dc1, #3b6dc1); }
@@ -7003,7 +7003,7 @@ Theme Success Color
   border-bottom: 2px solid #04a08b; }
 
 /*---form-element---*/
-.theme-success .form-element .input-group .input-group-addon {
+.theme-success .form-element .input-group in-bord .input-group in-bord-addon {
   background-image: linear-gradient(45deg, #04a08b, #00baff), linear-gradient(#3b6dc1, #3b6dc1); }
 .theme-success .form-element .form-control {
   background-image: linear-gradient(45deg, #04a08b, #00baff), linear-gradient(#3b6dc1, #3b6dc1); }
@@ -8720,7 +8720,7 @@ Theme Danger Color
   border-bottom: 2px solid #FF6C6C; }
 
 /*---form-element---*/
-.theme-danger .form-element .input-group .input-group-addon {
+.theme-danger .form-element .input-group in-bord .input-group in-bord-addon {
   background-image: linear-gradient(45deg, #FF6C6C, #00baff), linear-gradient(#3b6dc1, #3b6dc1); }
 .theme-danger .form-element .form-control {
   background-image: linear-gradient(45deg, #FF6C6C, #00baff), linear-gradient(#3b6dc1, #3b6dc1); }
@@ -10437,7 +10437,7 @@ Theme Warning Color
   border-bottom: 2px solid #F6B749; }
 
 /*---form-element---*/
-.theme-warning .form-element .input-group .input-group-addon {
+.theme-warning .form-element .input-group in-bord .input-group in-bord-addon {
   background-image: linear-gradient(45deg, #F6B749, #00baff), linear-gradient(#3b6dc1, #3b6dc1); }
 .theme-warning .form-element .form-control {
   background-image: linear-gradient(45deg, #F6B749, #00baff), linear-gradient(#3b6dc1, #3b6dc1); }

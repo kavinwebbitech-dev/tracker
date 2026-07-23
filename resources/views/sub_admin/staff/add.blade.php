@@ -50,7 +50,7 @@
 									{{-- <div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Select Sub Admin</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control @error('sub_admin') is-invalid @enderror" name="sub_admin">
 													<option value="">Select Sub Admin</option>
 													@if($sub_admin)
@@ -59,7 +59,7 @@
 													@endforeach
 													@endif
 												</select>
-												<span class="input-group-text"><i class="ti-user"></i></span>
+												<span class="input-group in-bord-text"><i class="ti-user"></i></span>
 											</div>
 											@error('sub_admin')
 			                                    <span class="invalid-feedback" role="alert">
@@ -71,9 +71,9 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Name</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Name" value="{{ old('name') }}" required>
-												<span class="input-group-text"><i class="ti-user"></i></span>
+												<span class="input-group in-bord-text"><i class="ti-user"></i></span>
 											</div>
 											@error('name')
 			                                    <span class="invalid-feedback" role="alert">
@@ -85,9 +85,9 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Email address</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ old('email') }}" required>
-												<span class="input-group-text"><i class="ti-email"></i></span>
+												<span class="input-group in-bord-text"><i class="ti-email"></i></span>
 											</div>
 											@error('email')
 			                                    <span class="invalid-feedback" role="alert">
@@ -99,9 +99,9 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Phone Number</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" placeholder="Phone Number" value="{{ old('phone') }}" required>
-												<span class="input-group-text"><i class="ti-mobile"></i></span>
+												<span class="input-group in-bord-text"><i class="ti-mobile"></i></span>
 											</div>
 											@error('phone')
 			                                    <span class="invalid-feedback" role="alert">
@@ -113,9 +113,9 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Salary</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('salary') is-invalid @enderror" name="salary" placeholder="Salary" value="{{ old('salary') }}" required>
-												<span class="input-group-text"><i class="ti-money"></i></span>
+												<span class="input-group in-bord-text"><i class="ti-money"></i></span>
 											</div>
 											@error('phone')
 			                                    <span class="invalid-feedback" role="alert">
@@ -127,9 +127,9 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Role</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('role') is-invalid @enderror" name="role" placeholder="Role" value="{{ old('role') }}" required>
-												<span class="input-group-text"><i class="ti-key"></i></span>
+												<span class="input-group in-bord-text"><i class="ti-key"></i></span>
 											</div>
 											@error('role')
 			                                    <span class="invalid-feedback" role="alert">
@@ -141,9 +141,9 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Password</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password">
-												<span class="input-group-text"><i class="ti-lock"></i></span>
+												<span class="input-group in-bord-text"><i class="ti-lock"></i></span>
 											</div>
 											@error('password')
 			                                    <span class="invalid-feedback" role="alert">
@@ -155,9 +155,9 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Confirm Password</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" placeholder="Confirm Password">
-												<span class="input-group-text"><i class="ti-lock"></i></span>
+												<span class="input-group in-bord-text"><i class="ti-lock"></i></span>
 											</div>
 											@error('password_confirmation')
 			                                    <span class="invalid-feedback" role="alert">

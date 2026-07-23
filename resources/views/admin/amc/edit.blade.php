@@ -50,7 +50,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Branches</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control select2" id="fld_branch_id" name="fld_branch_id">
 													@if($branches)
 													@foreach($branches as $key => $branch)
@@ -69,7 +69,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Customers List</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control select2" id="fld_cust_id" name="fld_cust_id" onchange="CustomerDetails()">
 													<option value="">Select Person</option>
 													@if($customers)
@@ -89,7 +89,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Name</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('cname') is-invalid @enderror" name="cname" id="cname" placeholder="Name" value="{{ $customer_details->fld_name }}" >
 											</div>
 											@error('cname')
@@ -102,7 +102,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Email</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="email" class="form-control @error('cemail') is-invalid @enderror" name="cemail" id="cemail" placeholder="Email" value="{{ $customer_details->fld_email }}" >
 											</div>
 											@error('cemail')
@@ -115,7 +115,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Company Name</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('ccname') is-invalid @enderror" name="ccname" id="ccname" placeholder="Company Name" value="{{ $customer_details->fld_company_name }}" >
 											</div>
 											@error('ccname')
@@ -128,7 +128,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Details</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<textarea type="text" class="form-control @error('fld_amc_dh_details') is-invalid @enderror" name="fld_amc_dh_details" placeholder="Details" required>{{ $domainhosting->fld_amc_dh_details }}</textarea>
 											</div>
 											@error('fld_amc_dh_details')
@@ -141,7 +141,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Register Date</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="date" class="form-control @error('fld_amc_reg_date') is-invalid @enderror" name="fld_amc_reg_date" value="{{ $domainhosting->fld_amc_reg_date }}" id="fld_amc_reg_date" required>
 											</div>
 											@error('fld_amc_reg_date')
@@ -154,7 +154,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Tenure(In Month)</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control select2 @error('fld_amc_dh_tenure') is-invalid @enderror" name="fld_amc_dh_tenure" id="fld_amc_dh_tenure" onchange="checkDate()">
 													<option value="">Month</option>
 													<option value="1" @if($domainhosting->fld_amc_dh_tenure == 1) selected @endif>1</option>
@@ -181,7 +181,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Expiry Date</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="date" class="form-control @error('fld_amc_end_date') is-invalid @enderror" name="fld_amc_end_date" value="{{ $domainhosting->fld_amc_end_date }}" id="fld_amc_end_date" required>
 											</div>
 											@error('fld_amc_end_date')
@@ -195,7 +195,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Tax Rate(%)</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('fld_amc_tax_rate') is-invalid @enderror" name="fld_amc_tax_rate" id="fld_amc_tax_rate" placeholder="Tax Rate" value="{{ $domainhosting->fld_amc_tax_rate }}" required onkeyup="TaxCalculate()">
 											</div>
 											@error('fld_amc_tax_rate')
@@ -208,7 +208,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Amount</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 
 												<input type="text" class="form-control @error('fld_amc_amount') is-invalid @enderror" name="fld_amc_amount" id="fld_amc_amount" placeholder="Amount" value="{{ $domainhosting->fld_amc_amount }}" required onkeyup="TaxCalculate()">
 											</div>
@@ -222,7 +222,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Total Amount</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('fld_amc_total_amount') is-invalid @enderror" name="fld_amc_total_amount" id="fld_amc_total_amount" placeholder="Total Amount" value="{{ $domainhosting->fld_amc_total_amount }}" readonly>
 											</div>
 											@error('fld_amc_total_amount')
@@ -275,7 +275,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Description</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<textarea type="text" class="form-control @error('fld_amc_description') is-invalid @enderror" name="fld_amc_description" placeholder="Description" rows="4">{{ $domainhosting->fld_amc_description }}</textarea>
 											</div>
 											@error('fld_amc_description')

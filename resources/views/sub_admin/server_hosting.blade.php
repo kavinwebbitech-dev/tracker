@@ -142,7 +142,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Hosting Name</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="text"
                                         class="form-control @error('fld_hosting_name') is-invalid @enderror"
                                         id="fld_hosting_name" name="fld_hosting_name" placeholder="Hosting Name"
@@ -159,7 +159,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Status</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <select name="fld_status" class="form-control" id="fld_status">
                                         <option value="1">Active</option>
                                         <option value="0">In Active</option>

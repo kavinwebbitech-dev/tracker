@@ -55,13 +55,13 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Task Type</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control @error('task_type') is-invalid @enderror" name="task_type" id="date_type" onchange="cusom_date()">
 													<option value="">Select Task Type</option>
 													<option value="custom" @if($task->task_type == "custom") selected @endif>One time Task</option>
 													{{-- <option value="recurring" @if($task->task_type == "recurring") selected @endif>Recurring</option> --}}
 												</select>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('date_type')
 			                                    <span class="invalid-feedback" role="alert">
@@ -74,13 +74,13 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">User Type</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control @error('user_type') is-invalid @enderror" name="user_type" id="user_type" onchange="cusom_date()">
 													<option value=""> Select User</option>
 														<option value="sub_admin" @if($task->sub_admin_id == "") selected @endif> Sub Admin</option>
 														<option value="staff" @if($task->sub_admin_id != "") selected @endif> Staff</option>
 												</select>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('user_type')
 			                                    <span class="invalid-feedback" role="alert">
@@ -94,14 +94,14 @@
 									<div class="col-md-6" id="check_dynamic3">
 										<div class="form-group">
 											<label class="form-label">Select Sub Admin</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control @error('task_sub_admin') is-invalid @enderror" name="task_sub_admin" id="task_sub_admin">
 													<option value=""> Select Sub Admin</option>
 													@foreach($sub_admin as $key => $value)
 														<option value="{{ $value->id }}" @if($task->staff_id == $value->id) selected @endif> {{ $value->name }}</option>
 													@endforeach
 												</select>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('task_sub_admin')
 			                                    <span class="invalid-feedback" role="alert">
@@ -115,14 +115,14 @@
 									<div class="col-md-6" id="check_dynamic" style="display:none;">
 										<div class="form-group">
 											<label class="form-label">Select User</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control @error('staff_id') is-invalid @enderror" name="staff_id" id="staff_id">
 													<option value=""> Select User</option>
 													@foreach($sub_admin as $key => $value)
 														<option value="{{ $value->id }}"> {{ $value->name }}</option>
 													@endforeach
 												</select>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('staff_id')
 			                                    <span class="invalid-feedback" role="alert">
@@ -136,14 +136,14 @@
 
 										<div class="form-group">
 											<label class="form-label">Select Sub Admin</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control @error('sub_admin_id') is-invalid @enderror" name="sub_admin_id" id="sub_admin_id" onchange="sub_admin_check()">
 													<option value=""> Select Sub Admin</option>
 													@foreach($sub_admin as $key => $value)
 														<option value="{{ $value->id }}" @if($task->sub_admin_id == $value->id) selected  @endif> {{ $value->name }}</option>
 													@endforeach
 												</select>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('sub_admin_id')
 			                                    <span class="invalid-feedback" role="alert">
@@ -156,13 +156,13 @@
 									<div class="col-md-6" id="check_dynamic" style="display:none;">
 										<div class="form-group">
 											<label class="form-label">Select User</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control @error('staff_id') is-invalid @enderror" name="staff_id" id="staff_id">
 													@foreach($sub_admin as $key => $value)
 														<option value="{{ $value->id }}"> {{ $value->name }}</option>
 													@endforeach
 												</select>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('staff_id')
 			                                    <span class="invalid-feedback" role="alert">
@@ -174,7 +174,7 @@
 
 									<div class="col-md-6" id="check_dynamic2" @if($task->sub_admin_id != "") style="display:block;" @else  style="display:none;"  @endif>
 										<div class="form-group"><label class="form-label">Select Staff</label>
-						    				<div class="input-group mb-3">
+						    				<div class="input-group in-bord mb-3">
 						    					<select class="form-control multiple_staff select2 @error('staff_id') is-invalid @enderror" id="multiple_staff"  name="multiple_staff[]" style="width: 100%;" multiple>
 												<!-- <select class="selectpicker form-control multiple_staff" id="multiple_staff" name="multiple_staff[]" multiple> -->
 													@foreach($staff as $key => $value1)
@@ -196,7 +196,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Select Project</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control select2 @error('project_id') is-invalid @enderror" name="project_id" id="project_id">
 													<option value="">Select Project</option>
 													@if($projects)
@@ -205,7 +205,7 @@
 													@endforeach
 													@endif
 												</select>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('date_type')
 			                                    <span class="invalid-feedback" role="alert">
@@ -218,9 +218,9 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Task Name</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('task_name') is-invalid @enderror" name="task_name" placeholder="Task Name" value="{{ $task->name }}" required>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('task_name')
 			                                    <span class="invalid-feedback" role="alert">
@@ -252,7 +252,7 @@
 						                <div class="col-md-3">
 											<div class="form-group">
 												<label class="form-label">Task Priority </label>
-												<div class="input-group mb-3">
+												<div class="input-group in-bord mb-3">
 													<select class="form-control" name="addmore[{{$task_staff->staff_id}}][priority]">
 														<option value="">Select Priority</option>
 														<option value="High" @if($task_staff->priority == "High") selected @endif>High</option>
@@ -271,7 +271,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Period of Task</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control @error('date_type') is-invalid @enderror" name="date_type">
 													<option value="7">Weekly</option>
 													<option value="15">15 Days</option>
@@ -279,7 +279,7 @@
 													<option value="90">Quarterly</option>
 													<option value="365">Yearly</option>
 												</select>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('date_type')
 			                                    <span class="invalid-feedback" role="alert">
@@ -292,7 +292,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Start Date</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="date" class="form-control @error('recurring_start_date') is-invalid @enderror" name="recurring_start_date" placeholder="Task Start Date" value="{{ old('recurring_start_date') }}">
 											</div>
 											@error('recurring_start_date')
@@ -311,7 +311,7 @@
 										<div class="form-group">
 											<label class="form-label">Start Date</label>
 
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="datetime-local" name="start_date" class="form-control @error('start_date') is-invalid @enderror" value="{{ $task->start_date }}">
 											</div>
 											@error('start_date')
@@ -326,7 +326,7 @@
 										<div class="form-group">
 											<label class="form-label">End Date</label>
 
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="date" name="end_date" class="form-control @error('end_date') is-invalid @enderror" value="{{ $task->end_date }}">
 											</div>
 											@error('end_date')
@@ -340,7 +340,7 @@
 									{{-- <div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Task Amount</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('task_amount') is-invalid @enderror" name="task_amount" placeholder="Task Amount" value="{{ $task->task_amount }}">
 											</div>
 											@error('task_amount')
@@ -358,7 +358,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Payment Follow Up</label>
-						    				<div class="input-group mb-3">
+						    				<div class="input-group in-bord mb-3">
 						    					<select class="form-control select2 @error('payment_follow_up') is-invalid @enderror" id="payment_follow_up"  name="payment_follow_up" style="width: 100%;">
 													<option value="">Select Person</option>	
 													@foreach($sub_admin1 as $key => $value)
@@ -372,7 +372,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Project Work Follow Up</label>
-						    				<div class="input-group mb-3">
+						    				<div class="input-group in-bord mb-3">
 						    					<select class="form-control select2 @error('project_follow_up') is-invalid @enderror" id="project_follow_up"  name="project_follow_up" style="width: 100%;">
 													<option value="">Select Person</option>	
 													@foreach($sub_admin1 as $key => $value)
@@ -409,9 +409,9 @@
 								</div>
 								{{-- <div class="form-group">
 									<label class="form-label">Confirm Password</label>
-									<div class="input-group mb-3">
+									<div class="input-group in-bord mb-3">
 										<input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" placeholder="Confirm Password">
-										<span class="input-group-text"><i class="ti-lock"></i></span>
+										<span class="input-group in-bord-text"><i class="ti-lock"></i></span>
 									</div>
 									@error('password_confirmation')
 	                                    <span class="invalid-feedback" role="alert">

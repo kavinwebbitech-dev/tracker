@@ -376,7 +376,7 @@
         				                      </div>
         				                      <div class="col-md-3">
         				                      	<div class="form-group">
-													<div class="input-group mb-3">
+													<div class="input-group in-bord mb-3">
 														<select class="form-control" name="addmore4[{{ $key4 }}][email_type]">
 															<option value="New" @if($value4->email_type == "New") selected @endif>New</option>
 															<option value="Renewal" @if($value4->email_type == "Renewal") selected @endif>Renewal</option>
@@ -407,7 +407,7 @@
         			                      </div>
         			                      <div class="col-md-3">
         			                      	<div class="form-group">
-												<div class="input-group mb-3">
+												<div class="input-group in-bord mb-3">
 													<select class="form-control" name="addmore4[0][email_type]">
 														<option value="New">New</option>
 														<option value="Renewal">Renewal</option>
@@ -569,7 +569,7 @@
           </div>\
           <div class="col-md-3">\
           	<div class="form-group">\
-							<div class="input-group mb-3">\
+							<div class="input-group in-bord mb-3">\
 								<select class="form-control" name="addmore4['+z+'][email_type]">\
 									<option value="New">New</option>\
 									<option value="Renewal">Renewal</option>\
@@ -638,7 +638,7 @@
           	<div class="row">
           		<div class="form-group">
 								<label class="form-label">Event Name</label>
-			    				<div class="input-group mb-3">
+			    				<div class="input-group in-bord mb-3">
 			    					<input type="text" class="form-control @error('event_name') is-invalid @enderror" name="event_name" id="event_name" placeholder="Event Name">
 								</div>
 							</div>
@@ -646,7 +646,7 @@
           	<div class="row">
           		<div class="form-group">
 								<label class="form-label">Upload Image</label>
-			    				<div class="input-group mb-3">
+			    				<div class="input-group in-bord mb-3">
 			    					<input type="file" class="form-control @error('event_image') is-invalid @enderror" name="event_image" id="event_image">
 								</div>
 								<input type="hidden" name="old_image" id="old_image">
@@ -656,7 +656,7 @@
           	<div class="row">
           		<div class="form-group">
           			<label class="form-label">Start Date</label>
-                  <div class="input-group mb-3">
+                  <div class="input-group in-bord mb-3">
                       <input type="date" class="form-control @error('start_date') is-invalid @enderror" name="start_date" id="start_date" onfocus="'showPicker' in this && this.showPicker()">
                   </div>
               </div>
@@ -664,7 +664,7 @@
           	<div class="row">
           		<div class="form-group">
           			<label class="form-label">End Date</label>
-                  <div class="input-group mb-3">
+                  <div class="input-group in-bord mb-3">
                       <input type="date" class="form-control @error('end_date') is-invalid @enderror" name="end_date" id="end_date" onfocus="'showPicker' in this && this.showPicker()">
                   </div>
               </div>
@@ -672,7 +672,7 @@
           	<div class="row">
 								<div class="form-group">
 									<label class="form-label">Select User Type </label>
-									<div class="input-group mb-3">
+									<div class="input-group in-bord mb-3">
 										<select class="form-control @error('user_type') is-invalid @enderror" name="user_type" id="user_type">
 											<option value="">Select Task Type</option>
 											<option value="Telecaller">Telecaller</option>
@@ -684,7 +684,7 @@
           	<div class="row">
           		<div class="form-group">
 								<label class="form-label">Description</label>
-			    				<div class="input-group mb-3">
+			    				<div class="input-group in-bord mb-3">
 			    					<input type="text" class="form-control @error('description') is-invalid @enderror" name="description" id="description" placeholder="Description">
 								</div>
 							</div>
@@ -692,7 +692,7 @@
           	<div class="row">
 								<div class="form-group">
 									<label class="form-label">Status</label>
-									<div class="input-group mb-3">
+									<div class="input-group in-bord mb-3">
 										<select class="form-control @error('status') is-invalid @enderror" name="status" id="status">
 											<option value="">Select Status</option>
 											<option value="Active">Active</option>

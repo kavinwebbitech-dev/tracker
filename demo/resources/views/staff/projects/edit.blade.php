@@ -76,7 +76,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Customer</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control select2 @error('customer') is-invalid @enderror" name="customer">
 													<option value="">Select Customer</option>
 													@if($customers)
@@ -96,7 +96,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Name</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Name" value="{{ $sub_admin->name }}">
 											</div>
 											@error('name')
@@ -109,7 +109,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Status</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control @error('status') is-invalid @enderror" name="status">
 													<option value="0" @if($sub_admin->status== 0) selected @endif>Pending</option>
 													<option value="1" @if($sub_admin->status== 1) selected @endif>On Progress</option>
@@ -128,7 +128,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Sales Person</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control select2 @error('sales_person') is-invalid @enderror" name="sales_person">
 													<option value="">Select Person</option>
 													@if($salesperson)
@@ -160,7 +160,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Order Confirm Date</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="date" class="form-control @error('confirm_date') is-invalid @enderror" name="confirm_date" value="{{ $sub_admin->sales_user_date }}">
 											</div>
 											@error('confirm_date')
@@ -173,7 +173,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Start Date</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="date" class="form-control @error('start_date') is-invalid @enderror" name="start_date" value="{{ $sub_admin->start_date }}">
 											</div>
 											@error('start_date')
@@ -186,7 +186,7 @@
 									<div class="col-md-4"  @if($sub_admin->is_renewal== 0) @else style="display: none;" @endif  id="end_day_display">
 										<div class="form-group">
 											<label class="form-label">End Date</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="date" class="form-control @error('end_date') is-invalid @enderror" name="end_date" value="{{ $sub_admin->end_date }}">
 											</div>
 											@error('end_date')
@@ -199,7 +199,7 @@
 									<div class="col-md-4" @if($sub_admin->is_renewal== 1) @else style="display: none;" @endif  id="end_day_display" id="renewal_days">
 										<div class="form-group">
 											<label class="form-label">Renewal Days</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('renewal_days') is-invalid @enderror" name="renewal_days" value="{{ $sub_admin->renewal_days }}">
 											</div>
 											@error('renewal_days')
@@ -212,7 +212,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Amount</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('amount') is-invalid @enderror" name="amount" placeholder="Amount" value="{{ $sub_admin->bid_amount }}" required>
 											</div>
 											@error('amount')
@@ -225,7 +225,7 @@
 									<div class="col-md-4" @if($sub_admin->is_renewal== 1) @else style="display: none;" @endif  id="end_day_display" id="alert_days">
 										<div class="form-group">
 											<label class="form-label">Alert Days</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('alert_days') is-invalid @enderror" name="alert_days" placeholder="Days" value="{{ $sub_admin->total_days }}">
 											</div>
 											@error('alert_days')
@@ -238,7 +238,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="form-label">Service</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control select2 @error('services') is-invalid @enderror" name="services">
 													<option value="">Select Service</option>
 													@if($services)

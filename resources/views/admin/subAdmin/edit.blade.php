@@ -167,12 +167,12 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label class="creative-label">Name</label>
-                                                <div class="input-group creative-input-group">
+                                                <div class="input-group in-bord creative-input-group in-bord">
                                                     <input type="text"
                                                         class="form-control @error('name') is-invalid @enderror"
                                                         name="name" placeholder="Name" value="{{ $sub_admin->name }}"
                                                         required>
-                                                    <span class="input-group-text"><i class="ti-user"></i></span>
+                                                    <span class="input-group in-bord-text"><i class="ti-user"></i></span>
                                                 </div>
                                                 @error('name')
                                                     <span class="invalid-feedback" role="alert">
@@ -184,12 +184,12 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label class="creative-label">Email address</label>
-                                                <div class="input-group creative-input-group">
+                                                <div class="input-group in-bord creative-input-group in-bord">
                                                     <input type="email"
                                                         class="form-control @error('email') is-invalid @enderror"
                                                         name="email" placeholder="Email" value="{{ $sub_admin->email }}"
                                                         required>
-                                                    <span class="input-group-text"><i class="ti-email"></i></span>
+                                                    <span class="input-group in-bord-text"><i class="ti-email"></i></span>
                                                 </div>
                                                 @error('email')
                                                     <span class="invalid-feedback" role="alert">
@@ -201,12 +201,12 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label class="creative-label">Phone Number</label>
-                                                <div class="input-group creative-input-group">
+                                                <div class="input-group in-bord creative-input-group in-bord">
                                                     <input type="text"
                                                         class="form-control @error('phone') is-invalid @enderror"
                                                         name="phone" placeholder="Phone Number"
                                                         value="{{ $sub_admin->phone }}" required>
-                                                    <span class="input-group-text"><i class="ti-mobile"></i></span>
+                                                    <span class="input-group in-bord-text"><i class="ti-mobile"></i></span>
                                                 </div>
                                                 @error('phone')
                                                     <span class="invalid-feedback" role="alert">
@@ -218,12 +218,12 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label class="creative-label">Role</label>
-                                                <div class="input-group creative-input-group">
+                                                <div class="input-group in-bord creative-input-group in-bord">
                                                     <input type="text"
                                                         class="form-control @error('role') is-invalid @enderror"
                                                         name="role" placeholder="Role" value="{{ $sub_admin->role }}"
                                                         required>
-                                                    <span class="input-group-text"><i class="ti-key"></i></span>
+                                                    <span class="input-group in-bord-text"><i class="ti-key"></i></span>
                                                 </div>
                                                 @error('role')
                                                     <span class="invalid-feedback" role="alert">
@@ -235,12 +235,12 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label class="creative-label">Salary</label>
-                                                <div class="input-group creative-input-group">
+                                                <div class="input-group in-bord creative-input-group in-bord">
                                                     <input type="text"
                                                         class="form-control @error('salary') is-invalid @enderror"
                                                         name="salary" placeholder="Salary"
                                                         value="{{ $sub_admin->salary }}" required>
-                                                    <span class="input-group-text"><i class="ti-money"></i></span>
+                                                    <span class="input-group in-bord-text"><i class="ti-money"></i></span>
                                                 </div>
                                                 @error('phone')
                                                     <span class="invalid-feedback" role="alert">
@@ -252,13 +252,13 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label class="creative-label">Joining Date</label>
-                                                <div class="input-group creative-input-group">
+                                                <div class="input-group in-bord creative-input-group in-bord">
                                                     <input type="date"
                                                         onfocus="'showPicker' in this && this.showPicker()"
                                                         class="form-control @error('join_date') is-invalid @enderror"
                                                         name="join_date" placeholder="Salary"
                                                         value="{{ $sub_admin->join_date }}" required>
-                                                    <!--<span class="input-group-text"><i class="ti-money"></i></span>-->
+                                                    <!--<span class="input-group in-bord-text"><i class="ti-money"></i></span>-->
                                                 </div>
                                                 @error('join_date')
                                                     <span class="invalid-feedback" role="alert">
@@ -270,11 +270,11 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label class="creative-label">Password</label>
-                                                <div class="input-group creative-input-group">
+                                                <div class="input-group in-bord creative-input-group in-bord">
                                                     <input type="password"
                                                         class="form-control @error('password') is-invalid @enderror"
                                                         name="password" placeholder="Password">
-                                                    <span class="input-group-text"><i class="ti-lock"></i></span>
+                                                    <span class="input-group in-bord-text"><i class="ti-lock"></i></span>
                                                 </div>
                                                 @error('password')
                                                     <span class="invalid-feedback" role="alert">
@@ -286,7 +286,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label class="creative-label">Status</label>
-                                                <div class="input-group creative-input-group">
+                                                <div class="input-group in-bord creative-input-group in-bord">
                                                     <select class="form-control @error('status') is-invalid @enderror"
                                                         name="status">
                                                         <option value="active"

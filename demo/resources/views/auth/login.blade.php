@@ -37,8 +37,8 @@
                                 <form method="POST" action="{{ route('user.login') }}">
                                     @csrf
                                     <div class="form-group">
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text bg-transparent"><i class="ti-user"></i></span>
+                                        <div class="input-group in-bord mb-3">
+                                            <span class="input-group in-bord-text bg-transparent"><i class="ti-user"></i></span>
                                             <input type="text" class="form-control ps-15 bg-transparent @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required placeholder="Username">
                                             @error('email')
                                                 <span class="invalid-feedback" role="alert">
@@ -48,8 +48,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text  bg-transparent"><i class="ti-lock"></i></span>
+                                        <div class="input-group in-bord mb-3">
+                                            <span class="input-group in-bord-text  bg-transparent"><i class="ti-lock"></i></span>
                                             <input type="password" class="form-control ps-15 bg-transparent @error('password') is-invalid @enderror" name="password" required placeholder="Password">
                                         </div>
                                     </div>

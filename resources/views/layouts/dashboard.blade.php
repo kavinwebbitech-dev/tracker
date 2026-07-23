@@ -924,7 +924,7 @@
                 //     	// console.log(obj);
                 //     	// alert("hi");
                 //         // $('#check_dynamic').append('<label class="form-label">User Type</label>\
-                //         // 				<div class="input-group mb-3">\
+                //         // 				<div class="input-group in-bord mb-3">\
                 // 		// 				<select class="selectpicker form-control" id="multiple_staff" name="multiple_staff" multiple>\
                 // 		// 					'+result+'\
                 // 		// 				</select>\</div>');

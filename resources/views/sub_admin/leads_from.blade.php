@@ -66,7 +66,7 @@
                                         @if (in_array('71', $role_section))
                                             {{-- <div class="col-md-3">
                                                 <div class="form-group">
-                                                    <div class="input-group mb-3">
+                                                    <div class="input-group in-bord mb-3">
                                                         <select name="service_id" class="form-control" id="service_id">
                                                             <option value="">Select Service</option>
                                                             @if ($service_id)
@@ -86,12 +86,12 @@
                                             </div> --}}
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                    <div class="input-group mb-3">
+                                                    <div class="input-group in-bord mb-3">
                                                         <input type="File"
                                                             class="form-control @error('upload_file') is-invalid @enderror"
                                                             id="upload_file" name="upload_file" placeholder="Business Name"
                                                             value="{{ old('upload_file') }}">
-                                                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                                                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                                                     </div>
                                                     @error('upload_file')
                                                         <span class="invalid-feedback" role="alert">
@@ -111,7 +111,7 @@
                                 <div class="row" style="margin-bottom: 10px;">
                                     <div class="col-md-2">
                                         <div class="form-group">
-                                            <div class="input-group mb-3">
+                                            <div class="input-group in-bord mb-3">
                                                 <input type="date"
                                                     class="form-control @error('start_date') is-invalid @enderror"
                                                     name="start_date" id="start_date" value="{{ $start_date ?? '' }}"
@@ -121,7 +121,7 @@
                                     </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
-                                            <div class="input-group mb-3">
+                                            <div class="input-group in-bord mb-3">
                                                 <input type="date"
                                                     class="form-control @error('end_date') is-invalid @enderror"
                                                     name="end_date" id="end_date" value="{{ $end_date ?? '' }}"
@@ -131,7 +131,7 @@
                                     </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
-                                            <div class="input-group mb-3">
+                                            <div class="input-group in-bord mb-3">
                                                 <select name="service_search" class="form-control" id="service_search">
                                                     <option value="">Select Service</option>
                                                     @if ($service_id)
@@ -147,7 +147,7 @@
                                     </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
-                                            <div class="input-group mb-3">
+                                            <div class="input-group in-bord mb-3">
                                                 <select name="salesperson" class="form-control" id="salesperson">
                                                     <option value="">Select Staff</option>
                                                     @if ($salesperson)
@@ -166,7 +166,7 @@
                                     </div>
                                     <div class="col-md-2">
                                         <div class="form-group">
-                                            <div class="input-group mb-3">
+                                            <div class="input-group in-bord mb-3">
                                                 <select name="status_id" class="form-control" id="status_id">
                                                     <option value="">Select Status</option>
                                                     @if ($lead_status)
@@ -279,10 +279,10 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Name</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="text" class="form-control @error('name') is-invalid @enderror"
                                         id="name" name="name" placeholder="Name" value="{{ old('name') }}">
-                                    <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                                    <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                                 </div>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -295,11 +295,11 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Contact No</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="text" class="form-control @error('contact_no') is-invalid @enderror"
                                         id="contact_no" name="contact_no" placeholder="Contact No"
                                         value="{{ old('contact_no') }}">
-                                    <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                                    <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                                 </div>
                                 @error('contact_no')
                                     <span class="invalid-feedback" role="alert">
@@ -312,12 +312,12 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Business Name</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="text"
                                         class="form-control @error('business_name') is-invalid @enderror"
                                         id="business_name" name="business_name" placeholder="Business Name"
                                         value="{{ old('business_name') }}">
-                                    <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+                                    <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
                                 </div>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -330,7 +330,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Service</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <select name="service" class="form-control" id="service">
                                         <option value="">Select Service</option>
                                         @if ($service)
@@ -351,7 +351,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Status</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <select name="status" class="form-control" id="status">
                                         <option value="">Select Status</option>
                                         @if ($lead_status)
@@ -401,7 +401,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Service</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <select name="service" class="form-control" id="service">
                                         <option value="">Select Service</option>
                                         @if ($lead_status)

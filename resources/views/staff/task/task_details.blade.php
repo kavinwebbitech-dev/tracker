@@ -200,9 +200,9 @@
                                                         <div class="form-group">
                                                             <label class="form-label">Start Date</label>
 
-                                                            <div class="input-group mb-3">
+                                                            <div class="input-group in-bord mb-3">
                                                                 <input type="datetime-local" name="start_date" class="form-control @error('start_date') is-invalid @enderror" required>
-                                                                <!-- <span class="input-group-text"><i class="ti-lock"></i></span> -->
+                                                                <!-- <span class="input-group in-bord-text"><i class="ti-lock"></i></span> -->
                                                             </div>
                                                             @error('start_date')
                                                                 <span class="invalid-feedback" role="alert">
@@ -214,9 +214,9 @@
                                                     <div class="col-md-2">
                                                         <div class="form-group">
                                                             <label class="form-label">End Date</label>
-                                                            <div class="input-group mb-3">
+                                                            <div class="input-group in-bord mb-3">
                                                                 <input type="datetime-local" name="end_date" class="form-control @error('end_date') is-invalid @enderror" required>
-                                                                <!-- <span class="input-group-text"><i class="ti-lock"></i></span> -->
+                                                                <!-- <span class="input-group in-bord-text"><i class="ti-lock"></i></span> -->
                                                             </div>
                                                             @error('end_date')
                                                                 <span class="invalid-feedback" role="alert">
@@ -228,7 +228,7 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label class="form-label">Comments</label>
-                                                            <div class="input-group mb-3">
+                                                            <div class="input-group in-bord mb-3">
                                                                 <input type="text" name="user_comment" class="form-control @error('user_comment') is-invalid @enderror" placeholder="Comments" required>
                                                             </div>
                                                             @error('user_comment')
@@ -241,7 +241,7 @@
                                                     <div class="col-md-2">
                                                         <div class="form-group">
                                                             <label class="form-label">Working Hours</label>
-                                                            <div class="input-group mb-3">
+                                                            <div class="input-group in-bord mb-3">
                                                                 <input type="text" name="working_hours" class="form-control @error('working_hours') is-invalid @enderror" placeholder="Working Hours" required>
                                                             </div>
                                                             @error('working_hours')
@@ -453,9 +453,9 @@
                         <div class="form-group">
                             <label class="form-label">Start Date</label>
 
-                            <div class="input-group mb-3">
+                            <div class="input-group in-bord mb-3">
                                 <input type="datetime-local" name="start_date" id="start_date" class="form-control @error('start_date') is-invalid @enderror" required>
-                                <!-- <span class="input-group-text"><i class="ti-lock"></i></span> -->
+                                <!-- <span class="input-group in-bord-text"><i class="ti-lock"></i></span> -->
                             </div>
                             @error('start_date')
                                 <span class="invalid-feedback" role="alert">
@@ -467,9 +467,9 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-label">End Date</label>
-                            <div class="input-group mb-3">
+                            <div class="input-group in-bord mb-3">
                                 <input type="datetime-local" name="end_date" id="end_date" class="form-control @error('end_date') is-invalid @enderror" required>
-                                <!-- <span class="input-group-text"><i class="ti-lock"></i></span> -->
+                                <!-- <span class="input-group in-bord-text"><i class="ti-lock"></i></span> -->
                             </div>
                             @error('end_date')
                                 <span class="invalid-feedback" role="alert">
@@ -481,7 +481,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-label">Comments</label>
-                            <div class="input-group mb-3">
+                            <div class="input-group in-bord mb-3">
                                 <input type="text" name="user_comment" class="form-control @error('user_comment') is-invalid @enderror" id="user_comment" placeholder="Comments" required>
                             </div>
                             @error('user_comment')
@@ -494,7 +494,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-label">Working Hours</label>
-                            <div class="input-group mb-3">
+                            <div class="input-group in-bord mb-3">
                                 <input type="text" name="working_hours_1" id="working_hours_1" class="form-control @error('working_hours_1') is-invalid @enderror" placeholder="Working Hours" required>
                             </div>
                             @error('working_hours_1')

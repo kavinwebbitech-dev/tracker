@@ -50,7 +50,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Name</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Name" value="{{ old('name') }}" required>
 											</div>
 											@error('name')
@@ -63,7 +63,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Date</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="date" class="form-control @error('proposal_date') is-invalid @enderror" name="proposal_date" placeholder="Date" value="{{ old('proposal_date') }}" required>
 											</div>
 											@error('proposal_date')

@@ -61,7 +61,7 @@
 									<div class="col-md-12">
 										<div class="form-group">
 											<label class="form-label">Select Staff</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="select2 form-control @error('staff_id') is-invalid @enderror" name="staff_id[]" multiple style="width: 100%;">
 													<option value="">Select Staff</option>
 													@if(count($sub_admin) > 0)
@@ -81,7 +81,7 @@
 									<div class="col-md-12">
 										<div class="form-group">
 											<label class="form-label">Group Name</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('group_name') is-invalid @enderror" name="group_name" placeholder="Name" value="{{ $group_staff->group_name }}" required>
 											</div>
 											@error('name')
@@ -94,12 +94,12 @@
 									<div class="col-md-12">
 										<div class="form-group">
 						                    <label class="form-label">Status</label>
-						                    <div class="input-group mb-3">
+						                    <div class="input-group in-bord mb-3">
 						                        <select name="status" class="form-control" id="status">
 						                            <option value="Active" @if($group_staff->status == "Active") selected @endif>Active</option>
 						                            <option value="In Active" @if($group_staff->status == "In Active") selected @endif>In Active</option>
 						                        </select>
-						                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+						                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 						                    </div>
 						                    @error('link')
 						                        <span class="invalid-feedback" role="alert">

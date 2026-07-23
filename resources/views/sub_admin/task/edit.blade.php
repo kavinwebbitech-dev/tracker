@@ -54,7 +54,7 @@
 									?>
 									<div class="col-md-6">
 										<div class="form-group"><label class="form-label">Select Staff</label>
-						    				<div class="input-group mb-3">
+						    				<div class="input-group in-bord mb-3">
 												<select class="selectpicker form-control multiple_staff" id="multiple_staff" name="multiple_staff[]" multiple>
 														@if($sub_admin)
 														@foreach($sub_admin as $key => $staff_details)
@@ -69,7 +69,7 @@
 									{{-- <div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Assign Staff</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control @error('staff_id') is-invalid @enderror" name="staff_id" id="staff_dropdown">
 													<option value="">Select Staff</option>
 													@if($sub_admin)
@@ -90,7 +90,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Select Project</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control select2 @error('project_id') is-invalid @enderror" name="project_id" id="project_id">
 													<option value="">Select Project</option>
 													@if($projects)
@@ -99,7 +99,7 @@
 													@endforeach
 													@endif
 												</select>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('date_type')
 			                                    <span class="invalid-feedback" role="alert">
@@ -112,9 +112,9 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Task Name</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('task_name') is-invalid @enderror" name="task_name" placeholder="Task Name" value="{{ $task->name }}" required>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('task_name')
 			                                    <span class="invalid-feedback" role="alert">
@@ -126,13 +126,13 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Freequency of Task Type</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control @error('task_type') is-invalid @enderror" name="task_type" onchange="cusom_date()" id="date_type">
 													<!-- <option value="">Select Task Type</option> -->
 													<!-- <option value="recurring">Recurring</option> -->
 													<option value="custom">One time Task</option>
 												</select>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('date_type')
 			                                    <span class="invalid-feedback" role="alert">
@@ -145,7 +145,7 @@
 									{{-- <div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Task Amount</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="text" class="form-control @error('task_amount') is-invalid @enderror" name="task_amount" placeholder="Task Amount" value="{{ $task->task_amount }}">
 												
 											</div>
@@ -179,7 +179,7 @@
 						                <div class="col-md-3">
 						                    <div class="form-group">
 						                        <label class="form-label">Task Priority </label>
-						                        <div class="input-group mb-3">
+						                        <div class="input-group in-bord mb-3">
 						                            <select class="form-control" name="addmore[{{$task_staff->staff_id}}][priority]">
 						                                <option value="">Select Priority</option>
 						                                <option value="High" @if($task_staff->priority == "High") selected @endif>High</option>\
@@ -198,7 +198,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Period of Task</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<select class="form-control @error('date_type') is-invalid @enderror" name="date_type">
 													<option value="7">Weekly</option>
 													<option value="15">15 Days</option>
@@ -206,7 +206,7 @@
 													<option value="90">Quarterly</option>
 													<option value="365">Yearly</option>
 												</select>
-												<!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+												<!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 											</div>
 											@error('date_type')
 			                                    <span class="invalid-feedback" role="alert">
@@ -219,7 +219,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="form-label">Start Date</label>
-											<div class="input-group mb-3">
+											<div class="input-group in-bord mb-3">
 												<input type="date" class="form-control @error('recurring_start_date') is-invalid @enderror" name="recurring_start_date" placeholder="Task Start Date" value="{{ old('recurring_start_date') }}">
 											</div>
 											@error('recurring_start_date')
@@ -257,9 +257,9 @@
 								</div>
 								{{-- <div class="form-group">
 									<label class="form-label">Confirm Password</label>
-									<div class="input-group mb-3">
+									<div class="input-group in-bord mb-3">
 										<input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation" placeholder="Confirm Password">
-										<span class="input-group-text"><i class="ti-lock"></i></span>
+										<span class="input-group in-bord-text"><i class="ti-lock"></i></span>
 									</div>
 									@error('password_confirmation')
 	                                    <span class="invalid-feedback" role="alert">

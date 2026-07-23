@@ -141,7 +141,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Name</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="text" class="form-control @error('name') is-invalid @enderror"
                                         id="name" name="name" placeholder="Name" value="{{ old('name') }}"
                                         required>
@@ -157,7 +157,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Bill Amount</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="text" class="form-control @error('bill_amount') is-invalid @enderror"
                                         id="bill_amount" name="bill_amount" placeholder="Bill Amount"
                                         value="{{ old('bill_amount') }}" required>
@@ -173,7 +173,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Bill Date</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="date" class="form-control @error('bill_date') is-invalid @enderror"
                                         id="bill_date" name="bill_date" placeholder="Bill Date"
                                         value="{{ old('bill_date') }}" onfocus="'showPicker' in this && this.showPicker()"
@@ -190,7 +190,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Repeat Every</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <select name="recurring_unit" id="recurring_unit" class="form-control"
                                         onchange="toggleRecurringValue()">
                                         <option value="none">No Repeat</option>
@@ -208,7 +208,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Status</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <select name="status" class="form-control" id="status">
                                         <option value="Active">Active</option>
                                         <option value="In Active">In Active</option>
@@ -255,7 +255,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Name</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="text" class="form-control @error('name') is-invalid @enderror"
                                         id="name1" name="name" placeholder="Name" value="{{ old('name') }}"
                                         required>
@@ -271,7 +271,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Bill Amount</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="text" class="form-control @error('bill_amount') is-invalid @enderror"
                                         id="bill_amount1" name="bill_amount" placeholder="Bill Amount"
                                         value="{{ old('bill_amount') }}" required>
@@ -287,7 +287,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Start Date</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="date" class="form-control @error('start_date') is-invalid @enderror"
                                         id="start_date" name="start_date" placeholder="Bill Date"
                                         value="{{ old('start_date') }}"
@@ -304,7 +304,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">End Date</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <input type="date" class="form-control @error('end_date') is-invalid @enderror"
                                         id="end_date1" name="end_date" placeholder="Recurring Days"
                                         value="{{ old('end_date') }}" onfocus="'showPicker' in this && this.showPicker()"
@@ -321,7 +321,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Status</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group in-bord mb-3">
                                     <select name="status" class="form-control" id="status">
                                         <option value="Active">Active</option>
                                         <option value="In Active">In Active</option>

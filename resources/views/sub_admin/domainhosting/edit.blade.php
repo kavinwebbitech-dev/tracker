@@ -52,7 +52,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Branches</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <select class="form-control select2" id="fld_branch_id"
                                                         name="fld_branch_id">
                                                         @if ($branches)
@@ -74,7 +74,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Customers List</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <select class="form-control select2" id="fld_cust_id" name="fld_cust_id"
                                                         onchange="CustomerDetails()">
                                                         <option value="">Select Person</option>
@@ -101,7 +101,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Name</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="text"
                                                         class="form-control @error('cname') is-invalid @enderror"
                                                         name="cname" id="cname" placeholder="Name"
@@ -117,7 +117,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Email</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="email"
                                                         class="form-control @error('cemail') is-invalid @enderror"
                                                         name="cemail" id="cemail" placeholder="Email"
@@ -133,7 +133,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label class="form-label">Company Name</label>
-                                                <div class="input-group mb-3">
+                                                <div class="input-group in-bord mb-3">
                                                     <input type="text"
                                                         class="form-control @error('ccname') is-invalid @enderror"
                                                         name="ccname" id="ccname" placeholder="Company Name"

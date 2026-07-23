@@ -112,7 +112,7 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Domain Server Name</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <input type="text" class="form-control @error('fld_domain_server_name') is-invalid @enderror" id="fld_domain_server_name" name="fld_domain_server_name" placeholder="Domain Server Name" value="{{ old('fld_domain_server_name') }}" required>
                     </div>
                     @error('fld_domain_server_name')
@@ -126,7 +126,7 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="form-label">Status</label>
-                    <div class="input-group mb-3">
+                    <div class="input-group in-bord mb-3">
                         <select name="fld_status" class="form-control" id="fld_status">
                             <option value="1">Active</option>
                             <option value="0">In Active</option>

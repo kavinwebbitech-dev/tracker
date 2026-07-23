@@ -900,7 +900,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-label">Staff Working Hours</label>
-                            <div class="input-group mb-3">
+                            <div class="input-group in-bord mb-3">
                                 <input type="text" name="working_hours_1" id="working_hours_1" class="form-control @error('working_hours_1') is-invalid @enderror" placeholder="Working Hours" required>
                             </div>
                             @error('working_hours_1')
@@ -913,7 +913,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="form-label">Add Working Hours</label>
-                            <div class="input-group mb-3">
+                            <div class="input-group in-bord mb-3">
                                 <input type="text" name="working_hours_2" class="form-control @error('working_hours_2') is-invalid @enderror" placeholder="Working Hours" required>
                             </div>
                             @error('working_hours_2')
@@ -1069,7 +1069,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="form-label">Enter Date</label>
-                            <div class="input-group mb-3">
+                            <div class="input-group in-bord mb-3">
                                 <input type="date" name="task_date" class="form-control @error('task_date') is-invalid @enderror" placeholder="Enter Amount" onfocus="'showPicker' in this && this.showPicker()" required>
                             </div>
                             @error('task_date')
@@ -1082,7 +1082,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="form-label">Enter Amount</label>
-                            <div class="input-group mb-3">
+                            <div class="input-group in-bord mb-3">
                                 <input type="text" name="amount" class="form-control @error('amount') is-invalid @enderror" placeholder="Enter Amount" required>
                             </div>
                             @error('amount')

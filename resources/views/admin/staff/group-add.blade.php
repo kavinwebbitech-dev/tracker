@@ -51,7 +51,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 										<label class="creative-label">Select Staff</label>
-										<div class="input-group mb-3 creative-input-group">   
+										<div class="input-group in-bord mb-3 creative-input-group in-bord">   
 											<select class="select2 form-control @error('staff_id') is-invalid @enderror" name="staff_id[]" multiple style="width: 100%;">
 												<option value="">Select Staff</option>
 												@if(count($sub_admin) > 0)
@@ -71,9 +71,9 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="creative-label">Group Name</label>
-											<div class="creative-input-group mb-3">
+											<div class="creative-input-group in-bord mb-3">
 												<input type="text" class="form-control @error('group_name') is-invalid @enderror" name="group_name" placeholder="Name" value="{{ old('group_name') }}" required>
-												<span class="input-group-text"><i class="ti-user"></i></span>
+												<span class="input-group in-bord-text"><i class="ti-user"></i></span>
 											</div>
 											@error('name')
 			                                    <span class="invalid-feedback" role="alert">
@@ -85,12 +85,12 @@
 									<div class="col-md-4">
 										<div class="form-group">
 						                    <label class="creative-label">Status</label>
-						                    <div class="creative-input-group mb-3">
+						                    <div class="creative-input-group in-bord mb-3">
 						                        <select name="status" class="form-control" id="status">
 						                            <option value="Active">Active</option>
 						                            <option value="In Active">In Active</option>
 						                        </select>
-						                        <!-- <span class="input-group-text"><i class="ti-user"></i></span> -->
+						                        <!-- <span class="input-group in-bord-text"><i class="ti-user"></i></span> -->
 						                    </div>
 						                    @error('link')
 						                        <span class="invalid-feedback" role="alert">
