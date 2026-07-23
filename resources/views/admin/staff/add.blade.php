@@ -110,6 +110,18 @@
             border-radius: 10px;
             padding: 22px !important;
         }
+
+        .in-bord {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: #fff;
+            height: 40px;
+        }
+
+        .in-bord span {
+            padding-right: 10px;
+        }
     </style>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -118,7 +130,7 @@
             <div class="content-header">
                 <div class="d-flex align-items-center">
                     <div class="me-auto">
-                        <h3 class="page-title">Create Staff</h3>
+                        <h3 class="page-title">Create Staff11</h3>
                         <div class="d-inline-block align-items-center">
                             <nav>
                                 <ol class="breadcrumb">

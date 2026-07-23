@@ -48,7 +48,7 @@
                     <div class="row" style="margin-bottom: 10px;">
                         <div class="col-md-5"></div>
                         <div class="col-md-3">
-                            <input type="file" name="bulk_upoad_file" class="form-control">
+                            <input type="file" name="bulk_upoad_file" class="form-control in-bord">
                             <a href="<?php echo url('');?>/public/admin_assets/images/customer_upload.xlsx" download>Sample File</a>
                         </div>
                         <div class="col-md-1">
